@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
 	<frameworkImplementation>org.apache.uima.java</frameworkImplementation>
 	<primitive>true</primitive>
-	<annotatorImplementationName>edu.cmu.lti.deiis.hw5.indexers.SolrIndexer
-	</annotatorImplementationName>
+	<annotatorImplementationName>edu.cmu.lti.deiis.hw5.indexers.SolrIndexer</annotatorImplementationName>
 	<analysisEngineMetaData>
 		<name>SolrIndexer</name>
-		<description />
+		<description/>
 		<version>1.0</version>
-		<vendor />
+		<vendor/>
 
 		<configurationParameters>
 			<configurationParameter>
@@ -67,14 +67,14 @@
 			</nameValuePair>
 		</configurationParameterSettings>
 
-		<typeSystemDescription />
-		<typePriorities />
-		<fsIndexCollection />
+		<typeSystemDescription/>
+		<typePriorities/>
+		<fsIndexCollection/>
 		<capabilities>
 			<capability>
-				<inputs />
-				<outputs />
-				<languagesSupported />
+				<inputs/>
+				<outputs/>
+				<languagesSupported/>
 			</capability>
 		</capabilities>
 		<operationalProperties>
@@ -83,5 +83,5 @@
 			<outputsNewCASes>false</outputsNewCASes>
 		</operationalProperties>
 	</analysisEngineMetaData>
-	<resourceManagerConfiguration />
+	<resourceManagerConfiguration/>
 </analysisEngineDescription>
