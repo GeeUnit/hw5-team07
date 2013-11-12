@@ -85,7 +85,7 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
         if (existingVal == null) {
           existingVal = new Double(0.0);
         }
-        hshAnswer.put(selectedAnswer, existingVal + 1.0);
+        hshAnswer.put(selectedAnswer, existingVal + (candSent.getRelevanceScore()));
       }
 
       String bestChoice = null;

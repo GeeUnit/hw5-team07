@@ -58,7 +58,7 @@ public class PhraseAnnotator extends JCasAnnotator_ImplBase{
 			String word=token.getText();
 			String pos=token.getPos();
 			
-			if(pos.startsWith("NN") || pos.startsWith("JJ") || pos.startsWith("CD")){
+			if(pos.startsWith("NN") || pos.startsWith("JJ") || pos.startsWith("CD") || pos.startsWith("PP")){
 				nounPhrase+=word+" ";
 			}else{
 				nounPhrase=nounPhrase.trim();
