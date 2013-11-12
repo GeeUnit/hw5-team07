@@ -79,6 +79,16 @@ public class AnswerChoiceCandAnsPMIScorer extends JCasAnnotator_ImplBase {
 						candSent.getSentence().getNerList(), NER.class);
 
 				ArrayList<CandidateAnswer>candAnsList=new ArrayList<CandidateAnswer>();
+				
+				/*
+				 * 
+				 *
+				System.out.println("length of answers: " + choiceList.size());
+				System.out.println("length of sentencs: " + candSentNouns.size());
+				*
+				*
+				*/
+				
 				for (int j = 0; j < choiceList.size(); j++) {
 					double score1 = 0.0;
 					Answer answer = choiceList.get(j);
@@ -125,7 +135,7 @@ public class AnswerChoiceCandAnsPMIScorer extends JCasAnnotator_ImplBase {
 			}
 
 			System.out
-					.println("================================================");
+					.println("================================================where I am in charge!!!");
 			FSList fsCandSentList=Utils.fromCollectionToFSList(aJCas, candSentList);
 			qaSet.get(i).setCandidateSentenceList(fsCandSentList);
 

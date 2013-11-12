@@ -83,7 +83,8 @@ public class AnswerSelectionByKCandAggregation extends JCasAnnotator_ImplBase {
 					if(existingVal==null){
 						existingVal=new Double(0.0);
 					}
-					hshAnswer.put(answer, existingVal+totalScore);
+					// ........................................................................
+					hshAnswer.put(answer, existingVal+totalScore/* * candSent.getRelevanceScore()*/);
 					
 				}
 			}
