@@ -1,6 +1,7 @@
 package edu.cmu.lti.deiis.hw5.candidate_sentence;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrServerException;
@@ -63,12 +64,17 @@ public class QuestionCandSentSimilarityMatcher  extends JCasAnnotator_ImplBase{
 			System.out.println("========================================================");
 			System.out.println("Question: "+question.getText());
 			String searchQuery=this.formSolrQuery(question);
+			System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+			System.out.println(searchQuery);
+			System.out.println(String.valueOf(TOP_SEARCH_RESULTS));
+			System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 			if(searchQuery.trim().equals("")){
 				continue;
 			}
 			ArrayList<CandidateSentence>candidateSentList=new ArrayList<CandidateSentence>();
 			SolrQuery solrQuery=new SolrQuery();
 			solrQuery.add("fq", "docid:"+testDocId);
+//			solrQuery.add("qf","nounphrases^1 namedentities^2");
 			solrQuery.add("q",searchQuery);
 			solrQuery.add("rows",String.valueOf(TOP_SEARCH_RESULTS));
 			solrQuery.setFields("*", "score");
@@ -83,7 +89,15 @@ public class QuestionCandSentSimilarityMatcher  extends JCasAnnotator_ImplBase{
 					}
 					String sentIdx=sentId.replace(docId,"").replace("_", "").trim();
 					int idx=Integer.parseInt(sentIdx);
+					
+//					Sentence annSentence=null;
 					Sentence annSentence=sentenceList.get(idx);
+//					if(idx<sentenceList.size()){
+//					  annSentence=sentenceList.get(idx);
+//					}
+//					else {
+//            annSentence=sentenceList.get(0);
+//          }
 					
 					String sentence=doc.get("text").toString();
 					double relScore=Double.parseDouble(doc.get("score").toString());
@@ -111,18 +125,24 @@ public class QuestionCandSentSimilarityMatcher  extends JCasAnnotator_ImplBase{
 		
 	}
 
+	// I edited the weight set of the query term,
 	public String formSolrQuery(Question question){
 		String solrQuery="";
 		
 		ArrayList<NounPhrase>nounPhrases=Utils.fromFSListToCollection(question.getNounList(), NounPhrase.class);
 		
+		Random random=new Random();
 		for(int i=0;i<nounPhrases.size();i++){
-			solrQuery+="nounphrases:\""+nounPhrases.get(i).getText()+"\" ";			
+//			solrQuery+="1 nounphrases:\""+nounPhrases.get(i).getText()+"\" ";	
+//		  solrQuery+="nounphrases:\""+nounPhrases.get(i).getText()+"\" "; 
+		  solrQuery+="nounphrases:\""+nounPhrases.get(i).getText()+"\"^"+String.valueOf(random.nextFloat())+" ";
 		}
 		
 		ArrayList<NER>neList=Utils.fromFSListToCollection(question.getNerList(), NER.class);
 		for(int i=0;i<neList.size();i++){
-			solrQuery+="namedentities:\""+neList.get(i).getText()+"\" ";
+//			solrQuery+="2 namedentities:\""+neList.get(i).getText()+"\" ";
+//		  solrQuery+="namedentities:\""+neList.get(i).getText()+"\" ";
+		  solrQuery+="namedentities:\""+neList.get(i).getText()+"\"^"+String.valueOf(random.nextFloat()+1)+" ";
 		}
 		solrQuery=solrQuery.trim();
 		
