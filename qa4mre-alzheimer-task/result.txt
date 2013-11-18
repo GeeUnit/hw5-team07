@@ -1,0 +1,124 @@
+Parsing CPE Descriptor
+Instantiating CPE
+Running CPE
+Total files: 6
+To abort processing, type "abort" and press enter.
+CPM Initialization Complete
+[Fatal Error] :1:1: Content is not allowed in prolog.
+org.apache.uima.collection.CollectionException
+	at edu.cmu.lti.deiis.hw5.collectionreaders.QA4MREXMITestDocReader.getNext(QA4MREXMITestDocReader.java:54)
+	at org.apache.uima.collection.impl.cpm.engine.ArtifactProducer.readNext(ArtifactProducer.java:494)
+	at org.apache.uima.collection.impl.cpm.engine.ArtifactProducer.run(ArtifactProducer.java:711)
+Caused by: org.xml.sax.SAXParseException: Content is not allowed in prolog.
+	at org.apache.xerces.parsers.AbstractSAXParser.parse(Unknown Source)
+	at org.apache.uima.cas.impl.XmiCasDeserializer.deserialize(XmiCasDeserializer.java:1955)
+	at org.apache.uima.cas.impl.XmiCasDeserializer.deserialize(XmiCasDeserializer.java:1894)
+	at edu.cmu.lti.deiis.hw5.collectionreaders.QA4MREXMITestDocReader.getNext(QA4MREXMITestDocReader.java:52)
+	... 2 more
+Nov 12, 2013 5:51:08 PM org.apache.uima.analysis_engine.impl.PrimitiveAnalysisEngine_impl callAnalysisComponentProcess(407)
+SEVERE: Exception occurred
+org.apache.uima.analysis_engine.AnalysisEngineProcessException: Annotator processing failed.    
+	at org.apache.uima.analysis_engine.impl.PrimitiveAnalysisEngine_impl.callAnalysisComponentProcess(PrimitiveAnalysisEngine_impl.java:391)
+	at org.apache.uima.analysis_engine.impl.PrimitiveAnalysisEngine_impl.processAndOutputNewCASes(PrimitiveAnalysisEngine_impl.java:296)
+	at org.apache.uima.analysis_engine.asb.impl.ASB_impl$AggregateCasIterator.processUntilNextOutputCas(ASB_impl.java:567)
+	at org.apache.uima.analysis_engine.asb.impl.ASB_impl$AggregateCasIterator.<init>(ASB_impl.java:409)
+	at org.apache.uima.analysis_engine.asb.impl.ASB_impl.process(ASB_impl.java:342)
+	at org.apache.uima.analysis_engine.impl.AggregateAnalysisEngine_impl.processAndOutputNewCASes(AggregateAnalysisEngine_impl.java:267)
+	at org.apache.uima.analysis_engine.impl.AnalysisEngineImplBase.process(AnalysisEngineImplBase.java:267)
+	at org.apache.uima.collection.impl.cpm.engine.ProcessingUnit.processNext(ProcessingUnit.java:897)
+	at org.apache.uima.collection.impl.cpm.engine.ProcessingUnit.run(ProcessingUnit.java:577)
+Caused by: java.lang.NullPointerException
+	at edu.cmu.lti.deiis.hw5.candidate_sentence.QuestionCandSentSimilarityMatcher.process(QuestionCandSentSimilarityMatcher.java:55)
+	at org.apache.uima.analysis_component.JCasAnnotator_ImplBase.process(JCasAnnotator_ImplBase.java:48)
+	at org.apache.uima.analysis_engine.impl.PrimitiveAnalysisEngine_impl.callAnalysisComponentProcess(PrimitiveAnalysisEngine_impl.java:375)
+	... 8 more
+Nov 12, 2013 5:51:08 PM org.apache.uima.analysis_engine.impl.AggregateAnalysisEngine_impl processAndOutputNewCASes(275)
+SEVERE: Exception occurred
+org.apache.uima.analysis_engine.AnalysisEngineProcessException: Annotator processing failed.    
+	at org.apache.uima.analysis_engine.impl.PrimitiveAnalysisEngine_impl.callAnalysisComponentProcess(PrimitiveAnalysisEngine_impl.java:391)
+	at org.apache.uima.analysis_engine.impl.PrimitiveAnalysisEngine_impl.processAndOutputNewCASes(PrimitiveAnalysisEngine_impl.java:296)
+	at org.apache.uima.analysis_engine.asb.impl.ASB_impl$AggregateCasIterator.processUntilNextOutputCas(ASB_impl.java:567)
+	at org.apache.uima.analysis_engine.asb.impl.ASB_impl$AggregateCasIterator.<init>(ASB_impl.java:409)
+	at org.apache.uima.analysis_engine.asb.impl.ASB_impl.process(ASB_impl.java:342)
+	at org.apache.uima.analysis_engine.impl.AggregateAnalysisEngine_impl.processAndOutputNewCASes(AggregateAnalysisEngine_impl.java:267)
+	at org.apache.uima.analysis_engine.impl.AnalysisEngineImplBase.process(AnalysisEngineImplBase.java:267)
+	at org.apache.uima.collection.impl.cpm.engine.ProcessingUnit.processNext(ProcessingUnit.java:897)
+	at org.apache.uima.collection.impl.cpm.engine.ProcessingUnit.run(ProcessingUnit.java:577)
+Caused by: java.lang.NullPointerException
+	at edu.cmu.lti.deiis.hw5.candidate_sentence.QuestionCandSentSimilarityMatcher.process(QuestionCandSentSimilarityMatcher.java:55)
+	at org.apache.uima.analysis_component.JCasAnnotator_ImplBase.process(JCasAnnotator_ImplBase.java:48)
+	at org.apache.uima.analysis_engine.impl.PrimitiveAnalysisEngine_impl.callAnalysisComponentProcess(PrimitiveAnalysisEngine_impl.java:375)
+	... 8 more
+org.apache.uima.analysis_engine.AnalysisEngineProcessException: Annotator processing failed.    
+	at org.apache.uima.analysis_engine.impl.PrimitiveAnalysisEngine_impl.callAnalysisComponentProcess(PrimitiveAnalysisEngine_impl.java:391)
+	at org.apache.uima.analysis_engine.impl.PrimitiveAnalysisEngine_impl.processAndOutputNewCASes(PrimitiveAnalysisEngine_impl.java:296)
+	at org.apache.uima.analysis_engine.asb.impl.ASB_impl$AggregateCasIterator.processUntilNextOutputCas(ASB_impl.java:567)
+	at org.apache.uima.analysis_engine.asb.impl.ASB_impl$AggregateCasIterator.<init>(ASB_impl.java:409)
+	at org.apache.uima.analysis_engine.asb.impl.ASB_impl.process(ASB_impl.java:342)
+	at org.apache.uima.analysis_engine.impl.AggregateAnalysisEngine_impl.processAndOutputNewCASes(AggregateAnalysisEngine_impl.java:267)
+	at org.apache.uima.analysis_engine.impl.AnalysisEngineImplBase.process(AnalysisEngineImplBase.java:267)
+	at org.apache.uima.collection.impl.cpm.engine.ProcessingUnit.processNext(ProcessingUnit.java:897)
+	at org.apache.uima.collection.impl.cpm.engine.ProcessingUnit.run(ProcessingUnit.java:577)
+Caused by: java.lang.NullPointerException
+	at edu.cmu.lti.deiis.hw5.candidate_sentence.QuestionCandSentSimilarityMatcher.process(QuestionCandSentSimilarityMatcher.java:55)
+	at org.apache.uima.analysis_component.JCasAnnotator_ImplBase.process(JCasAnnotator_ImplBase.java:48)
+	at org.apache.uima.analysis_engine.impl.PrimitiveAnalysisEngine_impl.callAnalysisComponentProcess(PrimitiveAnalysisEngine_impl.java:375)
+	... 8 more
+Nov 12, 2013 5:51:08 PM org.apache.uima.collection.impl.cpm.engine.ProcessingUnit process
+SEVERE: The container CpeQuestionDescriptor returned the following error message: Annotator processing failed.     (Thread Name: [Procesing Pipeline#1 Thread]::) 
+Nov 12, 2013 5:51:08 PM org.apache.uima.collection.impl.cpm.engine.ProcessingUnit maybeLogSevereException(2502)
+SEVERE: Thread: [Procesing Pipeline#1 Thread]::, message: Annotator processing failed.    
+org.apache.uima.analysis_engine.AnalysisEngineProcessException: Annotator processing failed.    
+	at org.apache.uima.analysis_engine.impl.PrimitiveAnalysisEngine_impl.callAnalysisComponentProcess(PrimitiveAnalysisEngine_impl.java:391)
+	at org.apache.uima.analysis_engine.impl.PrimitiveAnalysisEngine_impl.processAndOutputNewCASes(PrimitiveAnalysisEngine_impl.java:296)
+	at org.apache.uima.analysis_engine.asb.impl.ASB_impl$AggregateCasIterator.processUntilNextOutputCas(ASB_impl.java:567)
+	at org.apache.uima.analysis_engine.asb.impl.ASB_impl$AggregateCasIterator.<init>(ASB_impl.java:409)
+	at org.apache.uima.analysis_engine.asb.impl.ASB_impl.process(ASB_impl.java:342)
+	at org.apache.uima.analysis_engine.impl.AggregateAnalysisEngine_impl.processAndOutputNewCASes(AggregateAnalysisEngine_impl.java:267)
+	at org.apache.uima.analysis_engine.impl.AnalysisEngineImplBase.process(AnalysisEngineImplBase.java:267)
+	at org.apache.uima.collection.impl.cpm.engine.ProcessingUnit.processNext(ProcessingUnit.java:897)
+	at org.apache.uima.collection.impl.cpm.engine.ProcessingUnit.run(ProcessingUnit.java:577)
+Caused by: java.lang.NullPointerException
+	at edu.cmu.lti.deiis.hw5.candidate_sentence.QuestionCandSentSimilarityMatcher.process(QuestionCandSentSimilarityMatcher.java:55)
+	at org.apache.uima.analysis_component.JCasAnnotator_ImplBase.process(JCasAnnotator_ImplBase.java:48)
+	at org.apache.uima.analysis_engine.impl.PrimitiveAnalysisEngine_impl.callAnalysisComponentProcess(PrimitiveAnalysisEngine_impl.java:375)
+	... 8 more
+org.apache.uima.analysis_engine.AnalysisEngineProcessException: Annotator processing failed.    
+	at org.apache.uima.analysis_engine.impl.PrimitiveAnalysisEngine_impl.callAnalysisComponentProcess(PrimitiveAnalysisEngine_impl.java:391)
+	at org.apache.uima.analysis_engine.impl.PrimitiveAnalysisEngine_impl.processAndOutputNewCASes(PrimitiveAnalysisEngine_impl.java:296)
+	at org.apache.uima.analysis_engine.asb.impl.ASB_impl$AggregateCasIterator.processUntilNextOutputCas(ASB_impl.java:567)
+	at org.apache.uima.analysis_engine.asb.impl.ASB_impl$AggregateCasIterator.<init>(ASB_impl.java:409)
+	at org.apache.uima.analysis_engine.asb.impl.ASB_impl.process(ASB_impl.java:342)
+	at org.apache.uima.analysis_engine.impl.AggregateAnalysisEngine_impl.processAndOutputNewCASes(AggregateAnalysisEngine_impl.java:267)
+	at org.apache.uima.analysis_engine.impl.AnalysisEngineImplBase.process(AnalysisEngineImplBase.java:267)
+	at org.apache.uima.collection.impl.cpm.engine.ProcessingUnit.processNext(ProcessingUnit.java:897)
+	at org.apache.uima.collection.impl.cpm.engine.ProcessingUnit.run(ProcessingUnit.java:577)
+Caused by: java.lang.NullPointerException
+	at edu.cmu.lti.deiis.hw5.candidate_sentence.QuestionCandSentSimilarityMatcher.process(QuestionCandSentSimilarityMatcher.java:55)
+	at org.apache.uima.analysis_component.JCasAnnotator_ImplBase.process(JCasAnnotator_ImplBase.java:48)
+	at org.apache.uima.analysis_engine.impl.PrimitiveAnalysisEngine_impl.callAnalysisComponentProcess(PrimitiveAnalysisEngine_impl.java:375)
+	... 8 more
+Nov 12, 2013 5:51:08 PM org.apache.uima.collection.impl.cpm.container.ProcessingContainer_Impl process
+SEVERE: The CPM stopped because the configured error threshold 0 was exceeded. (Thread Name: [Procesing Pipeline#1 Thread]::) Component Name: CpeQuestionDescriptor 
+Nov 12, 2013 5:51:08 PM org.apache.uima.collection.impl.cpm.engine.ProcessingUnit process
+SEVERE: The CPM is terminating. The current component is CpeQuestionDescriptor. (Thread Name: [Procesing Pipeline#1 Thread]::) 
+Nov 12, 2013 5:51:08 PM org.apache.uima.collection.impl.cpm.engine.ProcessingUnit process
+WARNING: The CPM cannot be stopped by force. The current container is CpeQuestionDescriptor. (Thread Name: [Procesing Pipeline#1 Thread]::) Reason: The CAS processor CpeQuestionDescriptor is configured to stop the CPM when excessive errors are encountered.  (Thread Name: [Procesing Pipeline#1 Thread]::)
+Nov 12, 2013 5:51:08 PM org.apache.uima.collection.impl.cpm.engine.ProcessingUnit maybeLogSevereException(2502)
+SEVERE: Thread: [Procesing Pipeline#1 Thread]::, message: 
+org.apache.uima.collection.base_cpm.AbortCPMException: 
+	at org.apache.uima.collection.impl.cpm.container.ProcessingContainer_Impl.incrementCasProcessorErrors(ProcessingContainer_Impl.java:804)
+	at org.apache.uima.collection.impl.cpm.engine.ProcessingUnit.processNext(ProcessingUnit.java:1041)
+	at org.apache.uima.collection.impl.cpm.engine.ProcessingUnit.run(ProcessingUnit.java:577)
+Nov 12, 2013 5:51:08 PM org.apache.uima.collection.impl.cpm.engine.CPMEngine process
+INFO: The collection reader thread state is: 1003 (Thread Name: [Procesing Pipeline#1 Thread]::) 
+Nov 12, 2013 5:51:08 PM org.apache.uima.collection.impl.cpm.engine.CPMEngine process
+INFO: The CPM processing unit is 0 and processing state 2003. (Thread Name: [Procesing Pipeline#1 Thread]::)
+Nov 12, 2013 5:51:08 PM org.apache.uima.collection.impl.cpm.engine.CPMEngine process
+INFO: The CAS consumer thread state is 2001. (Thread Name: [Procesing Pipeline#1 Thread]::) 
+Nov 12, 2013 5:51:08 PM org.apache.uima.collection.impl.cpm.engine.CPMEngine process
+INFO: The application stopped the CPM. (Thread Name: [Procesing Pipeline#1 Thread]::)
+Nov 12, 2013 5:51:08 PM org.apache.uima.collection.impl.cpm.engine.CPMEngine process
+INFO: The CPM engine is stopping. An end-of-file token is added to the worker queue. (Thread Name: [Procesing Pipeline#1 Thread]::) Forced stop: true
+Read: /Users/zhengxiong/Documents/workspace/hw5-team07/qa4mre-alzheimer-task/XMIs/12-test-alzheimer/Biomedical_about_Alzheimer_Sample_GS.xml_1.xml
+Aborted

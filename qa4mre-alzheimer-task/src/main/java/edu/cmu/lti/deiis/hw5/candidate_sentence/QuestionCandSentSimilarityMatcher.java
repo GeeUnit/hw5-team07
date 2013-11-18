@@ -61,8 +61,8 @@ public class QuestionCandSentSimilarityMatcher  extends JCasAnnotator_ImplBase{
 			
 			
 			Question question=qaSet.get(i).getQuestion();
-			System.out.println("========================================================");
-			System.out.println("Question: "+question.getText());
+//			System.out.println("========================================================");
+//			System.out.println("Question: "+question.getText());
 			String searchQuery=this.formSolrQuery(question);
 			System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 			System.out.println(searchQuery);
@@ -76,6 +76,7 @@ public class QuestionCandSentSimilarityMatcher  extends JCasAnnotator_ImplBase{
 			solrQuery.add("fq", "docid:"+testDocId);
 //			solrQuery.add("qf","nounphrases^1 namedentities^2");
 			solrQuery.add("q",searchQuery);
+//			System.out.println(searchQuery);
 			solrQuery.add("rows",String.valueOf(TOP_SEARCH_RESULTS));
 			solrQuery.setFields("*", "score");
 			try {
@@ -105,7 +106,7 @@ public class QuestionCandSentSimilarityMatcher  extends JCasAnnotator_ImplBase{
 					candSent.setSentence(annSentence);
 					candSent.setRelevanceScore(relScore);
 					candidateSentList.add(candSent);
-					System.out.println(relScore+"\t"+sentence);
+//					System.out.println(relScore+"\t"+sentence);
 				}
 				FSList fsCandidateSentList=Utils.fromCollectionToFSList(aJCas, candidateSentList);
 				fsCandidateSentList.addToIndexes();
@@ -119,7 +120,7 @@ public class QuestionCandSentSimilarityMatcher  extends JCasAnnotator_ImplBase{
 			FSList fsQASet=Utils.fromCollectionToFSList(aJCas, qaSet);
 			testDoc.setQaList(fsQASet);
 			
-			System.out.println("=========================================================");
+//			System.out.println("=========================================================");
 		}
 	
 		
