@@ -75,6 +75,7 @@ public class QuestionCandSentSimilarityMatcher  extends JCasAnnotator_ImplBase{
 			solrQuery.setFields("*", "score");
 			try {
 				SolrDocumentList results=solrWrapper.runQuery(solrQuery, TOP_SEARCH_RESULTS);
+			
 				for(int j=0;j<results.size();j++){
 					SolrDocument doc=results.get(j);					
 					String sentId=doc.get("id").toString();
