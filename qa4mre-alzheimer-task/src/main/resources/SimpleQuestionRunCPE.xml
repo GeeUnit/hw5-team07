@@ -15,6 +15,12 @@
     <delegateAnalysisEngine key="AnswerSelectionByKCandAggregation">
       <import location="annotators/AnswerSelectionByKCandAggregation.xml"/>
     </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="AnswerChoiceCandAnsSynonymScorer">
+      <import name="annotators.AnswerChoiceCandAnsSynonymScorer"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="QuestionCandSentSynonymMatcher">
+      <import name="annotators.QuestionCandSentSynonymMatcher"/>
+    </delegateAnalysisEngine>
     <delegateAnalysisEngine key="AnswerChoiceCandAnsSimilarityScorer">
       <import location="annotators/AnswerChoiceCandAnsSimilarityScorer.xml"/>
     </delegateAnalysisEngine>
@@ -29,13 +35,8 @@
     <flowConstraints>
       <fixedFlow>
         <node>QuestionCandSentSimilarityMatcher</node>
-        <!-- <node>QuestionCandSentSynonymMatcher</node>-->
-        <!-- <node>QuestionCandSentDependencyMatcher</node>-->
-        <!--<node>AnswerChoiceCandAnsSimilarityScorer</node>-->
-        <!-- <node>AnswerChoiceCandAnsSynonymScorer</node>-->
-        <!--<node>AnswerChoiceCandAnsPMIScorer</node>-->
-        <node>AnswerChoiceCandAnsPMIScorer</node>
-      <node>AnswerSelectionByKCandVoting</node>
+        <node>AnswerChoiceCandAnsSimilarityScorer</node>
+        <node>AnswerSelectionByKCandVoting</node>
       </fixedFlow>
     </flowConstraints>
     <typePriorities/>

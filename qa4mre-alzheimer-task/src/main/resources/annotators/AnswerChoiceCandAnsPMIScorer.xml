@@ -23,7 +23,6 @@
         <multiValued>false</multiValued>
         <mandatory>false</mandatory>
       </configurationParameter>
-      
     </configurationParameters>
     <configurationParameterSettings>
       <nameValuePair>
@@ -37,8 +36,8 @@
         <value>
           <integer>5</integer>
         </value>
-      </nameValuePair>     
-    </configurationParameterSettings>     
+      </nameValuePair>
+    </configurationParameterSettings>
     <typeSystemDescription/>
     <typePriorities/>
     <fsIndexCollection/>

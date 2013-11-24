@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
   <primitive>true</primitive>
@@ -16,7 +15,7 @@
         <type>String</type>
         <multiValued>false</multiValued>
         <mandatory>false</mandatory>
-      </configurationParameter>    
+      </configurationParameter>
       <configurationParameter>
         <name>SOLR_CORE</name>
         <description>noise score</description>
@@ -61,9 +60,9 @@
       <nameValuePair>
         <name>TOP_SEARCH_RESULTS</name>
         <value>
-          <integer>3</integer>
+          <integer>15</integer>
         </value>
-      </nameValuePair>     
+      </nameValuePair>
     </configurationParameterSettings>
     <typeSystemDescription/>
     <typePriorities/>
