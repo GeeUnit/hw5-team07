@@ -51,7 +51,7 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
     for (int i = 0; i < qaSet.size(); i++) {
 
       Question question = qaSet.get(i).getQuestion();
-      System.out.println("Question: " + question.getText());
+      System.out.println("Selection--Question: " + question.getText());
 
       ArrayList<Answer> choiceList = Utils.fromFSListToCollection(qaSet.get(i).getAnswerList(),
               Answer.class);

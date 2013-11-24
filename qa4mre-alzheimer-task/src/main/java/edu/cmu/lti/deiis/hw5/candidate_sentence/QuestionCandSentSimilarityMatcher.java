@@ -135,15 +135,15 @@ public class QuestionCandSentSimilarityMatcher  extends JCasAnnotator_ImplBase{
 		Random random=new Random();
 		for(int i=0;i<nounPhrases.size();i++){
 //			solrQuery+="1 nounphrases:\""+nounPhrases.get(i).getText()+"\" ";	
-//		  solrQuery+="nounphrases:\""+nounPhrases.get(i).getText()+"\" "; 
-		  solrQuery+="nounphrases:\""+nounPhrases.get(i).getText()+"\"^"+String.valueOf(random.nextFloat())+" ";
+		  solrQuery+="nounphrases:\""+nounPhrases.get(i).getText()+"\" "; 
+//		  solrQuery+="nounphrases:\""+nounPhrases.get(i).getText()+"\"^"+String.valueOf(random.nextFloat())+" ";
 		}
 		
 		ArrayList<NER>neList=Utils.fromFSListToCollection(question.getNerList(), NER.class);
 		for(int i=0;i<neList.size();i++){
 //			solrQuery+="2 namedentities:\""+neList.get(i).getText()+"\" ";
-//		  solrQuery+="namedentities:\""+neList.get(i).getText()+"\" ";
-		  solrQuery+="namedentities:\""+neList.get(i).getText()+"\"^"+String.valueOf(random.nextFloat()+1)+" ";
+		  solrQuery+="namedentities:\""+neList.get(i).getText()+"\" ";
+//		  solrQuery+="namedentities:\""+neList.get(i).getText()+"\"^"+String.valueOf(random.nextFloat()+1)+" ";
 		}
 		solrQuery=solrQuery.trim();
 		

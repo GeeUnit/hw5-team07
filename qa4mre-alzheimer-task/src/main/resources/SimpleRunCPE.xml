@@ -3,6 +3,9 @@
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
   <primitive>false</primitive>
   <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="NGramAnnotator">
+      <import name="annotators/NGramAnnotator"/>
+    </delegateAnalysisEngine>
     <delegateAnalysisEngine key="QuestionNEAnnotator">
       <import location="annotators/QuestionNEAnnotator.xml"/>
     </delegateAnalysisEngine>
@@ -21,6 +24,9 @@
     <delegateAnalysisEngine key="NEAnnotator">
       <import location="annotators/NEAnnotator.xml"/>
     </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="SynonymAnnotator">
+      <import name="annotators.SynonymAnnotator"/>
+    </delegateAnalysisEngine>
     <delegateAnalysisEngine key="StanfordNLPAnnotator">
       <import location="annotators/StanfordNLPAnnotator.xml"/>
     </delegateAnalysisEngine>
@@ -30,17 +36,11 @@
     <delegateAnalysisEngine key="NoiseFilter">
       <import location="annotators/NoiseFilter.xml"/>
     </delegateAnalysisEngine>
-    
-    <delegateAnalysisEngine key="NGramAnnotator">
-      <import name="annotators/NGramAnnotator"/>
-    </delegateAnalysisEngine>
-    
-    <!--<delegateAnalysisEngine key="QuestionCandSentDependencyMatcher">
-      <import location="annotators/QuestionCandSentDependencyMatcher.xml"/>
-    </delegateAnalysisEngine>-->
-    
     <delegateAnalysisEngine key="QuestionCandSentSimilarityMatcher">
       <import location="annotators/QuestionCandSentSimilarityMatcher.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="QASynonymAnnotator">
+      <import name="annotators.QASynonymAnnotator"/>
     </delegateAnalysisEngine>
     <delegateAnalysisEngine key="StanfordQuestionNLPAnnotator">
       <import location="annotators/StanfordQuestionNLPAnnotator.xml"/>
@@ -48,23 +48,12 @@
     <delegateAnalysisEngine key="TextSegmenter">
       <import location="annotators/TextSegmenter.xml"/>
     </delegateAnalysisEngine>
-    <delegateAnalysisEngine key="AnswerChoiceCandAnsSimilarityScorer">
-      <import location="annotators/AnswerChoiceCandAnsSimilarityScorer.xml"/>
-    </delegateAnalysisEngine>
     <delegateAnalysisEngine key="StanfordSentenceAnnotator">
       <import location="annotators/StanfordSentenceAnnotator.xml"/>
     </delegateAnalysisEngine>
-    
-    <delegateAnalysisEngine key="QASynonymAnnotator">
-      <import name="annotators.QASynonymAnnotator"/>
+    <delegateAnalysisEngine key="AnswerChoiceCandAnsSimilarityScorer">
+      <import location="annotators/AnswerChoiceCandAnsSimilarityScorer.xml"/>
     </delegateAnalysisEngine>
-    <delegateAnalysisEngine key="SynonymAnnotator">
-      <import name="annotators.SynonymAnnotator"/>
-    </delegateAnalysisEngine>
-    <!--<delegateAnalysisEngine key="AnswerSelectionByKCandAggregation">
-      <import location="annotators/AnswerSelectionByKCandAggregation.xml"/>
-    </delegateAnalysisEngine>-->
-    
   </delegateAnalysisEngineSpecifiers>
   <analysisEngineMetaData>
     <name>CpeDescriptor</name>
@@ -84,26 +73,10 @@
         <node>QuestionPhraseAnnotator</node>
         <node>NEAnnotator</node>
         <node>QuestionNEAnnotator</node>
-
         <node>NGramAnnotator</node>
-        <!-- <node>SynonymAnnotator</node>-->
-        <!-- <node>QASynonymAnnotator</node>-->
-        <node>QuestionCandSentSimilarityMatcher</node>
-        <node>AnswerChoiceCandAnsSimilarityScorer</node>
-        <!-- <node>QuestionCandSentSynonymMatcher</node> -->        
-        <!-- <node>QuestionCandSentDependencyMatcher</node>-->
         <node>SynonymAnnotator</node>
         <node>QASynonymAnnotator</node>
-        <!-- <node>QuestionCandSentSynonymMatcher</node> -->        
-        <!-- <node>QuestionCandSentDependencyMatcher</node>-->
         <node>SolrIndexer</node>
-        <!--<node>AnswerChoiceCandAnsSynonymScorer</node>-->
-        <!--<node>AnswerChoiceCandAnsPMIScorer</node>-->
-        <node>QuestionCandSentSimilarityMatcher</node>       
-        <node>AnswerChoiceCandAnsSimilarityScorer</node>
-        <node>AnswerSelectionByKCandVoting</node>
-        <!--<node>AnswerSelectionByKCandVoting</node>-->
-
       </fixedFlow>
     </flowConstraints>
     <typePriorities/>
