@@ -6,16 +6,16 @@ Adding annotator tokenize
 Adding annotator ssplit
 Adding annotator pos
 Loading default properties from tagger edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger
-Reading POS tagger model from edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger ... done [1.4 sec].
+Reading POS tagger model from edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger ... done [0.9 sec].
 Adding annotator lemma
 Adding annotator ner
-Loading classifier from edu/stanford/nlp/models/ner/english.all.3class.distsim.crf.ser.gz ... done [4.3 sec].
-Loading classifier from edu/stanford/nlp/models/ner/english.muc.7class.distsim.crf.ser.gz ... done [3.0 sec].
-Loading classifier from edu/stanford/nlp/models/ner/english.conll.4class.distsim.crf.ser.gz ... done [1.8 sec].
+Loading classifier from edu/stanford/nlp/models/ner/english.all.3class.distsim.crf.ser.gz ... done [4.7 sec].
+Loading classifier from edu/stanford/nlp/models/ner/english.muc.7class.distsim.crf.ser.gz ... done [1.6 sec].
+Loading classifier from edu/stanford/nlp/models/ner/english.conll.4class.distsim.crf.ser.gz ... done [3.5 sec].
 Initialization JollyDayHoliday for sutime
 Reading TokensRegex rules from edu/stanford/nlp/models/sutime/defs.sutime.txt
 Reading TokensRegex rules from edu/stanford/nlp/models/sutime/english.sutime.txt
-Nov 19, 2013 8:02:56 PM edu.stanford.nlp.ling.tokensregex.CoreMapExpressionExtractor appendRules
+Nov 24, 2013 2:06:19 AM edu.stanford.nlp.ling.tokensregex.CoreMapExpressionExtractor appendRules
 INFO: Ignoring inactive rule: temporal-composite-8:ranges
 Reading TokensRegex rules from edu/stanford/nlp/models/sutime/english.holidays.sutime.txt
 Adding annotator parse
@@ -289,3336 +289,6 @@ Question no. 7 processed
 Question no. 8 processed
 Question no. 9 processed
 Question no. 10 processed
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "Clusterin Isoform Expression and Alzheimer 's Disease RiskI-Fang Ling1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "Jiraganya Bhongsatiern1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "James F. Simpson1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "David W. Fardo2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "rs11136000"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU isoforms"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "rs11136000"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "rs11136000T allele"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "clusterin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "AD-protective minor rs11136000T allele"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "rs11136000T allele"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "P01AG030128"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "P30AG028383"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "Top Clusterin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU mRNA"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "clusterin protein"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU isoforms"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU isoform"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU isoform"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU isoforms"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU isoforms"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "rs11136000"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "SH-SY5Y cellular mRNA"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2 cDNAs"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "reverse transcriptase"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "SuperScript III"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "t001 Real-time PCRThe"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU34"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "hypoxanthine-guanine phosphoribosyltransferase 1 and ribosomal protein L13A"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "rs11136000"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "TaqMan FAM"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "Pre-designed SNP"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU isoform"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "rs11136000"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "ImmunofluorescenceCLU"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "mouse anti-V5 antibody"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "ab27671"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "rabbit anti-calnexin antibody"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "rabbit anti-TGN46 antibody"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "ab16052"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "Alexa-488 goat anti-mouse IgG antibody"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "Alexa-568 goat anti-rabbit IgG antibody"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "protease"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "protease"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "mouse anti-V5 antibody"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "mouse anti-clusterin antibody"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "peroxidase"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "ChemiDoc XRS"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "PNGase F"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "PNGase F"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU isoforms"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "ATG site"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1 protein"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU isoforms"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU isoforms"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "exon5 – exon 9"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "PSORT II"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "g001"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "rs11136000"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU isoforms"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU isoform"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU isoforms"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2 isoforms"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "rs11136000T allele"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "g002"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU isoform"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "Figure 2 C"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "rs11136000"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "rs11136000"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "t003 CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "TGN46"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "clusterin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2 encoded proteins"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "ER"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "resultant clusterin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "TGN46"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "ER"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "g003 CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "V5"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "clusterin protein"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "PNGase F"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "PNGase"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "PNGase F digestion ( Figure 4 C"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "clusterin proteins"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "PNGase"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "PNGase F"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "endogenous clusterin proteins"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "carboxyl-terminal clusterin epitope"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "clusterin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "V5 epitope"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "cellular clusterin proteins"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "human brain clusterin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "g004"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "clusterin proteins"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "V5 / His"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2 -predicted proteins"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "SH-SY5Y clusterin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "clusterin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2 produce proteins"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU isoforms"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "rs11136000"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "clusterin proteins"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "rs11136000T allele"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "rs11136000"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "rs11136000"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU isoforms"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "rs11136000"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "rs11136000"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU mRNA"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "clusterin protein"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "rs11136000"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "rs11136000 resides within intron 3"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "rs11136000"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1 promoter"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "rs11136000"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU isoforms"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "ATG translation initiation sites"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "PNGase F"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "clusterin protein"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "clusterin protein"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU isoforms"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "histone deacetylase"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "rs11136000"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "rs11136000"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "clusterin protein"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "rs11136000"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "CLU isoforms"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "ApoE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "cytochrome c oxidase"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "NADH dehydrogenase"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
 Number of Sentences:
 189
 1gram for sentences is done.
@@ -3637,9 +307,6 @@ Number of Sentences:
 5
 5
 5
-4
-5
-0
 5
 5
 5
@@ -3647,9 +314,12 @@ Number of Sentences:
 5
 5
 5
-4
 5
-0
+5
+5
+5
+5
+5
 Question: Which technique was used to determine the cellular locations of the CLU1 and CLU2 gene products?
 Aggregated countss; 
 intracellular and secreted	intracellular and secreted	5.0
@@ -3664,18 +334,17 @@ Best Choice: 	ER and the Golgi apparatus
 ================================================
 Question: Which of the two CLU isoforms is the main one expressed in the choroid plexus?
 Aggregated countss; 
-CLU2	CLU2	1.0
+CLU2	CLU2	2.0
 CLU1	CLU1	3.0
-clusterin	clusterin	1.0
 Correct Choice: 	CLU2
 Best Choice: 	CLU1
 ================================================
 Question: Which clusterin single nucleotide polymorphism has been linked to a reduction in the risk for developing Alzheimer's disease?
 Aggregated countss; 
-CLU2	CLU2	2.0
-CLU	CLU	3.0
+CLU2	CLU2	4.0
+CLU	CLU	1.0
 Correct Choice: 	rs11136000T
-Best Choice: 	CLU
+Best Choice: 	CLU2
 ================================================
 Question: Which CLU protein isoforms in the brain have been characterized?
 Aggregated countss; 
@@ -3691,34 +360,36 @@ Best Choice: 	CLU2
 ================================================
 Question: Which hormone can control the expression of CLU isoforms?
 Aggregated countss; 
-AD	AD	1.0
 androgen	androgen	1.0
 cDNA	cDNA	1.0
-real-time PCR	real-time PCR	1.0
+real-time PCR	real-time PCR	2.0
 rs11136000	rs11136000	1.0
 Correct Choice: 	androgen
 Best Choice: 	null
 ================================================
 Question: What effect do androgens have on CLU2 gene expression?
 Aggregated countss; 
-expression	expression	2.0
-association	association	2.0
+expression	expression	1.0
+association	association	4.0
 Correct Choice: 	activation
-Best Choice: 	null
+Best Choice: 	association
 ================================================
 Question: Which particular histone deacetylase inhibitor has been shown to enhance the expression of CLU? 
 Aggregated countss; 
-astrocytes	astrocytes	5.0
+astrocytes	astrocytes	4.0
+amyloid	amyloid	1.0
 Correct Choice: 	valproate
 Best Choice: 	astrocytes
 ================================================
 Question: How many residues does the CLU2 protein sequence have?
 Aggregated countss; 
+protein	protein	4.0
+449	449	1.0
 Correct Choice: 	449
-Best Choice: 	null
+Best Choice: 	protein
 ================================================
 Correct: 2/10=20.0%
-c@1 score:0.26
+c@1 score:0.22000000000000003
 ################### DocId: QA4MRE-2012_BIOMEDICAL_GS.xml_2###########################
 ******Entered into process of NoiseFilter
 Total sentences: 180
@@ -3968,1798 +639,6 @@ Question no. 7 processed
 Question no. 8 processed
 Question no. 9 processed
 Question no. 10 processed
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "Somatostatin Modulates Insulin-Degrading-Enzyme"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "ADGrazia Tundo1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "Chiara Ciaccio1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "Mariaserena Boraso3"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "Insulin-degrading-enzyme"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "extracellular protease"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "somatostatin-14"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE proteolytic"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "Italian MIUR"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "FIRB RBNE03PX83"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "tau protein"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "insulin-degrading-enzyme"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "matrix metalloproteinase 9"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "MMP-9"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "metalloendopeptidase"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "insulin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "atrial natriuretic factor"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "insulin-like growth factors I"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE gene"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "AD-6 locus"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE haplotypes"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE gene"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "Somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "mouse CA1 hippocampal region"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "Somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "neprilysin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "somatostatin transmitter replacement"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "FK960"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "functionally active receptor"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "trypsin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "Human somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "recombinant insulin degrading-enzyme"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "SYBER ROX Master Mix came from 5 PRIME"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "BV-2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "trypsin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "Griffonia simplicifolia isolectin B4"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "protease"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE goat polyclonal antibody K-20"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "recombinant IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "SYBER ROX Master Mix"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "GAPDH"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "GAPDH"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "MMP-9"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "Somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE-siRNA"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "Mouse IgG"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "sst receptor"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "SSTR-1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "SSTR-2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "SSTR-4"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "BV-2 ( B )"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "-tubulin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE WB signals"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE mRNA"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "BV2"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "GAPDH"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "g002"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "insulin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "MMP-9"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "MMP-9"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "MMP-9"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "MMP-9"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "anti-MMP-9 antibody"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "MMP-9"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "MMP-9"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "MMP-9"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "anti-MMP-9 antibody"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "g003"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "somatostatin transmitter replacement"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "Somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "g004"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "endogenous IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE protein"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "g005"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "MMP-9"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "NEP"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "neuropeptide somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "extracellular A β protease"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "Somatostatin triggers IDE gene transcription and protein"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "MMP-9"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "Somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "Information Top Figure S1"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-, NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "somatostatin"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "IDE WB signals"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[]
-WoooooooooW
-[NER
-   sofa: _InitialView
-   begin: 0
-   end: 0
-   text: "somatostatin receptor"
-   tag: "B-PROTEIN"
-   weight: 0.0
-   source: <null>
-   synonyms: <null>
-]
-WoooooooooW
-[]
-WoooooooooW
-[]
 Number of Sentences:
 185
 1gram for sentences is done.
@@ -5775,21 +654,21 @@ Number of Sentences:
 5
 5
 5
-4
-2
-0
-5
-2
 5
 5
 5
 5
 5
-4
-2
-0
 5
-2
+5
+5
+5
+5
+5
+5
+5
+5
+5
 5
 Question: Which entity does allosterically regulate insulin degrading enzyme activity?
 Aggregated countss; 
@@ -5821,46 +700,45 @@ Best Choice: 	ELISA
 Question: What regulates the production of neprilysin?
 Aggregated countss; 
 enzyme	enzyme	2.0
-somatostatin	somatostatin	2.0
+somatostatin	somatostatin	3.0
 Correct Choice: 	somatostatin
-Best Choice: 	null
+Best Choice: 	somatostatin
 ================================================
 Question: What kind of glial cell is able to phagocyte b-amyloid?
 Aggregated countss; 
-neprilysin	neprilysin	2.0
+neprilysin	neprilysin	5.0
 Correct Choice: 	microglia
-Best Choice: 	null
+Best Choice: 	neprilysin
 ================================================
 Question: What is the major protease produced by microglia responsible for degrading A?
 Aggregated countss; 
+cells	cells	4.0
+Ab	Ab	1.0
 Correct Choice: 	extracellular
-Best Choice: 	null
+Best Choice: 	cells
 ================================================
 Question: What substance exhibited a similar effect on  IDE secretion as achieved by somatostatin?
 Aggregated countss; 
-octreotide	octreotide	4.0
-substrate	substrate	1.0
+octreotide	octreotide	5.0
 Correct Choice: 	octreotide
 Best Choice: 	octreotide
 ================================================
 Question: What are the sst receptors that are expressed on rat astrocytes?
 Aggregated countss; 
-somatostatin	somatostatin	1.0
-SSTR-1, SSTR-2 and SSTR-4	SSTR-1, SSTR-2 and SSTR-4	1.0
+somatostatin	somatostatin	2.0
+SSTR-1, SSTR-2 and SSTR-4	SSTR-1, SSTR-2 and SSTR-4	3.0
 Correct Choice: 	SSTR-1, SSTR-2 and SSTR-4
-Best Choice: 	null
+Best Choice: 	SSTR-1, SSTR-2 and SSTR-4
 ================================================
 Question: What method was used to inhibit the expression of IDE?
 Aggregated countss; 
-siRNA	siRNA	1.0
-microglia	microglia	1.0
-Western blot	Western blot	2.0
 positive modulation	positive modulation	1.0
+Western blot	Western blot	4.0
 Correct Choice: 	siRNA
-Best Choice: 	null
+Best Choice: 	Western blot
 ================================================
-Correct: 1/10=10.0%
-c@1 score:0.16000000000000003
+Correct: 3/10=30.0%
+c@1 score:0.33
 ################### DocId: QA4MRE-2012_BIOMEDICAL_GS.xml_3###########################
 ******Entered into process of NoiseFilter
 Total sentences: 84
@@ -5923,3 +801,732 @@ Sentence no. 56 processed
 Sentence no. 57 processed
 Sentence no. 58 processed
 Sentence no. 59 processed
+Sentence no. 60 processed
+Sentence no. 61 processed
+Sentence no. 62 processed
+Sentence no. 63 processed
+Sentence no. 64 processed
+Sentence no. 65 processed
+Sentence no. 66 processed
+Sentence no. 67 processed
+Sentence no. 68 processed
+Sentence no. 69 processed
+Sentence no. 70 processed
+Sentence no. 71 processed
+Sentence no. 72 processed
+Sentence no. 73 processed
+Sentence no. 74 processed
+Sentence no. 75 processed
+Sentence no. 76 processed
+Sentence no. 77 processed
+Sentence no. 78 processed
+Sentence no. 79 processed
+Sentence no. 80 processed
+Sentence no. 81 processed
+Sentence no. 82 processed
+Sentence no. 83 processed
+Sentence no. 84 processed
+Answer no. 0 processed
+Answer no. 1 processed
+Answer no. 2 processed
+Answer no. 3 processed
+Answer no. 4 processed
+Answer no. 0 processed
+Answer no. 1 processed
+Answer no. 2 processed
+Answer no. 3 processed
+Answer no. 4 processed
+Answer no. 0 processed
+Answer no. 1 processed
+Answer no. 2 processed
+Answer no. 3 processed
+Answer no. 4 processed
+Answer no. 0 processed
+Answer no. 1 processed
+Answer no. 2 processed
+Answer no. 3 processed
+Answer no. 4 processed
+Answer no. 0 processed
+Answer no. 1 processed
+Answer no. 2 processed
+Answer no. 3 processed
+Answer no. 4 processed
+Answer no. 0 processed
+Answer no. 1 processed
+Answer no. 2 processed
+Answer no. 3 processed
+Answer no. 4 processed
+Answer no. 0 processed
+Answer no. 1 processed
+Answer no. 2 processed
+Answer no. 3 processed
+Answer no. 4 processed
+Answer no. 0 processed
+Answer no. 1 processed
+Answer no. 2 processed
+Answer no. 3 processed
+Answer no. 4 processed
+Answer no. 0 processed
+Answer no. 1 processed
+Answer no. 2 processed
+Answer no. 3 processed
+Answer no. 4 processed
+Answer no. 0 processed
+Answer no. 1 processed
+Answer no. 2 processed
+Answer no. 3 processed
+Answer no. 4 processed
+Total Questions: 10
+Question no. 1 processed
+Question no. 2 processed
+Question no. 3 processed
+Question no. 4 processed
+Question no. 5 processed
+Question no. 6 processed
+Question no. 7 processed
+Question no. 8 processed
+Question no. 9 processed
+Question no. 10 processed
+Number of Sentences:
+84
+1gram for sentences is done.
+1gram for questions is done.
+1gram for answers is done.
+2gram for sentences is done.
+2gram for questions is done.
+2gram for answers is done.
+3gram for sentences is done.
+3gram for questions is done.
+3gram for answers is done.
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+Question: What cell type in AD brains shows mitochondrial defects?
+Aggregated countss; 
+astrocytes	astrocytes	5.0
+Correct Choice: 	astrocytes
+Best Choice: 	astrocytes
+================================================
+Question: In which anatomical structure in the brain does amyloid-beta aggregate?
+Aggregated countss; 
+receptor	receptor	5.0
+Correct Choice: 	choroid plexus
+Best Choice: 	receptor
+================================================
+Question: How many persons worldwide are estimated to have a medical condition related to neurodegeneration?
+Aggregated countss; 
+mitochondria	mitochondria	4.0
+LPR2	LPR2	1.0
+Correct Choice: 	more than 10 million
+Best Choice: 	mitochondria
+================================================
+Question: Which protein is able to block nitric oxide creation?
+Aggregated countss; 
+mitochondrial proteins	mitochondrial proteins	1.0
+amyloid	amyloid	4.0
+Correct Choice: 	gelsolin
+Best Choice: 	amyloid
+================================================
+Question: Which is the best-characterized factor that increases chances of getting AD?
+Aggregated countss; 
+damage	damage	5.0
+Correct Choice: 	age
+Best Choice: 	damage
+================================================
+Question: With which particular protein does amyloid-beta interact?
+Aggregated countss; 
+mitochondria	mitochondria	2.0
+extracellular domain	extracellular domain	3.0
+Correct Choice: 	gelsolin
+Best Choice: 	extracellular domain
+================================================
+Question: The aggregation of which peptide has been widely observed in brains of Alzheimer patients?
+Aggregated countss; 
+AD	AD	5.0
+Correct Choice: 	amyloid-beta
+Best Choice: 	AD
+================================================
+Question: What specific animal model can be used to study the role of amyloid-beta in apoptosis of choroid Plexus cells?
+Aggregated countss; 
+patients with AD	patients with AD	5.0
+Correct Choice: 	APP/Ps mice
+Best Choice: 	patients with AD
+================================================
+Question: Where does amyloid-beta assemble into oligomeric structures?
+Aggregated countss; 
+fractions	fractions	5.0
+Correct Choice: 	synaptic terminals
+Best Choice: 	fractions
+================================================
+Question: When does oxidative stress happen in AD patients?
+Aggregated countss; 
+before amyloid-beta accumulation	before amyloid-beta accumulation	1.0
+transgenic mouse	transgenic mouse	4.0
+Correct Choice: 	before amyloid-beta accumulation
+Best Choice: 	transgenic mouse
+================================================
+Correct: 1/10=10.0%
+c@1 score:0.1
+################### DocId: QA4MRE-2012_BIOMEDICAL_GS.xml_4###########################
+******Entered into process of NoiseFilter
+Total sentences: 281
+Sentence no. 1 processed
+Sentence no. 2 processed
+Sentence no. 3 processed
+Sentence no. 4 processed
+Sentence no. 5 processed
+Sentence no. 6 processed
+Sentence no. 7 processed
+Sentence no. 8 processed
+Sentence no. 9 processed
+Sentence no. 10 processed
+Sentence no. 11 processed
+Sentence no. 12 processed
+Sentence no. 13 processed
+Sentence no. 14 processed
+Sentence no. 15 processed
+Sentence no. 16 processed
+Sentence no. 17 processed
+Sentence no. 18 processed
+Sentence no. 19 processed
+Sentence no. 20 processed
+Sentence no. 21 processed
+Sentence no. 22 processed
+Sentence no. 23 processed
+Sentence no. 24 processed
+Sentence no. 25 processed
+Sentence no. 26 processed
+Sentence no. 27 processed
+Sentence no. 28 processed
+Sentence no. 29 processed
+Sentence no. 30 processed
+Sentence no. 31 processed
+Sentence no. 32 processed
+Sentence no. 33 processed
+Sentence no. 34 processed
+Sentence no. 35 processed
+Sentence no. 36 processed
+Sentence no. 37 processed
+Sentence no. 38 processed
+Sentence no. 39 processed
+Sentence no. 40 processed
+Sentence no. 41 processed
+Sentence no. 42 processed
+Sentence no. 43 processed
+Sentence no. 44 processed
+Sentence no. 45 processed
+Sentence no. 46 processed
+Sentence no. 47 processed
+Sentence no. 48 processed
+Sentence no. 49 processed
+Sentence no. 50 processed
+Sentence no. 51 processed
+Sentence no. 52 processed
+Sentence no. 53 processed
+Sentence no. 54 processed
+Sentence no. 55 processed
+Sentence no. 56 processed
+Sentence no. 57 processed
+Sentence no. 58 processed
+Sentence no. 59 processed
+Sentence no. 60 processed
+Sentence no. 61 processed
+Sentence no. 62 processed
+Sentence no. 63 processed
+Sentence no. 64 processed
+Sentence no. 65 processed
+Sentence no. 66 processed
+Sentence no. 67 processed
+Sentence no. 68 processed
+Sentence no. 69 processed
+Sentence no. 70 processed
+Sentence no. 71 processed
+Sentence no. 72 processed
+Sentence no. 73 processed
+Sentence no. 74 processed
+Sentence no. 75 processed
+Sentence no. 76 processed
+Sentence no. 77 processed
+Sentence no. 78 processed
+Sentence no. 79 processed
+Sentence no. 80 processed
+Sentence no. 81 processed
+Sentence no. 82 processed
+Sentence no. 83 processed
+Sentence no. 84 processed
+Sentence no. 85 processed
+Sentence no. 86 processed
+Sentence no. 87 processed
+Sentence no. 88 processed
+Sentence no. 89 processed
+Sentence no. 90 processed
+Sentence no. 91 processed
+Sentence no. 92 processed
+Sentence no. 93 processed
+Sentence no. 94 processed
+Sentence no. 95 processed
+Sentence no. 96 processed
+Sentence no. 97 processed
+Sentence no. 98 processed
+Sentence no. 99 processed
+Sentence no. 100 processed
+Sentence no. 101 processed
+Sentence no. 102 processed
+Sentence no. 103 processed
+Sentence no. 104 processed
+Sentence no. 105 processed
+Sentence no. 106 processed
+Sentence no. 107 processed
+Sentence no. 108 processed
+Sentence no. 109 processed
+Sentence no. 110 processed
+Sentence no. 111 processed
+Sentence no. 112 processed
+Sentence no. 113 processed
+Sentence no. 114 processed
+Sentence no. 115 processed
+Sentence no. 116 processed
+Sentence no. 117 processed
+Sentence no. 118 processed
+Sentence no. 119 processed
+Sentence no. 120 processed
+Sentence no. 121 processed
+Sentence no. 122 processed
+Sentence no. 123 processed
+Sentence no. 124 processed
+Sentence no. 125 processed
+Sentence no. 126 processed
+Sentence no. 127 processed
+Sentence no. 128 processed
+Sentence no. 129 processed
+Sentence no. 130 processed
+Sentence no. 131 processed
+Sentence no. 132 processed
+Sentence no. 133 processed
+Sentence no. 134 processed
+Sentence no. 135 processed
+Sentence no. 136 processed
+Sentence no. 137 processed
+Sentence no. 138 processed
+Sentence no. 139 processed
+Sentence no. 140 processed
+Sentence no. 141 processed
+Sentence no. 142 processed
+Sentence no. 143 processed
+Sentence no. 144 processed
+Sentence no. 145 processed
+Sentence no. 146 processed
+Sentence no. 147 processed
+Sentence no. 148 processed
+Sentence no. 149 processed
+Sentence no. 150 processed
+Sentence no. 151 processed
+Sentence no. 152 processed
+Sentence no. 153 processed
+Sentence no. 154 processed
+Sentence no. 155 processed
+Sentence no. 156 processed
+Sentence no. 157 processed
+Sentence no. 158 processed
+Sentence no. 159 processed
+Sentence no. 160 processed
+Sentence no. 161 processed
+Sentence no. 162 processed
+Sentence no. 163 processed
+Sentence no. 164 processed
+Sentence no. 165 processed
+Sentence no. 166 processed
+Sentence no. 167 processed
+Sentence no. 168 processed
+Sentence no. 169 processed
+Sentence no. 170 processed
+Sentence no. 171 processed
+Sentence no. 172 processed
+Sentence no. 173 processed
+Sentence no. 174 processed
+Sentence no. 175 processed
+Sentence no. 176 processed
+Sentence no. 177 processed
+Sentence no. 178 processed
+Sentence no. 179 processed
+Sentence no. 180 processed
+Sentence no. 181 processed
+Sentence no. 182 processed
+Sentence no. 183 processed
+Sentence no. 184 processed
+Sentence no. 185 processed
+Sentence no. 186 processed
+Sentence no. 187 processed
+Sentence no. 188 processed
+Sentence no. 189 processed
+Sentence no. 190 processed
+Sentence no. 191 processed
+Sentence no. 192 processed
+Sentence no. 193 processed
+Sentence no. 194 processed
+Sentence no. 195 processed
+Sentence no. 196 processed
+Sentence no. 197 processed
+Sentence no. 198 processed
+Sentence no. 199 processed
+Sentence no. 200 processed
+Sentence no. 201 processed
+Sentence no. 202 processed
+Sentence no. 203 processed
+Sentence no. 204 processed
+Sentence no. 205 processed
+Sentence no. 206 processed
+Sentence no. 207 processed
+Sentence no. 208 processed
+Sentence no. 209 processed
+Sentence no. 210 processed
+Sentence no. 211 processed
+Sentence no. 212 processed
+Sentence no. 213 processed
+Sentence no. 214 processed
+Sentence no. 215 processed
+Sentence no. 216 processed
+Sentence no. 217 processed
+Sentence no. 218 processed
+Sentence no. 219 processed
+Sentence no. 220 processed
+Sentence no. 221 processed
+Sentence no. 222 processed
+Sentence no. 223 processed
+Sentence no. 224 processed
+Sentence no. 225 processed
+Sentence no. 226 processed
+Sentence no. 227 processed
+Sentence no. 228 processed
+Sentence no. 229 processed
+Sentence no. 230 processed
+Sentence no. 231 processed
+Sentence no. 232 processed
+Sentence no. 233 processed
+Sentence no. 234 processed
+Sentence no. 235 processed
+Sentence no. 236 processed
+Sentence no. 237 processed
+Sentence no. 238 processed
+Sentence no. 239 processed
+Sentence no. 240 processed
+Sentence no. 241 processed
+Sentence no. 242 processed
+Sentence no. 243 processed
+Sentence no. 244 processed
+Sentence no. 245 processed
+Sentence no. 246 processed
+Sentence no. 247 processed
+Sentence no. 248 processed
+Sentence no. 249 processed
+Sentence no. 250 processed
+Sentence no. 251 processed
+Sentence no. 252 processed
+Sentence no. 253 processed
+Sentence no. 254 processed
+Sentence no. 255 processed
+Sentence no. 256 processed
+Sentence no. 257 processed
+Sentence no. 258 processed
+Sentence no. 259 processed
+Sentence no. 260 processed
+Sentence no. 261 processed
+Sentence no. 262 processed
+Sentence no. 263 processed
+Sentence no. 264 processed
+Sentence no. 265 processed
+Sentence no. 266 processed
+Sentence no. 267 processed
+Sentence no. 268 processed
+Sentence no. 269 processed
+Sentence no. 270 processed
+Sentence no. 271 processed
+Sentence no. 272 processed
+Sentence no. 273 processed
+Sentence no. 274 processed
+Sentence no. 275 processed
+Sentence no. 276 processed
+Sentence no. 277 processed
+Sentence no. 278 processed
+Sentence no. 279 processed
+Sentence no. 280 processed
+Sentence no. 281 processed
+Sentence no. 282 processed
+Sentence no. 283 processed
+Sentence no. 284 processed
+Sentence no. 285 processed
+Sentence no. 286 processed
+Answer no. 0 processed
+Answer no. 1 processed
+Answer no. 2 processed
+Answer no. 3 processed
+Answer no. 4 processed
+Answer no. 0 processed
+Answer no. 1 processed
+Answer no. 2 processed
+Answer no. 3 processed
+Answer no. 4 processed
+Answer no. 0 processed
+Answer no. 1 processed
+Answer no. 2 processed
+Answer no. 3 processed
+Answer no. 4 processed
+Answer no. 0 processed
+Answer no. 1 processed
+Answer no. 2 processed
+Answer no. 3 processed
+Answer no. 4 processed
+Answer no. 0 processed
+Answer no. 1 processed
+Answer no. 2 processed
+Answer no. 3 processed
+Answer no. 4 processed
+Answer no. 0 processed
+Answer no. 1 processed
+Answer no. 2 processed
+Answer no. 3 processed
+Answer no. 4 processed
+Answer no. 0 processed
+Answer no. 1 processed
+Answer no. 2 processed
+Answer no. 3 processed
+Answer no. 4 processed
+Answer no. 0 processed
+Answer no. 1 processed
+Answer no. 2 processed
+Answer no. 3 processed
+Answer no. 4 processed
+Answer no. 0 processed
+Answer no. 1 processed
+Answer no. 2 processed
+Answer no. 3 processed
+Answer no. 4 processed
+Answer no. 0 processed
+Answer no. 1 processed
+Answer no. 2 processed
+Answer no. 3 processed
+Answer no. 4 processed
+Total Questions: 10
+Question no. 1 processed
+Question no. 2 processed
+Question no. 3 processed
+Question no. 4 processed
+Question no. 5 processed
+Question no. 6 processed
+Question no. 7 processed
+Question no. 8 processed
+Question no. 9 processed
+Question no. 10 processed
+Question no. 11 processed
+Number of Sentences:
+286
+1gram for sentences is done.
+1gram for questions is done.
+1gram for answers is done.
+2gram for sentences is done.
+2gram for questions is done.
+2gram for answers is done.
+3gram for sentences is done.
+3gram for questions is done.
+3gram for answers is done.
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+Question: What effect can be observed when when γ-secretase is blocked? 
+Aggregated countss; 
+APP-CTF accumulation	APP-CTF accumulation	5.0
+Correct Choice: 	APP-CTF accumulation
+Best Choice: 	APP-CTF accumulation
+================================================
+Question: When APH1 genes are overexpressed in MEF KO what happens with the Aβ?
+Aggregated countss; 
+They are purified	They are purified	5.0
+Correct Choice: 	They are longer
+Best Choice: 	They are purified
+================================================
+Question: In which gene are mutations associated to many cases of early-onset familial forms of Alzheimer's disease?G
+Aggregated countss; 
+FAD	FAD	5.0
+Correct Choice: 	PSEN1
+Best Choice: 	FAD
+================================================
+Question: What experimental technique was used specifically to purify the γ-secretase complex?
+Aggregated countss; 
+plasmids	plasmids	4.0
+cell lines	cell lines	1.0
+Correct Choice: 	affinity chromatography
+Best Choice: 	plasmids
+================================================
+Question: What peptide is able to control the expression of the ApoE gene?
+Aggregated countss; 
+AD	AD	4.0
+APP-CTFs	APP-CTFs	1.0
+Correct Choice: 	AICD
+Best Choice: 	AD
+================================================
+Question: Which amino acid is critical for the activity of the PS1 protein?
+Aggregated countss; 
+aspartate	aspartate	4.0
+C-terminal	C-terminal	1.0
+Correct Choice: 	aspartate
+Best Choice: 	aspartate
+================================================
+Question: What experimental technique was used to determine the structure of γ-secretase?
+Aggregated countss; 
+EM	EM	1.0
+purification	purification	1.0
+densitometry	densitometry	3.0
+Correct Choice: 	EM
+Best Choice: 	densitometry
+================================================
+Question: What candidate drug that blocks the γ-secretase is now tested in clinical trials?
+Aggregated countss; 
+AD	AD	1.0
+LRP1	LRP1	4.0
+Correct Choice: 	Semagacestat
+Best Choice: 	LRP1
+================================================
+Question: What mutation of the PS1 protein causes γ-secretase activity almost to disappear?
+Aggregated countss; 
+L166P	L166P	1.0
+P436Q	P436Q	4.0
+Correct Choice: 	P436Q
+Best Choice: 	P436Q
+================================================
+Question: How many mutations relevant for familial forms of Alzheimer's disease have been detected for the PSEN1 gene?
+Aggregated countss; 
+42	42	1.0
+13	13	4.0
+Correct Choice: 	185
+Best Choice: 	13
+================================================
+Correct: 3/10=30.0%
+c@1 score:0.30000000000000004
+Completed 4 documents; 161633 characters
+Total Time Elapsed: 514641 ms 
+Initialization Time: 18291 ms
+Processing Time: 496350 ms
+
+
+ ------------------ PERFORMANCE REPORT ------------------
+
+Component Name: CollectionReaderDescriptor
+Event Type: Process
+Duration: 82ms (0.02%)
+Result: success
+Component Name: CpeDescriptor
+Event Type: Analysis
+Duration: 495778ms (99.61%)
+Sub-events:
+	Component Name: StanfordNLPDescriptor
+	Event Type: Analysis
+	Duration: 257127ms (51.66%)
+
+	Component Name: QuestionNEAnnotatorDescriptor
+	Event Type: Analysis
+	Duration: 1285ms (0.26%)
+
+	Component Name: QuestionPhraseAnnotatorDescriptor
+	Event Type: Analysis
+	Duration: 6ms (0%)
+
+	Component Name: AnswerSelectionByKCandVotingDescriptor
+	Event Type: Analysis
+	Duration: 36ms (0.01%)
+
+	Component Name: PhraseAnnotatorDescriptor
+	Event Type: Analysis
+	Duration: 90ms (0.02%)
+
+	Component Name: NEAnnotatorDescriptor
+	Event Type: Analysis
+	Duration: 4792ms (0.96%)
+
+	Component Name: SynonymAnnotatorDescriptor
+	Event Type: Analysis
+	Duration: 41ms (0.01%)
+
+	Component Name: StanfordNLPDescriptor
+	Event Type: Analysis
+	Duration: 186996ms (37.57%)
+
+	Component Name: NoiseFilterDescriptor
+	Event Type: Analysis
+	Duration: 286ms (0.06%)
+
+	Component Name: SolrIndexer
+	Event Type: Analysis
+	Duration: 40424ms (8.12%)
+
+	Component Name: QuestionCandSentSimilarityMatcherDescriptor
+	Event Type: Analysis
+	Duration: 2171ms (0.44%)
+
+	Component Name: QASynonymAnnotatorDescriptor
+	Event Type: Analysis
+	Duration: 5ms (0%)
+
+	Component Name: StanfordQuestionNLPDescriptor
+	Event Type: Analysis
+	Duration: 2256ms (0.45%)
+
+	Component Name: TextSegmenterDescriptor
+	Event Type: Analysis
+	Duration: 47ms (0.01%)
+
+	Component Name: AnswerChoiceCandAnsSimilarityScorerDescriptor
+	Event Type: Analysis
+	Duration: 49ms (0.01%)
+
+	Component Name: StanfordNLPDescriptor
+	Event Type: Analysis
+	Duration: 161ms (0.03%)
+
+	Component Name: Fixed Flow Controller
+	Event Type: Analysis
+	Duration: 3ms (0%)
+
+Component Name: CpeDescriptor
+Event Type: End of Batch
+Duration: 1ms (0%)
+Component Name: CasConsumerDescriptor
+Event Type: Analysis
+Duration: 1869ms (0.38%)
+Component Name: CasConsumerDescriptor
+Event Type: End of Batch
+Duration: 0ms (0%)
+

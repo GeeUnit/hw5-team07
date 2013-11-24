@@ -32,7 +32,7 @@ public class QuestionAnswerCandSentSimilarityMatcher  extends JCasAnnotator_Impl
 	//IndexSchema indexSchema;
 	String coreName;
 	String schemaName;
-	int TOP_SEARCH_RESULTS=10;
+	int TOP_SEARCH_RESULTS=2;
 
 	@Override
 	public void initialize(UimaContext context)
@@ -62,6 +62,7 @@ public class QuestionAnswerCandSentSimilarityMatcher  extends JCasAnnotator_Impl
 			Question question=qaSet.get(i).getQuestion();
 			FSList answerFSlist = qaSet.get(i).getAnswerList();
 			ArrayList answerlist =Utils.fromFSListToCollection(answerFSlist, Answer.class);
+			ArrayList<CandidateSentence>candidateSentList=new ArrayList<CandidateSentence>();
 			
 			for (int k=0;k<answerlist.size();k++){
   //			System.out.println("========================================================");
@@ -71,7 +72,7 @@ public class QuestionAnswerCandSentSimilarityMatcher  extends JCasAnnotator_Impl
   			if(searchQuery.trim().equals("")){
   				continue;
   			}
-  			ArrayList<CandidateSentence>candidateSentList=new ArrayList<CandidateSentence>();
+  			
   			SolrQuery solrQuery=new SolrQuery();
   			solrQuery.add("fq", "docid:"+testDocId);
   			solrQuery.add("q",searchQuery);
@@ -99,20 +100,22 @@ public class QuestionAnswerCandSentSimilarityMatcher  extends JCasAnnotator_Impl
   					candidateSentList.add(candSent);
   //					System.out.println(relScore+"\t"+sentence);
   				}
-  				FSList fsCandidateSentList=Utils.fromCollectionToFSList(aJCas, candidateSentList);
-  				fsCandidateSentList.addToIndexes();
-  				qaSet.get(i).setCandidateSentenceList(fsCandidateSentList);
-  				qaSet.get(i).addToIndexes();
+  				
   			
   				
   			} catch (SolrServerException e) {
   				e.printStackTrace();
   			}
+			}
+  			FSList fsCandidateSentList=Utils.fromCollectionToFSList(aJCas, candidateSentList);
+        fsCandidateSentList.addToIndexes();
+        qaSet.get(i).setCandidateSentenceList(fsCandidateSentList);
+        qaSet.get(i).addToIndexes();
   			FSList fsQASet=Utils.fromCollectionToFSList(aJCas, qaSet);
   			testDoc.setQaList(fsQASet);
   			
   //			System.out.println("=========================================================");
-		}
+		
 	
 		}	
 	}
