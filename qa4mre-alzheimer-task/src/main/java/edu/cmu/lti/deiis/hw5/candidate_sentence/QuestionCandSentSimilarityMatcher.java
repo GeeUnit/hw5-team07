@@ -14,6 +14,7 @@ import org.apache.uima.jcas.cas.FSList;
 import org.apache.uima.resource.ResourceInitializationException;
 
 import edu.cmu.lti.oaqa.core.provider.solr.SolrWrapper;
+import edu.cmu.lti.qalab.types.Answer;
 import edu.cmu.lti.qalab.types.CandidateSentence;
 import edu.cmu.lti.qalab.types.NER;
 import edu.cmu.lti.qalab.types.NounPhrase;
@@ -58,11 +59,12 @@ public class QuestionCandSentSimilarityMatcher  extends JCasAnnotator_ImplBase{
     
     for(int i=0;i<qaSet.size();i++){
       
-      
+      FSList answerFSlist = qaSet.get(i).getAnswerList();
+      ArrayList answerlist =Utils.fromFSListToCollection(answerFSlist, Answer.class);
       Question question=qaSet.get(i).getQuestion();
 //      System.out.println("========================================================");
 //      System.out.println("Question: "+question.getText());
-      String searchQuery=this.formSolrQuery(question);
+      String searchQuery=this.formSolrQuery(question, answerlist);
       if(searchQuery.trim().equals("")){
         continue;
       }
@@ -112,7 +114,7 @@ public class QuestionCandSentSimilarityMatcher  extends JCasAnnotator_ImplBase{
     
   }
 
-  public String formSolrQuery(Question question){
+  public String formSolrQuery(Question question, ArrayList answerlist){
     String solrQuery="";
     
     ArrayList<NounPhrase>nounPhrases=Utils.fromFSListToCollection(question.getNounList(), NounPhrase.class);
