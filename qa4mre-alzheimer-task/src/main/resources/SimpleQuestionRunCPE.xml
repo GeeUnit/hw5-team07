@@ -35,8 +35,13 @@
     <flowConstraints>
       <fixedFlow>
         <node>QuestionCandSentSimilarityMatcher</node>
+        <!-- <node>QuestionCandSentSynonymMatcher</node>-->
+        <!-- <node>QuestionCandSentDependencyMatcher</node>-->
+        <!--<node>AnswerChoiceCandAnsSimilarityScorer</node>-->
+        <!-- <node>AnswerChoiceCandAnsSynonymScorer</node>-->
+        <!--<node>AnswerChoiceCandAnsPMIScorer</node>-->
         <node>AnswerChoiceCandAnsSimilarityScorer</node>
-        <node>AnswerSelectionByKCandVoting</node>
+      <node>AnswerSelectionByKCandVoting</node>
       </fixedFlow>
     </flowConstraints>
     <typePriorities/>

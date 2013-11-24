@@ -230,7 +230,7 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
     Iterator<String> it = hshAnswer.keySet().iterator();
     String bestAns = null;
     double maxScore = MIN_SCORE_THRESHOLD;
-    System.out.println("Aggregated countss; ");
+    System.out.println("Aggregated counts; ");
     while (it.hasNext()) {
       String key = it.next();
       Double val = hshAnswer.get(key);
