@@ -15,6 +15,7 @@ import org.apache.uima.jcas.cas.FSList;
 import org.apache.uima.resource.ResourceInitializationException;
 
 import edu.cmu.lti.oaqa.core.provider.solr.SolrWrapper;
+import edu.cmu.lti.qalab.types.Answer;
 import edu.cmu.lti.qalab.types.CandidateSentence;
 import edu.cmu.lti.qalab.types.NER;
 import edu.cmu.lti.qalab.types.NounPhrase;
@@ -26,12 +27,12 @@ import edu.cmu.lti.qalab.utils.Utils;
 
 public class QuestionCandSentSimilarityMatcher  extends JCasAnnotator_ImplBase{
 
-	SolrWrapper solrWrapper=null;
-	String serverUrl;
-	//IndexSchema indexSchema;
-	String coreName;
-	String schemaName;
-	int TOP_SEARCH_RESULTS=10;
+  SolrWrapper solrWrapper=null;
+  String serverUrl;
+  //IndexSchema indexSchema;
+  String coreName;
+  String schemaName;
+  int TOP_SEARCH_RESULTS=10;
 
 	@Override
 	public void initialize(UimaContext context)
