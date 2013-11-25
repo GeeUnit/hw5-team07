@@ -70,6 +70,12 @@
     <delegateAnalysisEngine key="SynonymAnnotator">
       <import name="annotators.SynonymAnnotator"/>
     </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ThreeSentenceAnnotator">
+      <import name="annotators.ThreeSentenceAnnotator"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="SentenceCombiner">
+      <import name="annotators.SentenceCombiner"/>
+    </delegateAnalysisEngine>
     <!--<delegateAnalysisEngine key="AnswerSelectionByKCandAggregation">
       <import location="annotators/AnswerSelectionByKCandAggregation.xml"/>
     </delegateAnalysisEngine>-->
@@ -87,14 +93,15 @@
         <node>TextSegmenter</node>
         <node>StanfordSentenceAnnotator</node>
         <node>NoiseFilter</node>
+        <node>SentenceCombiner</node>
         <node>StanfordNLPAnnotator</node>
         <node>StanfordQuestionNLPAnnotator</node>
         <node>PhraseAnnotator</node>
         <node>QuestionPhraseAnnotator</node>
         <node>NEAnnotator</node>
+
+
         <node>QuestionNEAnnotator</node>
-
-
         <node>SynonymAnnotator</node>
         <node>QASynonymAnnotator</node>
         <node>SolrIndexer</node>

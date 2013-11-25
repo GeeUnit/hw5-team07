@@ -54,6 +54,7 @@ public class NoiseFilter extends JCasAnnotator_ImplBase {
 				try {
 					sentence = (Sentence) sentList.getNthElement(i);
 				} catch (Exception e) {
+					e.printStackTrace();
 					break;
 				}
 				
@@ -77,8 +78,7 @@ public class NoiseFilter extends JCasAnnotator_ImplBase {
 				sentenceList.add(sentence);
 				filteredText+=sentText+"\n";
 				
-			}
-						
+			}		
 			//System.out.println("Difference between size of (SourceDocument - FilteredDocument): "+(docText.length()-filteredText.length()));
 		
 			FSList modifiedSentList=Utils.createSentenceList(jCas, sentenceList);
@@ -86,6 +86,7 @@ public class NoiseFilter extends JCasAnnotator_ImplBase {
 			testDoc.setSentenceList(modifiedSentList);
 			testDoc.setFilteredText(filteredText);
 			testDoc.addToIndexes();
+			
 			
 		} catch (Exception e) {
 			e.printStackTrace();

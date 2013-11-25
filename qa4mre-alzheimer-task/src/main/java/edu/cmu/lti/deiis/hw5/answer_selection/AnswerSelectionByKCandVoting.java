@@ -29,7 +29,7 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
   private static final boolean WEIGHT_BY_RELEVANCE_VALUE = false;
 
   // The minimum score from voting/ranking an answer must have before it can be considered
-  private static final double MIN_SCORE_THRESHOLD = 2;
+  private static final double MIN_SCORE_THRESHOLD = 1;
 
   int K_CANDIDATES = 5;
 
