@@ -124,26 +124,31 @@ public class QuestionCandSentSynonymMatcher extends JCasAnnotator_ImplBase {
 
 		for (int i = 0; i < nounPhrases.size(); i++) {
 			NounPhrase np = nounPhrases.get(i);
-			// solrQuery += "nounphrases:\"" + np.getText() + "\" ";
-
-			ArrayList<Synonym> synList = Utils.fromFSListToCollection(
-					np.getSynonyms(), Synonym.class);
-			for (int j = 0; j < synList.size(); j++) {
-				solrQuery += "synonyms:\"" + synList.get(j).getText() + "\" ";
+			solrQuery += "nounphrases:\"" + np.getText() + "\" ";
+			if(np.getSynonyms()!=null)
+			{
+				ArrayList<Synonym> synList = Utils.fromFSListToCollection(
+						np.getSynonyms(), Synonym.class);
+				for (int j = 0; j < synList.size(); j++) {
+					solrQuery += "synonyms:\"" + synList.get(j).getText() + "\" ";
+				}
 			}
-
 		}
 
 		ArrayList<NER> neList = Utils.fromFSListToCollection(
 				question.getNerList(), NER.class);
 		for (int i = 0; i < neList.size(); i++) {
 			NER ner = neList.get(i);
-			// solrQuery += "namedentities:\"" + neList.get(i).getText() +
-			// "\" ";
-			ArrayList<Synonym> synList = Utils.fromFSListToCollection(
-					ner.getSynonyms(), Synonym.class);
-			for (int j = 0; j < synList.size(); j++) {
-				solrQuery += "synonyms:\"" + synList.get(j).getText() + "\" ";
+//			 solrQuery += "namedentities:\"" + neList.get(i).getText() +
+//			 "\" ";
+			if(ner.getSynonyms()!=null)
+			{
+				ArrayList<Synonym> synList = Utils.fromFSListToCollection(
+						ner.getSynonyms(), Synonym.class);
+				for (int j = 0; j < synList.size(); j++) {
+					solrQuery += "synonyms:\"" + synList.get(j).getText() + "\" ";
+				}
+
 			}
 		}
 		solrQuery = solrQuery.trim();
