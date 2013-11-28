@@ -47,13 +47,13 @@
     <configurationParameterSettings/>
     <flowConstraints>
       <fixedFlow>
-        <node>QuestionCandSentSynonymMatcher</node>
+        <node>QuestionAnswerCandSentSimilarityMatcher</node>
         <!-- <node>QuestionCandSentSynonymMatcher</node>-->
         <!-- <node>QuestionCandSentDependencyMatcher</node>-->
         <!--<node>AnswerChoiceCandAnsSimilarityScorer</node>-->
         <!-- <node>AnswerChoiceCandAnsSynonymScorer</node>-->
         <!--<node>AnswerChoiceCandAnsPMIScorer</node>-->
-        <node>AnswerChoiceCandAnsSynonymScorer</node>
+        <node>AnswerChoiceCandAnsPMIScorer</node>
       <node>AnswerSelectionByKCandVoting</node>
       </fixedFlow>
     </flowConstraints>

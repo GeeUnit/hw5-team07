@@ -134,8 +134,6 @@ public class AnswerChoiceCandAnsPMIScorer extends JCasAnnotator_ImplBase {
 				candSentList.set(c, candSent);
 			}
 
-			System.out
-					.println("================================================where I am in charge!!!");
 			FSList fsCandSentList=Utils.fromCollectionToFSList(aJCas, candSentList);
 			qaSet.get(i).setCandidateSentenceList(fsCandSentList);
 

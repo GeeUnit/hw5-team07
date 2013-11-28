@@ -139,8 +139,6 @@ public class QuestionCandSentSynonymMatcher extends JCasAnnotator_ImplBase {
 				question.getNerList(), NER.class);
 		for (int i = 0; i < neList.size(); i++) {
 			NER ner = neList.get(i);
-//			 solrQuery += "namedentities:\"" + neList.get(i).getText() +
-//			 "\" ";
 			if(ner.getSynonyms()!=null)
 			{
 				ArrayList<Synonym> synList = Utils.fromFSListToCollection(

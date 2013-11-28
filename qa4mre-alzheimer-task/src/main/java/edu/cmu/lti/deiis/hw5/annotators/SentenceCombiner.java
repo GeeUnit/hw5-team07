@@ -48,7 +48,7 @@ public class SentenceCombiner extends JCasAnnotator_ImplBase {
 
 				FSList fsNounList = sent.getPhraseList();
 				ArrayList<NounPhrase> nounPhrases =new ArrayList<NounPhrase>();
-				System.out.print(nounPhrases.size());
+
 				if(fsNounList!=null)
 				{
 					nounPhrases = Utils
@@ -88,7 +88,7 @@ public class SentenceCombiner extends JCasAnnotator_ImplBase {
 						}
 					}		
 				}	
-				System.out.println("=======>"+nounPhrases.size());
+
 				newNPLists.add(nounPhrases);
 				newNERLists.add(NEs);
 			}
