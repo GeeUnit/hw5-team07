@@ -55,45 +55,56 @@ public class SynonymAnnotator extends JCasAnnotator_ImplBase {
 		for (int i = 0; i < sentList.size(); i++) {
 			Sentence sentence = sentList.get(i);
 
-			ArrayList<NounPhrase> phraseList = Utils.fromFSListToCollection(
-					sentence.getPhraseList(), NounPhrase.class);
-			ArrayList<NER> nerList = Utils.fromFSListToCollection(
-					sentence.getNerList(), NER.class);
-			for (int j = 0; j < phraseList.size(); j++) {
-				NounPhrase phrase = phraseList.get(j);
-				LinkedList<String>synPhrases=getSynonym(phrase.getText());
-				ArrayList<Synonym>synList=new ArrayList<Synonym>();
-				for(int k=0;k<synPhrases.size();k++){
-					String syn=synPhrases.get(k);
-					Synonym synonym=new Synonym(jCas);
-					synonym.setText(syn);
-					synonym.setWeight(1.0);
-					synonym.setSource("gigaword-pubmed");
-					synonym.addToIndexes();
-					synList.add(synonym);					
-				}
-				FSList fsSynList=Utils.fromCollectionToFSList(jCas, synList);
-				phrase.setSynonyms(fsSynList);
-				phraseList.set(j, phrase);
-			}
-
-			for (int j = 0; j < nerList.size(); j++) {
-				NER ner = nerList.get(j);
-				LinkedList<String>synNers=getSynonym(ner.getText());
-				ArrayList<Synonym>synList=new ArrayList<Synonym>();
-				for(int k=0;k<synNers.size();k++){
-					String syn=synNers.get(k);
-					Synonym synonym=new Synonym(jCas);
-					synonym.setText(syn);
-					synonym.setWeight(1.0);
-					synonym.setSource("gigaword-pubmed");
-					synonym.addToIndexes();
-					synList.add(synonym);
-				}
-				FSList fsSynList=Utils.fromCollectionToFSList(jCas, synList);
-				ner.setSynonyms(fsSynList);
-				nerList.set(j, ner);
+			ArrayList<NounPhrase> phraseList=null;
+			if (sentence.getPhraseList()!=null)
+			{
+				phraseList = Utils.fromFSListToCollection(
+						sentence.getPhraseList(), NounPhrase.class);
 				
+				for (int j = 0; j < phraseList.size(); j++) {
+					NounPhrase phrase = phraseList.get(j);
+					LinkedList<String>synPhrases=getSynonym(phrase.getText());
+					ArrayList<Synonym>synList=new ArrayList<Synonym>();
+					for(int k=0;k<synPhrases.size();k++){
+						String syn=synPhrases.get(k);
+						Synonym synonym=new Synonym(jCas);
+						synonym.setText(syn);
+						synonym.setWeight(1.0);
+						synonym.setSource("gigaword-pubmed");
+						synonym.addToIndexes();
+						synList.add(synonym);					
+					}
+					FSList fsSynList=Utils.fromCollectionToFSList(jCas, synList);
+					phrase.setSynonyms(fsSynList);
+					phraseList.set(j, phrase);
+				}
+			}
+			
+			ArrayList<NER> nerList=null;
+			
+			if(sentence.getNerList()!=null)
+			{
+				 nerList = Utils.fromFSListToCollection(
+					sentence.getNerList(), NER.class);
+			
+				for (int j = 0; j < nerList.size(); j++) {
+					NER ner = nerList.get(j);
+					LinkedList<String>synNers=getSynonym(ner.getText());
+					ArrayList<Synonym>synList=new ArrayList<Synonym>();
+					for(int k=0;k<synNers.size();k++){
+						String syn=synNers.get(k);
+						Synonym synonym=new Synonym(jCas);
+						synonym.setText(syn);
+						synonym.setWeight(1.0);
+						synonym.setSource("gigaword-pubmed");
+						synonym.addToIndexes();
+						synList.add(synonym);
+					}
+					FSList fsSynList=Utils.fromCollectionToFSList(jCas, synList);
+					ner.setSynonyms(fsSynList);
+					nerList.set(j, ner);
+					
+				}
 			}
 			FSList fsPhraseList = Utils.fromCollectionToFSList(jCas, phraseList);			
 			FSList fsNERList = Utils.createNERList(jCas, nerList);
