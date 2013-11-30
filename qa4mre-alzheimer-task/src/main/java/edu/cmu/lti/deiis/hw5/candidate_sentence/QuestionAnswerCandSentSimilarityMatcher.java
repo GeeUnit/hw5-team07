@@ -127,11 +127,12 @@ public class QuestionAnswerCandSentSimilarityMatcher  extends JCasAnnotator_Impl
 		ArrayList<NounPhrase>nounPhrasesAnswer=Utils.fromFSListToCollection(answer.getNounPhraseList(), NounPhrase.class);
 		
 		for(int i=0;i<nounPhrases.size();i++){
-			solrQuery+="nounphrases:\""+nounPhrases.get(i).getText()+"\" ";			
+			solrQuery+="nounphrases:\""+nounPhrases.get(i).getText()+"\" ";	
 		}
 		
 		for(int i=0;i<nounPhrasesAnswer.size();i++){
-      solrQuery+="nounphrases:\""+nounPhrasesAnswer.get(i).getText()+"\" ";     
+//      solrQuery+="nounphrases:\""+nounPhrasesAnswer.get(i).getText()+"\" ";  
+		  solrQuery+="nounphrases:\""+nounPhrasesAnswer.get(i).getText()+"\"^3";
     }
 		
 		ArrayList<NER>neList=Utils.fromFSListToCollection(question.getNerList(), NER.class);
@@ -142,7 +143,8 @@ public class QuestionAnswerCandSentSimilarityMatcher  extends JCasAnnotator_Impl
 		}
 		
 		for(int i=0;i<neListAnswer.size();i++){
-      solrQuery+="namedentities:\""+neListAnswer.get(i).getText()+"\" ";
+//      solrQuery+="namedentities:\""+neListAnswer.get(i).getText()+"\" ";
+      solrQuery+="namedentities:\""+neListAnswer.get(i).getText()+"\"^3";
     }
 		solrQuery=solrQuery.trim();
 		
