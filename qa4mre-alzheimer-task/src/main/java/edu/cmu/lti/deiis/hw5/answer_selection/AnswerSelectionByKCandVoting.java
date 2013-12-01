@@ -31,12 +31,12 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
   // The minimum score from voting/ranking an answer must have before it can be considered
   private static final double MIN_SCORE_THRESHOLD = 2;
 
-  int K_CANDIDATES = 5;
+  int K_CANDIDATES = 10;
 
   @Override
   public void initialize(UimaContext context) throws ResourceInitializationException {
     super.initialize(context);
-    K_CANDIDATES = (Integer) context.getConfigParameterValue("K_CANDIDATES");
+    //K_CANDIDATES = (Integer) context.getConfigParameterValue("K_CANDIDATES");
   }
 
   @Override
@@ -67,7 +67,7 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
       for (int c = 0; c < topK; c++) {
 
         CandidateSentence candSent = candSentList.get(c);
-
+        //System.out.println(candSent);
         // Vote for best answer according to CandidateSentence
         singleVote(candSent, hshAnswer);
         //aggregateScoreVote(candSent, hshAnswer);
@@ -144,7 +144,7 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
         hshAnswer.put(currentAnswer, existingVal
                 + (candSent.getRelevanceScore() * (BORDA_VOTES - j)));
       else
-        hshAnswer.put(currentAnswer, existingVal + (BORDA_VOTES - j));
+        hshAnswer.put(currentAnswer, existingVal + (candSent.getRelevanceScore() * (BORDA_VOTES - j)));
     }
 
   }
@@ -182,7 +182,7 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
     if (WEIGHT_BY_RELEVANCE_VALUE)
       hshAnswer.put(selectedAnswer, existingVal + (candSent.getRelevanceScore() * 1.0));
     else
-      hshAnswer.put(selectedAnswer, existingVal + 1.0);
+      hshAnswer.put(selectedAnswer, existingVal + 1);
   }
 
   /**
@@ -211,7 +211,7 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
       if (WEIGHT_BY_RELEVANCE_VALUE)
         hshAnswer.put(answer, existingVal + (candSent.getRelevanceScore() * totalScore));
       else
-        hshAnswer.put(answer, existingVal + totalScore);
+        hshAnswer.put(answer, existingVal + (candSent.getRelevanceScore() * totalScore));
 
     }
 

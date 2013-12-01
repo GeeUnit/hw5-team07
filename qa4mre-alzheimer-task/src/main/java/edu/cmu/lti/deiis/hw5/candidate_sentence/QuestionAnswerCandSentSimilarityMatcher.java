@@ -1,6 +1,7 @@
 package edu.cmu.lti.deiis.hw5.candidate_sentence;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrServerException;
@@ -32,7 +33,7 @@ public class QuestionAnswerCandSentSimilarityMatcher  extends JCasAnnotator_Impl
 	//IndexSchema indexSchema;
 	String coreName;
 	String schemaName;
-	int TOP_SEARCH_RESULTS=2;
+	int TOP_SEARCH_RESULTS=10;
 
 	@Override
 	public void initialize(UimaContext context)
@@ -41,7 +42,7 @@ public class QuestionAnswerCandSentSimilarityMatcher  extends JCasAnnotator_Impl
 		serverUrl = (String) context.getConfigParameterValue("SOLR_SERVER_URL");
 		coreName = (String) context.getConfigParameterValue("SOLR_CORE");
 		schemaName = (String) context.getConfigParameterValue("SCHEMA_NAME");
-		TOP_SEARCH_RESULTS = (Integer) context.getConfigParameterValue("TOP_SEARCH_RESULTS");
+		//TOP_SEARCH_RESULTS = (Integer) context.getConfigParameterValue("TOP_SEARCH_RESULTS");
 		try {
 			this.solrWrapper = new SolrWrapper(serverUrl+coreName);
 		} catch (Exception e) {
@@ -61,9 +62,11 @@ public class QuestionAnswerCandSentSimilarityMatcher  extends JCasAnnotator_Impl
 		for(int i=0;i<qaSet.size();i++){			
 			Question question=qaSet.get(i).getQuestion();
 			FSList answerFSlist = qaSet.get(i).getAnswerList();
-			ArrayList answerlist =Utils.fromFSListToCollection(answerFSlist, Answer.class);
+			ArrayList<Answer> answerlist =Utils.fromFSListToCollection(answerFSlist, Answer.class);
 			ArrayList<CandidateSentence>candidateSentList=new ArrayList<CandidateSentence>();
 			
+			//System.out.println("Let me know the length of answerlist --->  " + answerlist.size());
+			for (int z = 0; z < 5; z++) {
 			for (int k=0;k<answerlist.size();k++){
   //			System.out.println("========================================================");
   //			System.out.println("Question: "+question.getText());
@@ -76,29 +79,31 @@ public class QuestionAnswerCandSentSimilarityMatcher  extends JCasAnnotator_Impl
   			SolrQuery solrQuery=new SolrQuery();
   			solrQuery.add("fq", "docid:"+testDocId);
   			solrQuery.add("q",searchQuery);
-  //			System.out.println(searchQuery);
+  			System.out.println(searchQuery);////////////////
   			solrQuery.add("rows",String.valueOf(TOP_SEARCH_RESULTS));
   			solrQuery.setFields("*", "score");
   			try {
   				SolrDocumentList results=solrWrapper.runQuery(solrQuery, TOP_SEARCH_RESULTS);
   				for(int j=0;j<results.size();j++){
-  					SolrDocument doc=results.get(j);					
-  					String sentId=doc.get("id").toString();
-  					String docId=doc.get("docid").toString();
-  					if(!testDocId.equals(docId)){
-  						continue;
-  					}
-  					String sentIdx=sentId.replace(docId,"").replace("_", "").trim();
-  					int idx=Integer.parseInt(sentIdx);
-  					Sentence annSentence=sentenceList.get(idx);
-  					
-  					String sentence=doc.get("text").toString();
-  					double relScore=Double.parseDouble(doc.get("score").toString());
-  					CandidateSentence candSent=new CandidateSentence(aJCas);
-  					candSent.setSentence(annSentence);
-  					candSent.setRelevanceScore(relScore);
-  					candidateSentList.add(candSent);
-  //					System.out.println(relScore+"\t"+sentence);
+  				  if (j == z) {
+  				    SolrDocument doc=results.get(j);          
+              String sentId=doc.get("id").toString();
+              String docId=doc.get("docid").toString();
+              if(!testDocId.equals(docId)){
+                continue;
+              }
+              String sentIdx=sentId.replace(docId,"").replace("_", "").trim();
+              int idx=Integer.parseInt(sentIdx);
+              Sentence annSentence=sentenceList.get(idx);
+              
+              String sentence=doc.get("text").toString();
+              double relScore=Double.parseDouble(doc.get("score").toString());
+              CandidateSentence candSent=new CandidateSentence(aJCas);
+              candSent.setSentence(annSentence);
+              candSent.setRelevanceScore(relScore);
+              candidateSentList.add(candSent);
+              System.out.println(relScore+"\t"+sentence);
+  				  }
   				}
   				
   			
@@ -107,6 +112,9 @@ public class QuestionAnswerCandSentSimilarityMatcher  extends JCasAnnotator_Impl
   				e.printStackTrace();
   			}
 			}
+			}
+	
+			  
   			FSList fsCandidateSentList=Utils.fromCollectionToFSList(aJCas, candidateSentList);
         fsCandidateSentList.addToIndexes();
         qaSet.get(i).setCandidateSentenceList(fsCandidateSentList);
@@ -118,6 +126,11 @@ public class QuestionAnswerCandSentSimilarityMatcher  extends JCasAnnotator_Impl
 		
 	
 		}	
+	}
+	public void swap (ArrayList<CandidateSentence> list, int a, int b){
+	  Object objA = list.get(a);
+	  list.set(a, list.get(b));
+	  list.set(b, (CandidateSentence) objA);
 	}
 
 	public String formSolrQuery(Question question, Answer answer){
