@@ -31,7 +31,7 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
   // The minimum score from voting/ranking an answer must have before it can be considered
   private static final double MIN_SCORE_THRESHOLD = 2;
 
-  int K_CANDIDATES = 10;
+  int K_CANDIDATES = 15;
 
   @Override
   public void initialize(UimaContext context) throws ResourceInitializationException {

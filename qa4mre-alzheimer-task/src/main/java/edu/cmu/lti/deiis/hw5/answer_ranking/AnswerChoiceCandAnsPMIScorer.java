@@ -29,7 +29,7 @@ public class AnswerChoiceCandAnsPMIScorer extends JCasAnnotator_ImplBase {
 
 	private SolrWrapper solrWrapper;
 	HashSet<String> hshStopWords = new HashSet<String>();
-	int K_CANDIDATES = 10;
+	int K_CANDIDATES = 15;
 	
 	@Override
 	public void initialize(UimaContext context)
