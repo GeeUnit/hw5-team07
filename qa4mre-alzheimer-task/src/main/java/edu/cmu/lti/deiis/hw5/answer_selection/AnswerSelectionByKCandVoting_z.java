@@ -20,7 +20,7 @@ import edu.cmu.lti.qalab.types.QuestionAnswerSet;
 import edu.cmu.lti.qalab.types.TestDocument;
 import edu.cmu.lti.qalab.utils.Utils;
 
-public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
+public class AnswerSelectionByKCandVoting_z extends JCasAnnotator_ImplBase {
 
   // Number of votes each CandidateSentence receives with the Borda voting system
   private static final int BORDA_VOTES = 2;

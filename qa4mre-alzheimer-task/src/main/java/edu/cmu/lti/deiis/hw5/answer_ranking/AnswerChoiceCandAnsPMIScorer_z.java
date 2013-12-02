@@ -25,7 +25,7 @@ import edu.cmu.lti.qalab.types.QuestionAnswerSet;
 import edu.cmu.lti.qalab.types.TestDocument;
 import edu.cmu.lti.qalab.utils.Utils;
 
-public class AnswerChoiceCandAnsPMIScorer extends JCasAnnotator_ImplBase {
+public class AnswerChoiceCandAnsPMIScorer_z extends JCasAnnotator_ImplBase {
 
 	private SolrWrapper solrWrapper;
 	HashSet<String> hshStopWords = new HashSet<String>();

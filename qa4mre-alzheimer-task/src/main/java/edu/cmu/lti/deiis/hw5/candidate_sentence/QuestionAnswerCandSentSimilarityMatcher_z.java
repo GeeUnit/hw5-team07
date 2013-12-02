@@ -26,7 +26,7 @@ import edu.cmu.lti.qalab.types.TestDocument;
 import edu.cmu.lti.qalab.types.Token;
 import edu.cmu.lti.qalab.utils.Utils;
 
-public class QuestionAnswerCandSentSimilarityMatcher  extends JCasAnnotator_ImplBase{
+public class QuestionAnswerCandSentSimilarityMatcher_z  extends JCasAnnotator_ImplBase{
 
 	SolrWrapper solrWrapper=null;
 	String serverUrl;
@@ -48,8 +48,6 @@ public class QuestionAnswerCandSentSimilarityMatcher  extends JCasAnnotator_Impl
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-		
 	}
 	
 	@Override
@@ -79,7 +77,7 @@ public class QuestionAnswerCandSentSimilarityMatcher  extends JCasAnnotator_Impl
   			SolrQuery solrQuery=new SolrQuery();
   			solrQuery.add("fq", "docid:"+testDocId);
   			solrQuery.add("q",searchQuery);
-  			System.out.println(searchQuery);////////////////
+  			//System.out.println(searchQuery);////////////////
   			solrQuery.add("rows",String.valueOf(TOP_SEARCH_RESULTS));
   			solrQuery.setFields("*", "score");
   			try {
@@ -102,7 +100,7 @@ public class QuestionAnswerCandSentSimilarityMatcher  extends JCasAnnotator_Impl
               candSent.setSentence(annSentence);
               candSent.setRelevanceScore(relScore);
               candidateSentList.add(candSent);
-              System.out.println(relScore+"\t"+sentence);
+              //System.out.println(relScore+"\t"+sentence);
   				  }
   				}
   				
