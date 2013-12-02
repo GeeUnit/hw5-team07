@@ -114,8 +114,8 @@ public class AnswerChoiceCandAnsPMIScorer extends JCasAnnotator_ImplBase {
 
 					}
 
-					System.out.println(choiceList.get(j).getText() + "\t"
-							+ score1 + "\t" + ((score1)));
+					//System.out.println(choiceList.get(j).getText() + "\t"
+						//	+ score1 + "\t" + ((score1)));
 
 					CandidateAnswer candAnswer=null;
 					if(candSent.getCandAnswerList()==null){
@@ -134,8 +134,6 @@ public class AnswerChoiceCandAnsPMIScorer extends JCasAnnotator_ImplBase {
 				candSentList.set(c, candSent);
 			}
 
-			System.out
-					.println("================================================where I am in charge!!!");
 			FSList fsCandSentList=Utils.fromCollectionToFSList(aJCas, candSentList);
 			qaSet.get(i).setCandidateSentenceList(fsCandSentList);
 

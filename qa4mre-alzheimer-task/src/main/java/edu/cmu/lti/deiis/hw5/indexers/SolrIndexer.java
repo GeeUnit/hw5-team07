@@ -77,35 +77,48 @@ public class SolrIndexer extends JCasAnnotator_ImplBase {
 				indexMap.put("text", sentText);
 
 				FSList fsNounList = sent.getPhraseList();
-				ArrayList<NounPhrase> nounPhrases = Utils
-						.fromFSListToCollection(fsNounList, NounPhrase.class);
-				ArrayList<String> nnList = new ArrayList<String>();
-				for (int j = 0; j < nounPhrases.size(); j++) {
-					NounPhrase nnPhr=nounPhrases.get(j);
-					nnList.add(nounPhrases.get(j).getText());
-					ArrayList<Synonym>synList=Utils.fromFSListToCollection(nnPhr.getSynonyms(),Synonym.class);
-					for(int k=0;k<synList.size();k++){
-						synonymList.add(synList.get(k).getText());
+				if(fsNounList!=null)
+				{
+					
+					ArrayList<NounPhrase> nounPhrases = Utils
+							.fromFSListToCollection(fsNounList, NounPhrase.class);
+					ArrayList<String> nnList = new ArrayList<String>();
+					for (int j = 0; j < nounPhrases.size(); j++) {
+						NounPhrase nnPhr=nounPhrases.get(j);
+						nnList.add(nounPhrases.get(j).getText());
+						if(nnPhr.getSynonyms()!=null)
+						{
+							ArrayList<Synonym>synList=Utils.fromFSListToCollection(nnPhr.getSynonyms(),Synonym.class);
+							for(int k=0;k<synList.size();k++){
+								synonymList.add(synList.get(k).getText());
+							}
+						}
 					}
+					indexMap.put("nounphrases", nnList);
 				}
-
-				indexMap.put("nounphrases", nnList);
+				
 
 				FSList fsNEList = sent.getNerList();
-				ArrayList<NER> namedEntities = Utils.fromFSListToCollection(
-						fsNEList, NER.class);
-				ArrayList<String> neList = new ArrayList<String>();
-				for (int j = 0; j < namedEntities.size(); j++) {
-					NER ner=namedEntities.get(j);
-					neList.add(namedEntities.get(j).getText());
-					ArrayList<Synonym>synList=Utils.fromFSListToCollection(ner.getSynonyms(),Synonym.class);
-					for(int k=0;k<synList.size();k++){
-						synonymList.add(synList.get(k).getText());
+				if(fsNEList!=null)
+				{
+					ArrayList<NER> namedEntities = Utils.fromFSListToCollection(
+							fsNEList, NER.class);
+					ArrayList<String> neList = new ArrayList<String>();
+					for (int j = 0; j < namedEntities.size(); j++) {
+						NER ner=namedEntities.get(j);
+						neList.add(namedEntities.get(j).getText());
+						if(ner.getSynonyms()!=null)
+						{
+							ArrayList<Synonym>synList=Utils.fromFSListToCollection(ner.getSynonyms(),Synonym.class);
+							for(int k=0;k<synList.size();k++){
+								synonymList.add(synList.get(k).getText());
+							}
+						}
 					}
+					indexMap.put("namedentities", neList);
+					indexMap.put("synonyms",synonymList);
 				}
-				indexMap.put("namedentities", neList);
-				indexMap.put("synonyms",synonymList);
-
+				
 				FSList fsDependencies = sent.getDependencyList();
 				if (fsDependencies != null) {
 				  ArrayList<Dependency> dependencies = Utils
@@ -136,7 +149,6 @@ public class SolrIndexer extends JCasAnnotator_ImplBase {
 			}
 
 		} catch (Exception e) {
-			System.out.println(testDoc);
 			e.printStackTrace();
 		}
 
