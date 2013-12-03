@@ -106,10 +106,9 @@ public class CooccurrencePruner extends AbstractPruner {
 					if(answer.getIsCorrect())
 					{
 //						System.out.print(qToken.getText());
-						System.out.print("===========================>");
-						System.out.print("@"+maxSOS);
+						System.out.print("CORRECT ===========================>");
 					}
-					System.out.println(answer.getText());
+					System.out.println("PRUNED BASED ON COOCURRENCE: "+answer.getText());
 					pruned++;
 				}
 				

@@ -1,6 +1,7 @@
 package edu.cmu.lti.deiis.hw5.answer_ranking;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Set;
 
 import org.apache.uima.UimaContext;
@@ -23,6 +24,19 @@ public abstract class AbstractPruner extends JCasAnnotator_ImplBase {
 	public void initialize(UimaContext context)
 			throws ResourceInitializationException {
 		super.initialize(context);
+		this.nounTags=new HashSet<String>();
+		this.nounTags.add("NN");
+		this.nounTags.add("NNS");
+		this.nounTags.add("NNP");
+		this.nounTags.add("NNPS");
+		this.nounTags.add("PRP");
+		this.nounTags.add("PRP$");
+		
+		this.questionTags=new HashSet<String>();
+		this.questionTags.add("WDT");
+		this.questionTags.add("WP");
+		this.questionTags.add("WP$");
+		this.questionTags.add("WRB");
 	}
 
 	@Override

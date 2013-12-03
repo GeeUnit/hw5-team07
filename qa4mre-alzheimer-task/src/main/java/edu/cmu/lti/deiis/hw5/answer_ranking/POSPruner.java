@@ -38,7 +38,11 @@ public class POSPruner extends AbstractPruner {
 			if(questionPos.contains("*") || questionPos.contains(expectedPos))
 			{
 				prunedAnswerList.add(answer);
-			}	
+			}
+			else
+			{
+				System.out.println("PRUNED BASED ON POS: "+answer.getText());
+			}
 		}
 		return prunedAnswerList;
 	}
