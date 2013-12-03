@@ -25,11 +25,11 @@ import edu.cmu.lti.qalab.types.QuestionAnswerSet;
 import edu.cmu.lti.qalab.types.TestDocument;
 import edu.cmu.lti.qalab.utils.Utils;
 
-public class AnswerChoiceCandAnsPMIScorer extends JCasAnnotator_ImplBase {
+public class AnswerChoiceCandAnsPMIScorer_z extends JCasAnnotator_ImplBase {
 
 	private SolrWrapper solrWrapper;
 	HashSet<String> hshStopWords = new HashSet<String>();
-	int K_CANDIDATES=5;
+	int K_CANDIDATES = 15;
 	
 	@Override
 	public void initialize(UimaContext context)
@@ -37,7 +37,7 @@ public class AnswerChoiceCandAnsPMIScorer extends JCasAnnotator_ImplBase {
 		super.initialize(context);
 		String serverUrl = (String) context
 				.getConfigParameterValue("SOLR_SERVER_URL");
-		K_CANDIDATES=(Integer)context.getConfigParameterValue("K_CANDIDATES");
+		//K_CANDIDATES=(Integer)context.getConfigParameterValue("K_CANDIDATES");
 		
 		try {
 			this.solrWrapper = new SolrWrapper(serverUrl);
@@ -68,6 +68,7 @@ public class AnswerChoiceCandAnsPMIScorer extends JCasAnnotator_ImplBase {
 							CandidateSentence.class);
 
 			int topK = Math.min(K_CANDIDATES, candSentList.size());
+			//System.out.println("Let me see topK value:  ------>  " + topK);
 			for (int c = 0; c < topK; c++) {
 
 				CandidateSentence candSent = candSentList.get(c);
@@ -95,8 +96,8 @@ public class AnswerChoiceCandAnsPMIScorer extends JCasAnnotator_ImplBase {
 
 					for (int k = 0; k < candSentNouns.size(); k++) {
 						try {
-							score1 += scoreCoOccurInSameDoc(candSentNouns
-									.get(k).getText(), choiceList.get(j));
+							score1 += (1 * scoreCoOccurInSameDoc(candSentNouns
+									.get(k).getText(), choiceList.get(j)));
 
 						} catch (Exception e) {
 							e.printStackTrace();
@@ -106,16 +107,16 @@ public class AnswerChoiceCandAnsPMIScorer extends JCasAnnotator_ImplBase {
 					for (int k = 0; k < candSentNers.size(); k++) {
 
 						try {
-							score1 += scoreCoOccurInSameDoc(candSentNers.get(k)
-									.getText(), choiceList.get(j));
+							score1 += (2 * scoreCoOccurInSameDoc(candSentNers.get(k)
+									.getText(), choiceList.get(j)));
 						} catch (Exception e) {
 							e.printStackTrace();
 						}
 
 					}
 
-					//System.out.println(choiceList.get(j).getText() + "\t"
-						//	+ score1 + "\t" + ((score1)));
+					System.out.println(choiceList.get(j).getText() + "\t"
+							+ score1 + "\t" + ((score1)));
 
 					CandidateAnswer candAnswer=null;
 					if(candSent.getCandAnswerList()==null){

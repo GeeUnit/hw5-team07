@@ -2,43 +2,68 @@
 <analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
   <primitive>true</primitive>
-  <annotatorImplementationName>edu.cmu.lti.deiis.hw5.answer_ranking.AnswerChoiceCandAnsPMIScorer</annotatorImplementationName>
+  <annotatorImplementationName>edu.cmu.lti.deiis.hw5.candidate_sentence.QuestionAllAnswersCandSentSimilarityMatcher</annotatorImplementationName>
   <analysisEngineMetaData>
-    <name>AnswerChoiceCandAnsPMIScorerDescriptor</name>
+    <name>QuestionCandSentSimilarityMatcherDescriptor</name>
     <description/>
     <version>1.0</version>
     <vendor/>
     <configurationParameters>
       <configurationParameter>
         <name>SOLR_SERVER_URL</name>
-        <description>background solr url</description>
+        <description>solr server url</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>false</mandatory>
+      </configurationParameter>    
+      <configurationParameter>
+        <name>SOLR_CORE</name>
+        <description>noise score</description>
         <type>String</type>
         <multiValued>false</multiValued>
         <mandatory>false</mandatory>
       </configurationParameter>
       <configurationParameter>
-        <name>K_CANDIDATES</name>
-        <description>K candidates</description>
+        <name>SCHEMA_NAME</name>
+        <description>schema name</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>false</mandatory>
+      </configurationParameter>
+      <configurationParameter>
+        <name>TOP_SEARCH_RESULTS</name>
+        <description>top search results</description>
         <type>Integer</type>
         <multiValued>false</multiValued>
         <mandatory>false</mandatory>
       </configurationParameter>
-      
     </configurationParameters>
     <configurationParameterSettings>
       <nameValuePair>
         <name>SOLR_SERVER_URL</name>
         <value>
-          <string>http://peace.isri.cs.cmu.edu:9080/solr/genomics-simple/</string>
+          <string>http://localhost:8983/solr/</string>
         </value>
       </nameValuePair>
       <nameValuePair>
-        <name>K_CANDIDATES</name>
+        <name>SOLR_CORE</name>
         <value>
-          <integer>5</integer>
+          <string>qa4mre</string>
         </value>
       </nameValuePair>
-    </configurationParameterSettings>     
+      <nameValuePair>
+        <name>SCHEMA_NAME</name>
+        <value>
+          <string>example</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>TOP_SEARCH_RESULTS</name>
+        <value>
+          <integer>10</integer>
+        </value>
+      </nameValuePair>
+    </configurationParameterSettings>
     <typeSystemDescription/>
     <typePriorities/>
     <fsIndexCollection/>
