@@ -1,10 +1,9 @@
 package edu.cmu.lti.deiis.hw5.answer_selection;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Set;
 
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_component.JCasAnnotator_ImplBase;
@@ -22,14 +21,14 @@ import edu.cmu.lti.qalab.utils.Utils;
 
 public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
 
-  // Number of votes each CandidateSentence receives with the Borda voting system
-  private static final int BORDA_VOTES = 2;
-
   // Indicates if scoring methods should weight by candidate sentence relevance value if applicable
   private static final boolean WEIGHT_BY_RELEVANCE_VALUE = false;
 
   // The minimum score from voting/ranking an answer must have before it can be considered
   private static final double MIN_SCORE_THRESHOLD = 2;
+
+  // The minimum score an answer needs to recieve a vote
+  private static final double MIN_TO_VOTE_THRESHOLD = 0;
 
   int K_CANDIDATES = 5;
 
@@ -70,8 +69,6 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
 
         // Vote for best answer according to CandidateSentence
         singleVote(candSent, hshAnswer);
-        //aggregateScoreVote(candSent, hshAnswer);
-        //bordaVote(candSent, hshAnswer);
 
       }
 
@@ -119,37 +116,6 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
   }
 
   /**
-   * In the Borda voting system, each CandidateSentence can vote for their top N answers with rank.
-   * For example, if N = 3, a CandidateSentence would give its rank one answer three points, its
-   * rank two answer two points, and a rank three answer one point.
-   * 
-   * @param candSent
-   *          The CandidateSentence voting for a best answer
-   * @param hshAnswer
-   *          The map of answer text to current borda score
-   */
-  public void bordaVote(CandidateSentence candSent, HashMap<String, Double> hshAnswer) {
-    ArrayList<CandidateAnswer> candAnswerList = Utils.fromFSListToCollection(
-            candSent.getCandAnswerList(), CandidateAnswer.class);
-    Collections.sort(candAnswerList, new scoreComparator());
-    String currentAnswer = "";
-    for (int j = 0; j < BORDA_VOTES; j++) {
-      currentAnswer = candAnswerList.get(j).getText();
-
-      Double existingVal = hshAnswer.get(currentAnswer);
-      if (existingVal == null) {
-        existingVal = new Double(0.0);
-      }
-      if (WEIGHT_BY_RELEVANCE_VALUE)
-        hshAnswer.put(currentAnswer, existingVal
-                + (candSent.getRelevanceScore() * (BORDA_VOTES - j)));
-      else
-        hshAnswer.put(currentAnswer, existingVal + (BORDA_VOTES - j));
-    }
-
-  }
-
-  /**
    * Populates hshAnswer with a vote for the CandidateAnswer with the highest score in the list.
    * 
    * @param candSent
@@ -157,11 +123,11 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
    * @param hshAnswer
    *          The map of answer text to current vote count
    */
-  public void singleVote(CandidateSentence candSent, HashMap<String, Double> hshAnswer) {
+  private void singleVote(CandidateSentence candSent, HashMap<String, Double> hshAnswer) {
     ArrayList<CandidateAnswer> candAnswerList = Utils.fromFSListToCollection(
             candSent.getCandAnswerList(), CandidateAnswer.class);
     String selectedAnswer = "";
-    double maxScore = Double.NEGATIVE_INFINITY;
+    double maxScore = MIN_TO_VOTE_THRESHOLD;
     for (int j = 0; j < candAnswerList.size(); j++) {
 
       CandidateAnswer candAns = candAnswerList.get(j);
@@ -174,47 +140,18 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
         selectedAnswer = answer;
       }
     }
+    
     Double existingVal = hshAnswer.get(selectedAnswer);
     if (existingVal == null) {
       existingVal = new Double(0.0);
     }
 
-    if (WEIGHT_BY_RELEVANCE_VALUE)
-      hshAnswer.put(selectedAnswer, existingVal + (candSent.getRelevanceScore() * 1.0));
-    else
-      hshAnswer.put(selectedAnswer, existingVal + 1.0);
-  }
-
-  /**
-   * In the aggregate scoring system, a CandidateSentence adds its confidence for each
-   * CandidateAnswer to hshAnswer
-   * 
-   * @param candSent
-   *          The CandidateSentence voting for a best answer
-   * @param hshAnswer
-   *          The map of answer text to current aggregate count
-   */
-  public void aggregateScoreVote(CandidateSentence candSent, HashMap<String, Double> hshAnswer) {
-    ArrayList<CandidateAnswer> candAnswerList = Utils.fromFSListToCollection(
-            candSent.getCandAnswerList(), CandidateAnswer.class);
-
-    for (int j = 0; j < candAnswerList.size(); j++) {
-
-      CandidateAnswer candAns = candAnswerList.get(j);
-      String answer = candAns.getText();
-      double totalScore = getCandidateAnswerScore(candAns);
-
-      Double existingVal = hshAnswer.get(answer);
-      if (existingVal == null) {
-        existingVal = new Double(0.0);
-      }
+    if(selectedAnswer != null) {
       if (WEIGHT_BY_RELEVANCE_VALUE)
-        hshAnswer.put(answer, existingVal + (candSent.getRelevanceScore() * totalScore));
+        hshAnswer.put(selectedAnswer, existingVal + (candSent.getRelevanceScore() * 1.0));
       else
-        hshAnswer.put(answer, existingVal + totalScore);
-
+        hshAnswer.put(selectedAnswer, existingVal + 1.0);
     }
-
   }
 
   /**
@@ -225,7 +162,7 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
    * @return
    * @throws Exception
    */
-  public String findBestChoice(HashMap<String, Double> hshAnswer) throws Exception {
+  private String findBestChoice(HashMap<String, Double> hshAnswer) throws Exception {
 
     Iterator<String> it = hshAnswer.keySet().iterator();
     String bestAns = null;
@@ -241,8 +178,27 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
       }
 
     }
+    // Assign answer to 'all of the above' answer if no other answer
+    if (bestAns == null)
+      bestAns = getAllOfTheAbove(hshAnswer.keySet());
 
     return bestAns;
+  }
+
+  /**
+   * Checks if one of the answers is 'all of the above'
+   * 
+   * @param set
+   *          The set of answers
+   * @return The 'All of the above' answer if found, else null.
+   */
+  private String getAllOfTheAbove(Set<String> answerSet) {
+    for (String answer : answerSet) {
+      if (answer.toLowerCase().contains("none") && answer.toLowerCase().contains("above"))
+        return answer;
+    }
+
+    return null;
   }
 
   /*
@@ -250,23 +206,6 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
    */
   private double getCandidateAnswerScore(CandidateAnswer candAns) {
     return candAns.getSimilarityScore() + candAns.getSynonymScore() + candAns.getPMIScore();
-  }
-
-  /*
-   * Compares CandidateAnswers based on getCandidateAnswerScore()
-   */
-  private class scoreComparator implements Comparator<CandidateAnswer> {
-    public int compare(CandidateAnswer a, CandidateAnswer b) {
-      double aScore = getCandidateAnswerScore(a);
-      double bScore = getCandidateAnswerScore(b);
-
-      if (aScore > bScore)
-        return 1;
-      if (aScore < bScore)
-        return -1;
-
-      return 0;
-    }
   }
 
 }
