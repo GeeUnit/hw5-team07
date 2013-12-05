@@ -27,6 +27,9 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
   // The minimum score from voting/ranking an answer must have before it can be considered
   private static final double MIN_SCORE_THRESHOLD = 2;
 
+  // The minimum score an answer needs to recieve a vote
+  private static final double MIN_TO_VOTE_THRESHOLD = 0;
+
   int K_CANDIDATES = 5;
 
   @Override
@@ -124,7 +127,7 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
     ArrayList<CandidateAnswer> candAnswerList = Utils.fromFSListToCollection(
             candSent.getCandAnswerList(), CandidateAnswer.class);
     String selectedAnswer = "";
-    double maxScore = Double.NEGATIVE_INFINITY;
+    double maxScore = MIN_TO_VOTE_THRESHOLD;
     for (int j = 0; j < candAnswerList.size(); j++) {
 
       CandidateAnswer candAns = candAnswerList.get(j);
@@ -137,15 +140,18 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
         selectedAnswer = answer;
       }
     }
+    
     Double existingVal = hshAnswer.get(selectedAnswer);
     if (existingVal == null) {
       existingVal = new Double(0.0);
     }
 
-    if (WEIGHT_BY_RELEVANCE_VALUE)
-      hshAnswer.put(selectedAnswer, existingVal + (candSent.getRelevanceScore() * 1.0));
-    else
-      hshAnswer.put(selectedAnswer, existingVal + 1.0);
+    if(selectedAnswer != null) {
+      if (WEIGHT_BY_RELEVANCE_VALUE)
+        hshAnswer.put(selectedAnswer, existingVal + (candSent.getRelevanceScore() * 1.0));
+      else
+        hshAnswer.put(selectedAnswer, existingVal + 1.0);
+    }
   }
 
   /**
@@ -172,9 +178,9 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
       }
 
     }
-    // All of the above logic
+    // Assign answer to 'all of the above' answer if no other answer
     if (bestAns == null)
-      bestAns = containsAllOfTheAbove(hshAnswer.keySet());
+      bestAns = getAllOfTheAbove(hshAnswer.keySet());
 
     return bestAns;
   }
@@ -186,7 +192,7 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
    *          The set of answers
    * @return The 'All of the above' answer if found, else null.
    */
-  private String containsAllOfTheAbove(Set<String> answerSet) {
+  private String getAllOfTheAbove(Set<String> answerSet) {
     for (String answer : answerSet) {
       if (answer.toLowerCase().contains("none") && answer.toLowerCase().contains("above"))
         return answer;
