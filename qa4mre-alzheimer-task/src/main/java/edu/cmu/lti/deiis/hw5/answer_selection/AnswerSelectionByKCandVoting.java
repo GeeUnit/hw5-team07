@@ -112,7 +112,6 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
     return "";
   }
 
-
   /**
    * Populates hshAnswer with a vote for the CandidateAnswer with the highest score in the list.
    * 
@@ -149,7 +148,6 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
       hshAnswer.put(selectedAnswer, existingVal + 1.0);
   }
 
-
   /**
    * Finds the Answer (key) with the highest value (votes/rank score) in hshAnswer
    * 
@@ -175,24 +173,25 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
 
     }
     // All of the above logic
-    if( bestAns == null) 
+    if (bestAns == null)
       bestAns = containsAllOfTheAbove(hshAnswer.keySet());
-    
+
     return bestAns;
   }
-  
+
   /**
-   * Checks if one of the answers is 'all of the above' 
+   * Checks if one of the answers is 'all of the above'
    * 
-   * @param set The set of answers
+   * @param set
+   *          The set of answers
    * @return The 'All of the above' answer if found, else null.
    */
   private String containsAllOfTheAbove(Set<String> answerSet) {
-    for(String answer : answerSet) {
-      if( answer.toLowerCase() == "all of the above" )
+    for (String answer : answerSet) {
+      if (answer.toLowerCase().contains("none") && answer.toLowerCase().contains("above"))
         return answer;
     }
-    
+
     return null;
   }
 

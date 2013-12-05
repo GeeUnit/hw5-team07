@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
   <primitive>false</primitive>
@@ -46,6 +45,9 @@
     <delegateAnalysisEngine key="QuestionAnswerCandSentSimilarityMatcher">
       <import name="annotators.QuestionAnswerCandSentSimilarityMatcher"/>
     </delegateAnalysisEngine>
+  <delegateAnalysisEngine key="AnswerSelectionByKCandVoting">
+      <import name="annotators.AnswerSelectionByKCandVoting"/>
+    </delegateAnalysisEngine>
   </delegateAnalysisEngineSpecifiers>
   <analysisEngineMetaData>
     <name>CpeQuestionDescriptor</name>
@@ -57,11 +59,10 @@
     <flowConstraints>
       <fixedFlow>
         <node>POSPruner</node>
-        <node>CooccurrencePruner</node>
         <node>QuestionAnswerCandSentSimilarityMatcher</node>
         <node>AnswerChoiceCandAnsSimilarityScorer</node>
-        <node>AnswerSelectionByKCandAggregation</node>
-      </fixedFlow>
+        <node>AnswerSelectionByKCandVoting</node>
+        </fixedFlow>
     </flowConstraints>
     <typePriorities/>
     <fsIndexCollection/>
