@@ -33,6 +33,15 @@ public class POSPruner extends AbstractPruner {
 		ArrayList<Answer> prunedAnswerList=new ArrayList<Answer>();
 		for (Answer answer : answers) {
 			
+			/**
+			 * Keep the None of the above answers
+			 */
+			String answerText=answer.getText().toLowerCase();
+			if(answerText.contains("none")&&answerText.contains("above"))
+			{
+				continue;
+			}
+			
 			String expectedPos=this.getAnswerPOS(answer);
 			
 			if(questionPos.contains("*") || questionPos.contains(expectedPos))
@@ -41,6 +50,10 @@ public class POSPruner extends AbstractPruner {
 			}
 			else
 			{
+				if(answer.getIsCorrect())
+				{
+					System.out.print("CORRECT >>>>>>>>>>>>>>>>>>>>>");
+				}
 				System.out.println("PRUNED BASED ON POS: "+answer.getText());
 			}
 		}
