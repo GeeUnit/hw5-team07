@@ -39,6 +39,7 @@ public class POSPruner extends AbstractPruner {
 			String answerText=answer.getText().toLowerCase();
 			if(answerText.contains("none")&&answerText.contains("above"))
 			{
+				prunedAnswerList.add(answer);
 				continue;
 			}
 			
