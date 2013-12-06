@@ -55,7 +55,7 @@ public class POSPruner extends AbstractPruner {
 				{
 					System.out.print("CORRECT >>>>>>>>>>>>>>>>>>>>>");
 				}
-				System.out.println("PRUNED BASED ON POS: "+answer.getText());
+				System.out.println("PRUNED BASED ON EXPECTED POS: "+expectedPos+"---->"+answer.getText());
 			}
 		}
 		return prunedAnswerList;
@@ -136,6 +136,9 @@ public class POSPruner extends AbstractPruner {
 		{
 			expectedPOS.add("NN");
 			expectedPOS.add("NNS");
+			expectedPOS.add("NNP");
+			expectedPOS.add("NNPS");
+			expectedPOS.add("SYM");
 						
 		}
 		else if(posChain.startsWith("WRB-JJ"))
@@ -168,17 +171,18 @@ public class POSPruner extends AbstractPruner {
 		{
 			posTags.add(token.getPos());
 		}
-		if(posTags.contains("CD"))
-		{
-			return "CD";
-		}
+//		if(posTags.contains("CD"))
+//		{
+//			return "CD";
+//		}
 		if(npList.size()>1)
 		{
 			return "NNS";
 		}
 		else
 		{		
-			return tokenList.get(tokenList.size()-1).getPos();
+			String ansPos= tokenList.get(tokenList.size()-1).getPos();
+			return ansPos;
 		}
 	}
 

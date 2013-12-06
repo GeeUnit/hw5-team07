@@ -40,16 +40,16 @@
   <delegateAnalysisEngine key="POSPruner">
       <import name="annotators.POSPruner"/>
     </delegateAnalysisEngine>
-    <delegateAnalysisEngine key="CooccurrencePruner">
-      <import name="annotators.CooccurrencePruner"/>
-    </delegateAnalysisEngine>
     <delegateAnalysisEngine key="QuestionAnswerCandSentSimilarityMatcher">
       <import name="annotators.QuestionAnswerCandSentSimilarityMatcher"/>
     </delegateAnalysisEngine>
-  <delegateAnalysisEngine key="AnswerSelectionByKCandVoting">
+    <delegateAnalysisEngine key="AnswerSelectionByKCandVoting">
       <import name="annotators.AnswerSelectionByKCandVoting"/>
     </delegateAnalysisEngine>
-  </delegateAnalysisEngineSpecifiers>
+  <delegateAnalysisEngine key="AnswerChoiceCandAnsPMIScorer">
+      <import name="annotators.AnswerChoiceCandAnsPMIScorer"/>
+    </delegateAnalysisEngine>
+    </delegateAnalysisEngineSpecifiers>
   <analysisEngineMetaData>
     <name>CpeQuestionDescriptor</name>
     <description/>
@@ -59,10 +59,11 @@
     <configurationParameterSettings/>
     <flowConstraints>
       <fixedFlow>
+        <node>POSPruner</node>
         <node>QuestionAnswerCandSentSimilarityMatcher</node>
-        <node>AnswerChoiceCandAnsSynonymScorer</node>
+        <node>AnswerChoiceCandAnsSimilarityScorer</node>
         <node>AnswerSelectionByKCandVoting</node>
-        </fixedFlow>
+      </fixedFlow>
     </flowConstraints>
     <typePriorities/>
     <fsIndexCollection/>

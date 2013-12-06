@@ -41,7 +41,8 @@ public class CooccurrencePruner extends AbstractPruner {
 	@Override
 	public ArrayList<Answer> prune(Question question, ArrayList<Answer> answers) {
 		
-		System.out.println(question.getText());
+		
+//		System.out.println(question.getText());
 		ArrayList<Token> tokens=Utils.getTokenListFromQuestion(question);
 		
 		//Get the important noun that we are seeking.
@@ -53,6 +54,17 @@ public class CooccurrencePruner extends AbstractPruner {
 		
 		for(Answer answer:answers)
 		{
+			
+			/**
+			 * Keep the None of the above answers
+			 */
+			String answerText=answer.getText().toLowerCase();
+			if(answerText.contains("none")&&answerText.contains("above"))
+			{
+				prunedAnswers.add(answer);
+				continue;
+			}
+			
 			FSList npList=answer.getNounPhraseList();
 			ArrayList<NounPhrase> nounPhrases=Utils.fromFSListToCollection(npList, NounPhrase.class);
 			if(nounPhrases.size()>0){

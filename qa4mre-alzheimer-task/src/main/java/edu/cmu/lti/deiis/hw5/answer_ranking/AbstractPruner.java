@@ -29,6 +29,7 @@ public abstract class AbstractPruner extends JCasAnnotator_ImplBase {
 		this.nounTags.add("NNS");
 		this.nounTags.add("NNP");
 		this.nounTags.add("NNPS");
+		this.nounTags.add("SYM");
 		this.nounTags.add("PRP");
 		this.nounTags.add("PRP$");
 		
