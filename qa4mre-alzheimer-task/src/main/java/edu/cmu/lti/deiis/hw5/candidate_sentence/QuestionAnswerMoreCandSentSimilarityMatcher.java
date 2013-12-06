@@ -26,7 +26,7 @@ import edu.cmu.lti.qalab.types.TestDocument;
 import edu.cmu.lti.qalab.types.Token;
 import edu.cmu.lti.qalab.utils.Utils;
 
-public class QuestionAnswerCandSentSimilarityMatcher_z  extends JCasAnnotator_ImplBase{
+public class QuestionAnswerMoreCandSentSimilarityMatcher  extends JCasAnnotator_ImplBase{
 
 	SolrWrapper solrWrapper=null;
 	String serverUrl;

@@ -20,7 +20,7 @@ import edu.cmu.lti.qalab.types.QuestionAnswerSet;
 import edu.cmu.lti.qalab.types.TestDocument;
 import edu.cmu.lti.qalab.utils.Utils;
 
-public class AnswerSelectionByKCandVoting_z extends JCasAnnotator_ImplBase {
+public class AnswerSelectionPMIByKCandVoting extends JCasAnnotator_ImplBase {
 
   // Number of votes each CandidateSentence receives with the Borda voting system
   private static final int BORDA_VOTES = 2;
@@ -78,6 +78,12 @@ public class AnswerSelectionByKCandVoting_z extends JCasAnnotator_ImplBase {
       String bestChoice = null;
       try {
         bestChoice = findBestChoice(hshAnswer);
+        
+        if (bestChoice != null) {
+          Answer toSelect=this.getBestAnswer(choiceList, bestChoice);
+          toSelect.setIsSelected(true);
+          toSelect.addToIndexes();
+        }
 
       } catch (Exception e) {
         e.printStackTrace();
@@ -116,6 +122,18 @@ public class AnswerSelectionByKCandVoting_z extends JCasAnnotator_ImplBase {
     }
 
     return "";
+  }
+  
+  private Answer getBestAnswer(ArrayList<Answer> choiceList, String bestAnswer)
+  {
+          for (int j = 0; j < choiceList.size(); j++) {
+              Answer answer = choiceList.get(j);
+              
+              if (answer.getText().trim().equalsIgnoreCase(bestAnswer.trim())) {
+                return answer;
+              }
+            }
+          return null;
   }
 
   /**
