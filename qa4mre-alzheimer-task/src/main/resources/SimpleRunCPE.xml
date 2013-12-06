@@ -49,27 +49,18 @@
       <import location="annotators/QuestionCandSentDependencyMatcher.xml"/>
     </delegateAnalysisEngine>-->
     
-    <delegateAnalysisEngine key="QuestionCandSentSimilarityMatcher">
-      <import location="annotators/QuestionCandSentSimilarityMatcher.xml"/>
+    <delegateAnalysisEngine key="QASynonymAnnotator">
+      <import name="annotators.QASynonymAnnotator"/>
     </delegateAnalysisEngine>
     
     <!--<delegateAnalysisEngine key="QuestionCandSentSynonymMatcher">
       <import location="annotators/QuestionCandSentSynonymMatcher.xml"/>
     </delegateAnalysisEngine>-->
     
-    <delegateAnalysisEngine key="AnswerChoiceCandAnsSimilarityScorer">
-      <import location="annotators/AnswerChoiceCandAnsSimilarityScorer.xml"/>
-    </delegateAnalysisEngine>
-    
-    <delegateAnalysisEngine key="AnswerSelectionByKCandVoting">
-      <import location="annotators/AnswerSelectionByKCandVoting.xml"/>
-    </delegateAnalysisEngine>
-    <delegateAnalysisEngine key="QASynonymAnnotator">
-      <import name="annotators.QASynonymAnnotator"/>
-    </delegateAnalysisEngine>
     <delegateAnalysisEngine key="SynonymAnnotator">
       <import name="annotators.SynonymAnnotator"/>
     </delegateAnalysisEngine>
+    
     <delegateAnalysisEngine key="SentenceCombiner">
       <import name="annotators.SentenceCombiner"/>
     </delegateAnalysisEngine>

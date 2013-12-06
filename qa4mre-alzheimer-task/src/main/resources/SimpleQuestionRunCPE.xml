@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
   <primitive>false</primitive>
   <delegateAnalysisEngineSpecifiers>
-    <delegateAnalysisEngine key="AnswerChoiceMoreCandAnsPMIScorer">
-      <import location="annotators/AnswerChoiceMoreCandAnsPMIScorer.xml"/>
+    <delegateAnalysisEngine key="AnswerChoiceCandAnsSynonymScorer">
+      <import name="annotators.AnswerChoiceCandAnsSynonymScorer"/>
     </delegateAnalysisEngine>
-    <delegateAnalysisEngine key="AnswerSelectionByKCandAggregation">
-      <import location="annotators/AnswerSelectionByKCandAggregation.xml"/>
-    </delegateAnalysisEngine>
-    <delegateAnalysisEngine key="AnswerSelectionPMIByKCandVoting">
-      <import location="annotators/AnswerSelectionPMIByKCandVoting.xml"/>
-    </delegateAnalysisEngine>
-    <delegateAnalysisEngine key="QuestionCandSentSimilarityMatcher">
-      <import location="annotators/QuestionCandSentSimilarityMatcher.xml"/>
+    <delegateAnalysisEngine key="QuestionCandSentSynonymMatcher">
+      <import name="annotators.QuestionCandSentSynonymMatcher"/>
     </delegateAnalysisEngine>
     <!-- <delegateAnalysisEngine key="AnswerChoiceCandAnsSynonymScorer">
       <import location="annotators/AnswerChoiceCandAnsSynonymScorer.xml"/>
@@ -24,26 +19,14 @@
     <!-- <delegateAnalysisEngine key="QuestionCandSentDependencyMatcher">
       <import location="annotators/QuestionCandSentDependencyMatcher.xml"/>
     </delegateAnalysisEngine>-->
-    <delegateAnalysisEngine key="AnswerChoiceCandAnsSimilarityScorer">
-      <import location="annotators/AnswerChoiceCandAnsSimilarityScorer.xml"/>
+    <delegateAnalysisEngine key="POSPruner">
+      <import name="annotators.POSPruner"/>
     </delegateAnalysisEngine>
-  <delegateAnalysisEngine key="QuestionAnswerMoreCandSentSimilarityMatcher">
-      <import name="annotators.QuestionAnswerMoreCandSentSimilarityMatcher"/>
+    <delegateAnalysisEngine key="QuestionAnswerCandSentSimilarityMatcher">
+      <import name="annotators.QuestionAnswerCandSentSimilarityMatcher"/>
     </delegateAnalysisEngine>
-    <delegateAnalysisEngine key="AnswerChoiceCandAnsSynonymScorer">
-      <import name="annotators.AnswerChoiceCandAnsSynonymScorer"/>
-    </delegateAnalysisEngine>
-    <delegateAnalysisEngine key="QuestionCandSentSynonymMatcher">
-      <import name="annotators.QuestionCandSentSynonymMatcher"/>
-    </delegateAnalysisEngine>
-  <delegateAnalysisEngine key="OutputRunCasConsumerDescriptor">
-      <import location="/Users/zhengxiong/git/791/hw5-team07/qa4mre-alzheimer-task/src/main/resources/consumers/OutputRunCasConsumerDescriptor.xml"/>
-    </delegateAnalysisEngine>
-  <delegateAnalysisEngine key="CasConsumerDescriptor">
-      <import location="/Users/zhengxiong/git/791/hw5-team07/qa4mre-alzheimer-task/src/main/resources/consumers/CasConsumerDescriptor.xml"/>
-    </delegateAnalysisEngine>
-    <delegateAnalysisEngine key="CasConsumerResultDescriptor">
-      <import location="/Users/zhengxiong/git/791/hw5-team07/qa4mre-alzheimer-task/src/main/resources/consumers/CasConsumerResultDescriptor.xml"/>
+    <delegateAnalysisEngine key="AnswerSelectionByKCandVoting">
+      <import name="annotators.AnswerSelectionByKCandVoting"/>
     </delegateAnalysisEngine>
   </delegateAnalysisEngineSpecifiers>
   <analysisEngineMetaData>
@@ -55,14 +38,10 @@
     <configurationParameterSettings/>
     <flowConstraints>
       <fixedFlow>
-        <node>QuestionAnswerMoreCandSentSimilarityMatcher</node>
-        <!-- <node>QuestionCandSentSynonymMatcher</node>-->
-        <!-- <node>QuestionCandSentDependencyMatcher</node>-->
-        <!--<node>AnswerChoiceCandAnsSimilarityScorer</node>-->
-        <!-- <node>AnswerChoiceCandAnsSynonymScorer</node>-->
-        <!--<node>AnswerChoiceCandAnsPMIScorer</node>-->
-        <node>AnswerChoiceMoreCandAnsPMIScorer</node>
-      <node>AnswerSelectionPMIByKCandVoting</node>
+        <node>POSPruner</node>
+        <node>QuestionAnswerCandSentSimilarityMatcher</node>
+        <node>AnswerChoiceCandAnsSynonymScorer</node>
+        <node>AnswerSelectionByKCandVoting</node>
       </fixedFlow>
     </flowConstraints>
     <typePriorities/>
