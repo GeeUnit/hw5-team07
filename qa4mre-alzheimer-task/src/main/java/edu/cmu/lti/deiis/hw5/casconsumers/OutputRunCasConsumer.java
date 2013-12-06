@@ -164,13 +164,14 @@ public class OutputRunCasConsumer extends CasConsumer_ImplBase {
 				
 				testId++;
 				//TBD: get reading-test id, such as r_id = doc.getReadingTestId()
-				System.out.println(doc.getReadingTestId());
+				//System.out.println(doc.getReadingTestId());
 				out.write(String.format("\t<reading-test r_id=\"%d\">\n", Integer.parseInt(doc.getReadingTestId())));
 				
 				FSList list = doc.getQaList();
 				boolean answered = false;
 				int selectedAnswerId = -1;
 				while (list instanceof NonEmptyFSList) { // every question
+
 					answered = false; //reset "answered" variable.
 					selectedAnswerId = -1;
 					
@@ -179,7 +180,7 @@ public class OutputRunCasConsumer extends CasConsumer_ImplBase {
 					Question q = qas.getQuestion();
 					
 					//DEBUG
-					//System.out.println(q.getId());
+//					System.out.println(q.getId());
 					
 					q_id = Integer.parseInt(q.getId());
 					// DEBUG System.out.println("Question: " + q.getText());
