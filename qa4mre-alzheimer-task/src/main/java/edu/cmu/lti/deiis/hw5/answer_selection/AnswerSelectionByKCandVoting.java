@@ -72,7 +72,7 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
 
       for (int c = 0; c < topK; c++) {
 
-        CandidateSentence candSent = candSentList.get(c);
+				CandidateSentence candSent = candSentList.get(c);
 
         // Vote for best answer according to CandidateSentence
         singleVote(candSent, hshAnswer);
@@ -82,6 +82,13 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
       String bestChoice = null;
       try {
         bestChoice = findBestChoice(hshAnswer);
+       
+        if(bestChoice!=null)
+        {
+        	 Answer toSelect=this.getBestAnswer(choiceList, bestChoice);
+	        toSelect.setIsSelected(true);
+	        toSelect.addToIndexes();
+        }
 
       } catch (Exception e) {
         e.printStackTrace();
@@ -126,6 +133,18 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
     return "";
   }
 
+  private Answer getBestAnswer(ArrayList<Answer> choiceList, String bestAnswer)
+  {
+	  for (int j = 0; j < choiceList.size(); j++) {
+	      Answer answer = choiceList.get(j);
+	      
+	      if (answer.getText().trim().equalsIgnoreCase(bestAnswer.trim())) {
+	        return answer;
+	      }
+	    }
+	  return null;
+  }
+  
   /**
    * Populates hshAnswer with a vote for the CandidateAnswer with the highest score in the list.
    * 

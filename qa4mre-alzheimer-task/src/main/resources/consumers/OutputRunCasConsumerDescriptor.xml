@@ -1,19 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+<?xml version="1.0" encoding="UTF-8"?><casConsumerDescription xmlns="http://uima.apache.org/resourceSpecifier">
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
-  <primitive>true</primitive>
-  <annotatorImplementationName>edu.cmu.lti.deiis.hw5.answer_ranking.AnswerChoiceCandAnsSimilarityScorer</annotatorImplementationName>
-  <analysisEngineMetaData>
-    <name>AnswerChoiceCandAnsSimilarityScorerDescriptor</name>
+  <implementationName>edu.cmu.lti.deiis.hw5.casconsumers.OutputRunCasConsumer</implementationName>
+  <processingResourceMetaData>
+    <name>CasConsumerDescriptor</name>
     <description/>
     <version>1.0</version>
     <vendor/>
     <configurationParameters>
       <configurationParameter>
-        <name>K_CANDIDATES</name>
-        <description>K candidates</description>
-        <type>Integer</type>
+        <name>OUTPUT_DIR</name>
+        <description>output to be written</description>
+        <type>String</type>
         <multiValued>false</multiValued>
         <mandatory>false</mandatory>
       </configurationParameter>
@@ -21,14 +18,17 @@
     </configurationParameters>
     <configurationParameterSettings>
       <nameValuePair>
-        <name>K_CANDIDATES</name>
+        <name>OUTPUT_DIR</name>
         <value>
-          <integer>12</integer>
+          <string>results/13-blind/</string>
         </value>
-      </nameValuePair>
+      </nameValuePair>      
     </configurationParameterSettings>
-        
-    <typeSystemDescription/>
+    <typeSystemDescription>
+      <imports>
+        <import name="TypeSystemDescriptor"/>
+      </imports>
+    </typeSystemDescription>
     <typePriorities/>
     <fsIndexCollection/>
     <capabilities>
@@ -40,9 +40,9 @@
     </capabilities>
     <operationalProperties>
       <modifiesCas>true</modifiesCas>
-      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <multipleDeploymentAllowed>false</multipleDeploymentAllowed>
       <outputsNewCASes>false</outputsNewCASes>
     </operationalProperties>
-  </analysisEngineMetaData>
+  </processingResourceMetaData>
   <resourceManagerConfiguration/>
-</analysisEngineDescription>
+</casConsumerDescription>
