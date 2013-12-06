@@ -59,10 +59,11 @@
     <configurationParameterSettings/>
     <flowConstraints>
       <fixedFlow>
+        <node>POSPruner</node>
         <node>QuestionAnswerCandSentSimilarityMatcher</node>
-        <node>AnswerChoiceCandAnsSimilarityScorer</node>
+        <node>AnswerChoiceCandAnsSynonymScorer</node>
         <node>AnswerSelectionByKCandVoting</node>
-        </fixedFlow>
+      </fixedFlow>
     </flowConstraints>
     <typePriorities/>
     <fsIndexCollection/>

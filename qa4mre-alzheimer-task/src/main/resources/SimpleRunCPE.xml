@@ -102,6 +102,7 @@
         <!-- <node>SynonymAnnotator</node>-->
         <!-- <node>QASynonymAnnotator</node>-->
         <node>QASynonymAnnotator</node>
+        <node>SentenceCombiner</node>
         <node>SolrIndexer</node>
         <!--<node>AnswerSelectionByKCandVoting</node>-->
 
