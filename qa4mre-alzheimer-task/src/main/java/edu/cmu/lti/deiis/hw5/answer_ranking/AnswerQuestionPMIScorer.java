@@ -113,8 +113,8 @@ public class AnswerQuestionPMIScorer extends JCasAnnotator_ImplBase {
 
           }
 
-          System.out.println(choiceList.get(j).getText() + "\t"
-              + score1 + "\t" + ((score1)));
+//          System.out.println(choiceList.get(j).getText() + "\t"
+//              + score1 + "\t" + ((score1)));
 
           CandidateAnswer candAnswer=null;
           if(candSent.getCandAnswerList()==null){
