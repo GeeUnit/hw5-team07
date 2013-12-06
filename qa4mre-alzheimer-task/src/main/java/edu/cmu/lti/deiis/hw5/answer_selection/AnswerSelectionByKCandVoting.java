@@ -232,8 +232,11 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
   @Override
   public void destroy()
   {
+	  System.out.println();
+	  System.out.println("++++++++++++++++++++++++++++++++++++++++++++++");
 	  System.out.println("AVERAGE c@1 Score: "+(this.sumCScore/this.docCount));
 	  System.out.println("AVERAGE Accuracy: "+(this.sumAcc/this.docCount)+"%");
+	  System.out.println("++++++++++++++++++++++++++++++++++++++++++++++");
   }
   
 }
