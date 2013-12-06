@@ -61,7 +61,7 @@
       <nameValuePair>
         <name>TOP_SEARCH_RESULTS</name>
         <value>
-          <integer>20</integer>
+          <integer>15</integer>
         </value>
       </nameValuePair>
     </configurationParameterSettings>
