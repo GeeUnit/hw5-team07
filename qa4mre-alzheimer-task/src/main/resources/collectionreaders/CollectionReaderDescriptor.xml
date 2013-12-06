@@ -21,7 +21,7 @@
       <nameValuePair>
         <name>INPUT_DIR</name>
         <value>
-          <string>data/blind-test/</string>
+          <string>data/13-blind/</string>
         </value>
       </nameValuePair>
     </configurationParameterSettings>
