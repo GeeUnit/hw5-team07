@@ -57,7 +57,9 @@ public class StanfordNLPAnnotator extends JCasAnnotator_ImplBase {
 		// System.out.println("===============================================");
 		// System.out.println("DocText: " + docText);
 		String filteredSents[] = filteredText.split("[\\n]");
+		
 		System.out.println("Total sentences: "+filteredSents.length);
+		
 		ArrayList<Sentence> sentList = new ArrayList<Sentence>();
 		int sentNo = 0;
 		for (int i = 0; i < filteredSents.length; i++) {

@@ -39,7 +39,7 @@ public class AnswerChoiceCandAnsSynonymScorer extends JCasAnnotator_ImplBase {
 
 		for (int i = 0; i < qaSet.size(); i++) {
 
-			Question question = qaSet.get(i).getQuestion();
+//			Question question = qaSet.get(i).getQuestion();
 //			System.out.println("Question: " + question.getText());
 			ArrayList<Answer> choiceList = Utils.fromFSListToCollection(qaSet
 					.get(i).getAnswerList(), Answer.class);
@@ -100,11 +100,13 @@ public class AnswerChoiceCandAnsSynonymScorer extends JCasAnnotator_ImplBase {
 						}
 
 					}
-
+					
 //					System.out.println(choiceList.get(j).getText() + "\t"
 //							+ nnMatch);
 					CandidateAnswer candAnswer = null;
-					if (candSent.getCandAnswerList() == null) {
+					
+					//was null originally. I reversed it because it seems like it would just cause errors, as passing null into the util function will cause errors.
+					if (candSent.getCandAnswerList() != null) {
 						candAnswer = Utils.fromFSListToCollection(
 								candSent.getCandAnswerList(),
 								CandidateAnswer.class).get(j);//
