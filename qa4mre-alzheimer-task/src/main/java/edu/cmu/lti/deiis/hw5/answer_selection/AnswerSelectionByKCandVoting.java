@@ -27,7 +27,7 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
   // The minimum score from voting/ranking an answer must have before it can be considered
   private static final double MIN_SCORE_THRESHOLD = 2;
 
-  // The minimum score an answer needs to recieve a vote
+  // The minimum score an answer needs to receive a vote
   private static final double MIN_TO_VOTE_THRESHOLD = 0;
 
   int K_CANDIDATES = 5;
