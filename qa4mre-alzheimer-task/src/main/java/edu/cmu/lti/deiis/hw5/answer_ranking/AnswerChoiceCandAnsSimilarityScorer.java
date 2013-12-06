@@ -50,7 +50,7 @@ public class AnswerChoiceCandAnsSimilarityScorer extends JCasAnnotator_ImplBase 
 
 			int topK = Math.min(K_CANDIDATES, candSentList.size());
 			/* check for the topK */
-			System.out.println(topK);
+			//System.out.println(topK);
 			/* check for the topK */
 			for (int c = 0; c < topK; c++) {
 

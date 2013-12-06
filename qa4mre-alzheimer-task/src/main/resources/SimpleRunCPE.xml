@@ -70,6 +70,9 @@
     <delegateAnalysisEngine key="SynonymAnnotator">
       <import name="annotators.SynonymAnnotator"/>
     </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="SentenceCombiner">
+      <import name="annotators.SentenceCombiner"/>
+    </delegateAnalysisEngine>
     <!--<delegateAnalysisEngine key="AnswerSelectionByKCandAggregation">
       <import location="annotators/AnswerSelectionByKCandAggregation.xml"/>
     </delegateAnalysisEngine>-->
@@ -99,6 +102,7 @@
         <!-- <node>SynonymAnnotator</node>-->
         <!-- <node>QASynonymAnnotator</node>-->
         <node>QASynonymAnnotator</node>
+        <node>SentenceCombiner</node>
         <node>SolrIndexer</node>
         <!--<node>AnswerSelectionByKCandVoting</node>-->
 

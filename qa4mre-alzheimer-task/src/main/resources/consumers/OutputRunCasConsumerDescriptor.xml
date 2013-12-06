@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<casConsumerDescription xmlns="http://uima.apache.org/resourceSpecifier">
+<?xml version="1.0" encoding="UTF-8"?><casConsumerDescription xmlns="http://uima.apache.org/resourceSpecifier">
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
-  <implementationName>edu.cmu.lti.deiis.hw5.casconsumers.QA4MRECasConsumer</implementationName>
+  <implementationName>edu.cmu.lti.deiis.hw5.casconsumers.OutputRunCasConsumer</implementationName>
   <processingResourceMetaData>
     <name>CasConsumerDescriptor</name>
     <description/>
@@ -15,26 +14,15 @@
         <multiValued>false</multiValued>
         <mandatory>false</mandatory>
       </configurationParameter>
-      <configurationParameter>
-        <name>THRESHOLD</name>
-        <type>String</type>
-        <multiValued>false</multiValued>
-        <mandatory>false</mandatory>
-      </configurationParameter>
+      
     </configurationParameters>
     <configurationParameterSettings>
       <nameValuePair>
         <name>OUTPUT_DIR</name>
         <value>
-          <string>XMIs/12-test-alzheimer/</string>
+          <string>results/13-blind/</string>
         </value>
-      </nameValuePair>
-      <nameValuePair>
-        <name>THRESHOLD</name>
-        <value>
-          <string>3.0</string>
-        </value>
-      </nameValuePair>
+      </nameValuePair>      
     </configurationParameterSettings>
     <typeSystemDescription>
       <imports>
@@ -52,7 +40,7 @@
     </capabilities>
     <operationalProperties>
       <modifiesCas>true</modifiesCas>
-      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <multipleDeploymentAllowed>false</multipleDeploymentAllowed>
       <outputsNewCASes>false</outputsNewCASes>
     </operationalProperties>
   </processingResourceMetaData>
