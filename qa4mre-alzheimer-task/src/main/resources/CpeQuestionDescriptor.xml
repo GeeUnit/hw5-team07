@@ -22,7 +22,7 @@
 			<checkpoint batch="10000" time="1000ms" />
 			<configurationParameterSettings />
 		</casProcessor>
-		<casProcessor deployment="integrated" name="OutputRunCasConsumerDescriptor">
+		<casProcessor deployment="integrated" name="CasConsumerResultDescriptor">
 			<descriptor>
 				<import location="consumers/OutputRunCasConsumerDescriptor.xml" />
 			</descriptor>

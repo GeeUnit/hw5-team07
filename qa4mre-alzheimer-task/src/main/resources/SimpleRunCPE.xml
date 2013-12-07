@@ -37,7 +37,7 @@
     <delegateAnalysisEngine key="NoiseFilter">
       <import location="annotators/NoiseFilter.xml"/>
     </delegateAnalysisEngine>
-    <delegateAnalysisEngine key="QuestionCandSentSimilarityMatcher">
+    <!-- <delegateAnalysisEngine key="QuestionCandSentSimilarityMatcher">
       <import location="annotators/QuestionCandSentSimilarityMatcher.xml"/>
     </delegateAnalysisEngine>
     <delegateAnalysisEngine key="QASynonymAnnotator">
@@ -53,8 +53,24 @@
       <import location="annotators/StanfordSentenceAnnotator.xml"/>
     </delegateAnalysisEngine>
     <delegateAnalysisEngine key="AnswerChoiceCandAnsSimilarityScorer">
-      <import location="annotators/AnswerChoiceCandAnsSimilarityScorer.xml"/>
+      <import location="annotators/AnswerChoiceCandAnsSimilarityScorer.xml"/> -->
+    
+    <!--<delegateAnalysisEngine key="QuestionCandSentDependencyMatcher">
+      <import location="annotators/QuestionCandSentDependencyMatcher.xml"/>
+    </delegateAnalysisEngine>-->
+    
+    <delegateAnalysisEngine key="QASynonymAnnotator">
+      <import name="annotators.QASynonymAnnotator"/>
     </delegateAnalysisEngine>
+    
+    <!--<delegateAnalysisEngine key="QuestionCandSentSynonymMatcher">
+      <import location="annotators/QuestionCandSentSynonymMatcher.xml"/>
+    </delegateAnalysisEngine>-->
+    
+    <delegateAnalysisEngine key="SynonymAnnotator">
+      <import name="annotators.SynonymAnnotator"/>
+    </delegateAnalysisEngine>
+    
     <delegateAnalysisEngine key="SentenceCombiner">
       <import name="annotators.SentenceCombiner"/>
     </delegateAnalysisEngine>
@@ -87,6 +103,7 @@
         <!-- <node>SynonymAnnotator</node>-->
         <!-- <node>QASynonymAnnotator</node>-->
         <node>QASynonymAnnotator</node>
+        <node>SentenceCombiner</node>
         <node>SolrIndexer</node>
         <!--<node>AnswerSelectionByKCandVoting</node>-->
       </fixedFlow>

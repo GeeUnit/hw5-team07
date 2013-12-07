@@ -34,98 +34,86 @@ public class QuestionCandSentSimilarityMatcher  extends JCasAnnotator_ImplBase{
   String schemaName;
   int TOP_SEARCH_RESULTS=10;
 
-	@Override
-	public void initialize(UimaContext context)
-			throws ResourceInitializationException {
-		super.initialize(context);
-		serverUrl = (String) context.getConfigParameterValue("SOLR_SERVER_URL");
-		coreName = (String) context.getConfigParameterValue("SOLR_CORE");
-		schemaName = (String) context.getConfigParameterValue("SCHEMA_NAME");
-		TOP_SEARCH_RESULTS = (Integer) context.getConfigParameterValue("TOP_SEARCH_RESULTS");
-		try {
-			this.solrWrapper = new SolrWrapper(serverUrl+coreName);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-		
-	}
-	
-	@Override
-	public void process(JCas aJCas) throws AnalysisEngineProcessException {
-		TestDocument testDoc=Utils.getTestDocumentFromCAS(aJCas);
-		String testDocId=testDoc.getId();
-		ArrayList<Sentence>sentenceList=Utils.getSentenceListFromTestDocCAS(aJCas);
-		ArrayList<QuestionAnswerSet>qaSet=Utils.getQuestionAnswerSetFromTestDocCAS(aJCas);
-		
-		for(int i=0;i<qaSet.size();i++){
-			
-			
-			Question question=qaSet.get(i).getQuestion();
-//			System.out.println("========================================================");
-//			System.out.println("Question: "+question.getText());
-			String searchQuery=this.formSolrQuery(question);
-			System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
-			System.out.println(searchQuery);
-			System.out.println(String.valueOf(TOP_SEARCH_RESULTS));
-			System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
-			if(searchQuery.trim().equals("")){
-				continue;
-			}
-			ArrayList<CandidateSentence>candidateSentList=new ArrayList<CandidateSentence>();
-			SolrQuery solrQuery=new SolrQuery();
-			solrQuery.add("fq", "docid:"+testDocId);
-//			solrQuery.add("qf","nounphrases^1 namedentities^2");
-			solrQuery.add("q",searchQuery);
-//			System.out.println(searchQuery);
-			solrQuery.add("rows",String.valueOf(TOP_SEARCH_RESULTS));
-			solrQuery.setFields("*", "score");
-			try {
-				SolrDocumentList results=solrWrapper.runQuery(solrQuery, TOP_SEARCH_RESULTS);
-				for(int j=0;j<results.size();j++){
-					SolrDocument doc=results.get(j);					
-					String sentId=doc.get("id").toString();
-					String docId=doc.get("docid").toString();
-					if(!testDocId.equals(docId)){
-						continue;
-					}
-					String sentIdx=sentId.replace(docId,"").replace("_", "").trim();
-					int idx=Integer.parseInt(sentIdx);
-					
-//					Sentence annSentence=null;
-					Sentence annSentence=sentenceList.get(idx);
-//					if(idx<sentenceList.size()){
-//					  annSentence=sentenceList.get(idx);
-//					}
-//					else {
-//            annSentence=sentenceList.get(0);
-//          }
-					
-					String sentence=doc.get("text").toString();
-					double relScore=Double.parseDouble(doc.get("score").toString());
-					CandidateSentence candSent=new CandidateSentence(aJCas);
-					candSent.setSentence(annSentence);
-					candSent.setRelevanceScore(relScore);
-					candidateSentList.add(candSent);
-//					System.out.println(relScore+"\t"+sentence);
-				}
-				FSList fsCandidateSentList=Utils.fromCollectionToFSList(aJCas, candidateSentList);
-				fsCandidateSentList.addToIndexes();
-				qaSet.get(i).setCandidateSentenceList(fsCandidateSentList);
-				qaSet.get(i).addToIndexes();
-			
-				
-			} catch (SolrServerException e) {
-				e.printStackTrace();
-			}
-			FSList fsQASet=Utils.fromCollectionToFSList(aJCas, qaSet);
-			testDoc.setQaList(fsQASet);
-			
-//			System.out.println("=========================================================");
-		}
-	
-		
-	}
+
+  @Override
+  public void initialize(UimaContext context)
+      throws ResourceInitializationException {
+    super.initialize(context);
+    serverUrl = (String) context.getConfigParameterValue("SOLR_SERVER_URL");
+    coreName = (String) context.getConfigParameterValue("SOLR_CORE");
+    schemaName = (String) context.getConfigParameterValue("SCHEMA_NAME");
+    TOP_SEARCH_RESULTS = (Integer) context.getConfigParameterValue("TOP_SEARCH_RESULTS");
+    try {
+      this.solrWrapper = new SolrWrapper(serverUrl+coreName);
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+    
+    
+  }
+  
+  @Override
+  public void process(JCas aJCas) throws AnalysisEngineProcessException {
+    TestDocument testDoc=Utils.getTestDocumentFromCAS(aJCas);
+    String testDocId=testDoc.getId();
+    ArrayList<Sentence>sentenceList=Utils.getSentenceListFromTestDocCAS(aJCas);
+    ArrayList<QuestionAnswerSet>qaSet=Utils.getQuestionAnswerSetFromTestDocCAS(aJCas);
+    for(int i=0;i<qaSet.size();i++){
+      
+      FSList answerFSlist = qaSet.get(i).getAnswerList();
+      ArrayList answerlist =Utils.fromFSListToCollection(answerFSlist, Answer.class);
+      Question question=qaSet.get(i).getQuestion();
+//      System.out.println("========================================================");
+//      System.out.println("Question: "+question.getText());
+      String searchQuery=this.formSolrQuery(question, answerlist);
+      if(searchQuery.trim().equals("")){
+        continue;
+      }
+      ArrayList<CandidateSentence>candidateSentList=new ArrayList<CandidateSentence>();
+      SolrQuery solrQuery=new SolrQuery();
+      solrQuery.add("fq", "docid:"+testDocId);
+      solrQuery.add("q",searchQuery);
+//      System.out.println(searchQuery);
+      solrQuery.add("rows",String.valueOf(TOP_SEARCH_RESULTS));
+      solrQuery.setFields("*", "score");
+      try {
+        SolrDocumentList results=solrWrapper.runQuery(solrQuery, TOP_SEARCH_RESULTS);
+        for(int j=0;j<results.size();j++){
+          SolrDocument doc=results.get(j);          
+          String sentId=doc.get("id").toString();
+          String docId=doc.get("docid").toString();
+          if(!testDocId.equals(docId)){
+            continue;
+          }
+          String sentIdx=sentId.replace(docId,"").replace("_", "").trim();
+          int idx=Integer.parseInt(sentIdx);
+          Sentence annSentence=sentenceList.get(idx);
+          
+          String sentence=doc.get("text").toString();
+          double relScore=Double.parseDouble(doc.get("score").toString());
+          CandidateSentence candSent=new CandidateSentence(aJCas);
+          candSent.setSentence(annSentence);
+          candSent.setRelevanceScore(relScore);
+          candidateSentList.add(candSent);
+//          System.out.println(relScore+"\t"+sentence);
+        }
+        FSList fsCandidateSentList=Utils.fromCollectionToFSList(aJCas, candidateSentList);
+        fsCandidateSentList.addToIndexes();
+        qaSet.get(i).setCandidateSentenceList(fsCandidateSentList);
+        qaSet.get(i).addToIndexes();
+      
+        
+      } catch (SolrServerException e) {
+        e.printStackTrace();
+      }
+      FSList fsQASet=Utils.fromCollectionToFSList(aJCas, qaSet);
+      testDoc.setQaList(fsQASet);
+      
+//      System.out.println("=========================================================");
+    }
+  
+    
+  }
 
 	// I edited the weight set of the query term,
 	public String formSolrQuery(Question question){

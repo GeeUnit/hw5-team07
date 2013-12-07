@@ -3,6 +3,7 @@ package edu.cmu.lti.deiis.hw5.answer_selection;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import org.apache.uima.UimaContext;
@@ -35,6 +36,8 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
   private int docCount;
   private double sumAcc;
   private double sumCScore;
+  private HashMap<String, Double> cScoreList;
+  private HashMap<String, Double> accList;
   
   @Override
   public void initialize(UimaContext context) throws ResourceInitializationException {
@@ -43,6 +46,9 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
     this.docCount=0;
     this.sumAcc=0D;
     this.sumCScore=0D;
+    
+    this.cScoreList=new HashMap<String, Double>();
+    this.accList=new HashMap<String, Double>();
   }
 
   @Override
@@ -72,20 +78,19 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
 
       for (int c = 0; c < topK; c++) {
 
-				CandidateSentence candSent = candSentList.get(c);
+		CandidateSentence candSent = candSentList.get(c);
 
         // Vote for best answer according to CandidateSentence
         singleVote(candSent, hshAnswer);
 
       }
-
       String bestChoice = null;
       try {
         bestChoice = findBestChoice(hshAnswer);
-       
+
         if(bestChoice!=null)
         {
-        	 Answer toSelect=this.getBestAnswer(choiceList, bestChoice);
+        	Answer toSelect=this.getBestAnswer(choiceList, bestChoice);
 	        toSelect.setIsSelected(true);
 	        toSelect.addToIndexes();
         }
@@ -119,6 +124,9 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
     this.docCount++;
     this.sumAcc+=accuracy;
     this.sumCScore+=cAt1;
+    
+    this.accList.put(testDoc.getId(), new Double(accuracy));
+    this.cScoreList.put(testDoc.getId(), new Double(cAt1));
 
   }
 
@@ -200,13 +208,13 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
    * @throws Exception
    */
   private String findBestChoice(HashMap<String, Double> hshAnswer) throws Exception {
-
     Iterator<String> it = hshAnswer.keySet().iterator();
     String bestAns = null;
     double maxScore = MIN_SCORE_THRESHOLD*this.K_CANDIDATES;
     System.out.println("Aggregated counts; ");
     while (it.hasNext()) {
       String key = it.next();
+      
       Double val = hshAnswer.get(key);
       System.out.println(key + "\t" + key + "\t" + val);
       if (val > maxScore) {
@@ -251,11 +259,16 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
   @Override
   public void destroy()
   {
+	  for(Entry<String, Double> entry:this.accList.entrySet())
+	  {
+		  System.out.println(entry.getKey()+":  accuracy: "+entry.getValue()+": c@1score: "+this.cScoreList.get(entry.getKey()));
+	  }
 	  System.out.println();
 	  System.out.println("++++++++++++++++++++++++++++++++++++++++++++++");
-	  System.out.println("AVERAGE c@1 Score: "+(this.sumCScore/this.docCount));
-	  System.out.println("AVERAGE Accuracy: "+(this.sumAcc/this.docCount)+"%");
+	  System.out.println("DOCUMENT AVERAGE c@1 Score: "+(this.sumCScore/this.docCount));
+	  System.out.println("DOCUMENT AVERAGE Accuracy: "+(this.sumAcc/this.docCount)+"%");
 	  System.out.println("++++++++++++++++++++++++++++++++++++++++++++++");
+	  System.out.println();
   }
   
 }

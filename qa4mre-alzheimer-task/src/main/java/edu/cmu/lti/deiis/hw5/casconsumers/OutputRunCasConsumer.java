@@ -45,7 +45,7 @@ public class OutputRunCasConsumer extends CasConsumer_ImplBase {
 	/**
 	 * for writing to the output format.
 	 */
-	String team_id = "7"; // TBD: needs to be replaced by real team id in the
+	String team_id = "cmuq"; // TBD: needs to be replaced by real team id in the
 								// task.
 	int current_year = 13;
 	String number_of_run = "01"; // TBD: needs to be passed in from the
@@ -157,16 +157,21 @@ public class OutputRunCasConsumer extends CasConsumer_ImplBase {
 
 			if (an instanceof TestDocument) {
 				TestDocument doc = (TestDocument) an;
-				doc.setReadingTestId(String.valueOf(testId));
+				if(doc.getReadingTestId()==null)
+				{
+					doc.setReadingTestId(String.valueOf(testId));
+				}
+				
 				testId++;
 				//TBD: get reading-test id, such as r_id = doc.getReadingTestId()
-				System.out.println(doc.getReadingTestId());
+				//System.out.println(doc.getReadingTestId());
 				out.write(String.format("\t<reading-test r_id=\"%d\">\n", Integer.parseInt(doc.getReadingTestId())));
 				
 				FSList list = doc.getQaList();
 				boolean answered = false;
 				int selectedAnswerId = -1;
 				while (list instanceof NonEmptyFSList) { // every question
+
 					answered = false; //reset "answered" variable.
 					selectedAnswerId = -1;
 					
@@ -175,7 +180,7 @@ public class OutputRunCasConsumer extends CasConsumer_ImplBase {
 					Question q = qas.getQuestion();
 					
 					//DEBUG
-					//System.out.println(q.getId());
+//					System.out.println(q.getId());
 					
 					q_id = Integer.parseInt(q.getId());
 					// DEBUG System.out.println("Question: " + q.getText());
@@ -213,6 +218,7 @@ public class OutputRunCasConsumer extends CasConsumer_ImplBase {
 					list = ((NonEmptyFSList) list).getTail();
 				}
 				out.write("\t</reading-test>\n");
+				testId++;
 			}
 		}
 
