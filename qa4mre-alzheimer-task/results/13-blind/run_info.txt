@@ -29,19 +29,13 @@ POSPruner
 CooccurrencePruner
 QuestionAnswerCandSentSimilarityMatcher
 AnswerChoiceCandAnsSimilarityScorer
-<<<<<<< HEAD
-AnswerSelectionByKCandVoting
 
-------Run 3-----------
+
+------Run 4-----------
 Indexing Phase:
 SentenceCombiner
 
 Search Phase:
-POSPruner
-CooccurrencePruner
 QuestionAnswerMoreCandSentSimilarityMatcher
 AnswerChoiceMoreCandAnsPMIScorer
 AnswerSelectionPMIByKCandVoting
-=======
-AnswerSelectionByKCandVoting
->>>>>>> 8bcfc5b1b65b66587798a2002456a2ef182f62e3
