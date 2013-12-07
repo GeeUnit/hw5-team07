@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
   <primitive>false</primitive>
@@ -25,6 +24,9 @@
     <delegateAnalysisEngine key="NEAnnotator">
       <import location="annotators/NEAnnotator.xml"/>
     </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="SentenceCombiner">
+      <import name="annotators.SentenceCombiner"/>
+    </delegateAnalysisEngine>
     <delegateAnalysisEngine key="SynonymAnnotator">
       <import name="annotators.SynonymAnnotator"/>
     </delegateAnalysisEngine>
@@ -37,47 +39,18 @@
     <delegateAnalysisEngine key="NoiseFilter">
       <import location="annotators/NoiseFilter.xml"/>
     </delegateAnalysisEngine>
-    <!-- <delegateAnalysisEngine key="QuestionCandSentSimilarityMatcher">
-      <import location="annotators/QuestionCandSentSimilarityMatcher.xml"/>
-    </delegateAnalysisEngine>
-    <delegateAnalysisEngine key="QASynonymAnnotator">
-      <import name="annotators.QASynonymAnnotator"/>
-    </delegateAnalysisEngine>
     <delegateAnalysisEngine key="StanfordQuestionNLPAnnotator">
-      <import location="annotators/StanfordQuestionNLPAnnotator.xml"/>
+      <import name="annotators.StanfordQuestionNLPAnnotator"/>
     </delegateAnalysisEngine>
     <delegateAnalysisEngine key="TextSegmenter">
-      <import location="annotators/TextSegmenter.xml"/>
+      <import name="annotators.TextSegmenter"/>
     </delegateAnalysisEngine>
-    <delegateAnalysisEngine key="StanfordSentenceAnnotator">
-      <import location="annotators/StanfordSentenceAnnotator.xml"/>
-    </delegateAnalysisEngine>
-    <delegateAnalysisEngine key="AnswerChoiceCandAnsSimilarityScorer">
-      <import location="annotators/AnswerChoiceCandAnsSimilarityScorer.xml"/> -->
-    
-    <!--<delegateAnalysisEngine key="QuestionCandSentDependencyMatcher">
-      <import location="annotators/QuestionCandSentDependencyMatcher.xml"/>
-    </delegateAnalysisEngine>-->
-    
     <delegateAnalysisEngine key="QASynonymAnnotator">
       <import name="annotators.QASynonymAnnotator"/>
     </delegateAnalysisEngine>
-    
-    <!--<delegateAnalysisEngine key="QuestionCandSentSynonymMatcher">
-      <import location="annotators/QuestionCandSentSynonymMatcher.xml"/>
-    </delegateAnalysisEngine>-->
-    
-    <delegateAnalysisEngine key="SynonymAnnotator">
-      <import name="annotators.SynonymAnnotator"/>
+    <delegateAnalysisEngine key="StanfordSentenceAnnotator">
+      <import name="annotators.StanfordSentenceAnnotator"/>
     </delegateAnalysisEngine>
-    
-    <delegateAnalysisEngine key="SentenceCombiner">
-      <import name="annotators.SentenceCombiner"/>
-    </delegateAnalysisEngine>
-    <!--<delegateAnalysisEngine key="AnswerSelectionByKCandAggregation">
-      <import location="annotators/AnswerSelectionByKCandAggregation.xml"/>
-    </delegateAnalysisEngine>-->
-    
   </delegateAnalysisEngineSpecifiers>
   <analysisEngineMetaData>
     <name>CpeDescriptor</name>
@@ -97,15 +70,13 @@
         <node>QuestionPhraseAnnotator</node>
         <node>NEAnnotator</node>
         <node>QuestionNEAnnotator</node>
-
-
         <node>SynonymAnnotator</node>
-        <!-- <node>SynonymAnnotator</node>-->
-        <!-- <node>QASynonymAnnotator</node>-->
         <node>QASynonymAnnotator</node>
         <node>SentenceCombiner</node>
         <node>SolrIndexer</node>
-        <!--<node>AnswerSelectionByKCandVoting</node>-->
+        <node>TextSegmenter</node>
+        <node>StanfordSentenceAnnotator</node>
+        <node>StanfordQuestionNLPAnnotator</node>
       </fixedFlow>
     </flowConstraints>
     <typePriorities/>

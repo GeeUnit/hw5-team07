@@ -65,7 +65,7 @@ public class QuestionCandSentSimilarityMatcher  extends JCasAnnotator_ImplBase{
       Question question=qaSet.get(i).getQuestion();
 //      System.out.println("========================================================");
 //      System.out.println("Question: "+question.getText());
-      String searchQuery=this.formSolrQuery(question, answerlist);
+      String searchQuery=this.formSolrQuery(question);
       if(searchQuery.trim().equals("")){
         continue;
       }
