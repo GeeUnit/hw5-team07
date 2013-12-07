@@ -2,14 +2,22 @@
 
 This document lists detailed information about the runs
 
+------Run 1---------
+Search Phase:
+QuestionAnswerMoreCandSentSimilarityMatcher
+AnswerChoiceMoreCandAnsPMIScorer
+AnswerSelectionPMIByKCandVoting
 
-
-
-
-
-Run 2:
+------Run 2---------
 
 Indexing Phase:
-Three Sentence Combiner
+SentenceCombiner
 
-Search
+Search Phase:
+POSPruner
+QuestionAnswerCandSentSimilarityMatcher
+AnswerChoiceCandAnsSimilarityScorer
+AnswerSelectionByKCandVoting
+
+
+------Run 3-----------
