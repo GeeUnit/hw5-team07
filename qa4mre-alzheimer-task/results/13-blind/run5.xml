@@ -51,7 +51,7 @@
 	</reading-test>
 	<reading-test r_id="2">
 		<question q_id="1" answered="YES">
-			<answer a_id="3"/>
+			<answer a_id="4"/>
 		</question>
 		<question q_id="2" answered="YES">
 			<answer a_id="4"/>
@@ -139,7 +139,7 @@
 			<answer a_id="5"/>
 		</question>
 		<question q_id="4" answered="YES">
-			<answer a_id="1"/>
+			<answer a_id="5"/>
 		</question>
 		<question q_id="5" answered="YES">
 			<answer a_id="5"/>
@@ -150,9 +150,7 @@
 		<question q_id="7" answered="YES">
 			<answer a_id="5"/>
 		</question>
-		<question q_id="8" answered="YES">
-			<answer a_id="5"/>
-		</question>
+		<question q_id ="8" answered="NO" />
 		<question q_id="9" answered="YES">
 			<answer a_id="5"/>
 		</question>
@@ -177,31 +175,31 @@
 	</reading-test>
 	<reading-test r_id="5">
 		<question q_id="1" answered="YES">
-			<answer a_id="2"/>
+			<answer a_id="3"/>
 		</question>
 		<question q_id="2" answered="YES">
 			<answer a_id="4"/>
 		</question>
 		<question q_id="3" answered="YES">
-			<answer a_id="5"/>
+			<answer a_id="3"/>
 		</question>
 		<question q_id="4" answered="YES">
 			<answer a_id="5"/>
 		</question>
 		<question q_id="5" answered="YES">
-			<answer a_id="3"/>
+			<answer a_id="1"/>
 		</question>
 		<question q_id="6" answered="YES">
 			<answer a_id="5"/>
 		</question>
 		<question q_id="7" answered="YES">
-			<answer a_id="5"/>
+			<answer a_id="2"/>
 		</question>
 		<question q_id="8" answered="YES">
 			<answer a_id="2"/>
 		</question>
 		<question q_id="9" answered="YES">
-			<answer a_id="4"/>
+			<answer a_id="3"/>
 		</question>
 		<question q_id="10" answered="YES">
 			<answer a_id="5"/>
@@ -212,7 +210,7 @@
 			<answer a_id="1"/>
 		</question>
 		<question q_id="2" answered="YES">
-			<answer a_id="1"/>
+			<answer a_id="2"/>
 		</question>
 		<question q_id="3" answered="YES">
 			<answer a_id="4"/>
@@ -224,7 +222,7 @@
 			<answer a_id="2"/>
 		</question>
 		<question q_id="6" answered="YES">
-			<answer a_id="1"/>
+			<answer a_id="5"/>
 		</question>
 		<question q_id="7" answered="YES">
 			<answer a_id="2"/>
@@ -259,7 +257,7 @@
 			<answer a_id="1"/>
 		</question>
 		<question q_id="7" answered="YES">
-			<answer a_id="3"/>
+			<answer a_id="5"/>
 		</question>
 		<question q_id="8" answered="YES">
 			<answer a_id="3"/>
@@ -288,7 +286,7 @@
 	</reading-test>
 	<reading-test r_id="8">
 		<question q_id="1" answered="YES">
-			<answer a_id="3"/>
+			<answer a_id="4"/>
 		</question>
 		<question q_id="2" answered="YES">
 			<answer a_id="4"/>
@@ -306,10 +304,10 @@
 			<answer a_id="2"/>
 		</question>
 		<question q_id="7" answered="YES">
-			<answer a_id="2"/>
+			<answer a_id="1"/>
 		</question>
 		<question q_id="8" answered="YES">
-			<answer a_id="3"/>
+			<answer a_id="5"/>
 		</question>
 		<question q_id="9" answered="YES">
 			<answer a_id="5"/>

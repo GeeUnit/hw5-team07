@@ -39,3 +39,14 @@ Search Phase:
 QuestionAnswerMoreCandSentSimilarityMatcher
 AnswerChoiceMoreCandAnsPMIScorer
 AnswerSelectionPMIByKCandVoting
+
+------Run 5-----------
+Indexing Phase:
+Sentence Combiner
+
+Search Phase:
+POSPruner
+CoocurrencePruner
+QuestionAnswerMoreCandSentSimilarityMatcher
+AnswerChoiceCandAnsPMIScorer
+AnswerSelectionPMIByKCandVoting
