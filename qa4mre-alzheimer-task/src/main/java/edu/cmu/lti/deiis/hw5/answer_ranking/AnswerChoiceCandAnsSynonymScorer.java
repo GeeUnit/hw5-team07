@@ -16,6 +16,7 @@ import edu.cmu.lti.qalab.types.NER;
 import edu.cmu.lti.qalab.types.NounPhrase;
 import edu.cmu.lti.qalab.types.Question;
 import edu.cmu.lti.qalab.types.QuestionAnswerSet;
+import edu.cmu.lti.qalab.types.Synonym;
 import edu.cmu.lti.qalab.types.TestDocument;
 import edu.cmu.lti.qalab.utils.Utils;
 
@@ -52,7 +53,7 @@ public class AnswerChoiceCandAnsSynonymScorer extends JCasAnnotator_ImplBase {
 			for (int c = 0; c < topK; c++) {
 
 				CandidateSentence candSent = candSentList.get(c);
-
+				
 				ArrayList<NounPhrase> candSentNouns = Utils
 						.fromFSListToCollection(candSent.getSentence()
 								.getPhraseList(), NounPhrase.class);
@@ -68,36 +69,107 @@ public class AnswerChoiceCandAnsSynonymScorer extends JCasAnnotator_ImplBase {
 									NounPhrase.class);
 					ArrayList<NER> choiceNERs = Utils.fromFSListToCollection(
 							answer.getNerList(), NER.class);
-
+					
 					int nnMatch = 0;
 					for (int k = 0; k < candSentNouns.size(); k++) {
-						for (int l = 0; l < choiceNERs.size(); l++) {
-							if (candSentNouns.get(k).getText()
-									.contains(choiceNERs.get(l).getText())) {
-								nnMatch++;
-							}
-						}
-						for (int l = 0; l < choiceNouns.size(); l++) {
-							if (candSentNouns.get(k).getText()
-									.contains(choiceNouns.get(l).getText())) {
-								nnMatch++;
-							}
-						}
+					  NounPhrase np_candSent=candSentNouns.get(k);
+					  ArrayList<Synonym> candSentSynonyms=Utils
+			              .fromFSListToCollection(np_candSent.getSynonyms(),
+			                      Synonym.class);
+					  for (int k2 = 0; k2 < choiceNouns.size(); k2++) {
+              NounPhrase np_choice=choiceNouns.get(k2);
+              ArrayList<Synonym> choiceSynonyms=Utils
+                      .fromFSListToCollection(np_choice.getSynonyms(),
+                              Synonym.class);
+              for (int l = 0; l < candSentSynonyms.size(); l++) {
+                Synonym syn_candSent=candSentSynonyms.get(l);
+                for (int l2 = 0; l2 < choiceSynonyms.size(); l2++) {
+                  Synonym syn_choice=choiceSynonyms.get(l2);
+                  if (syn_candSent.getText().contains(syn_choice.getText())) {
+                    nnMatch++;
+                  }
+                }
+              }
+            }
+					  
+					  for (int k2 = 0; k2 < choiceNERs.size(); k2++) {
+              NER ner_choice=choiceNERs.get(k2);
+              ArrayList<Synonym> choiceSynonyms=Utils
+                      .fromFSListToCollection(ner_choice.getSynonyms(),
+                              Synonym.class);
+              for (int l = 0; l < candSentSynonyms.size(); l++) {
+                Synonym syn_candSent=candSentSynonyms.get(l);
+                for (int l2 = 0; l2 < choiceSynonyms.size(); l2++) {
+                  Synonym syn_choice=choiceSynonyms.get(l2);
+                  if (syn_candSent.getText().contains(syn_choice.getText())) {
+                    nnMatch++;
+                  }
+                }
+              }
+            }
+//						for (int l = 0; l < choiceNERs.size(); l++) {
+//							if (candSentNouns.get(k).getText()
+//									.contains(choiceNERs.get(l).getText())) {
+//								nnMatch++;
+//							}
+//						}
+//						for (int l = 0; l < choiceNouns.size(); l++) {
+//							if (candSentNouns.get(k).getText()
+//									.contains(choiceNouns.get(l).getText())) {
+//								nnMatch++;
+//							}
+//						}
 					}
 
 					for (int k = 0; k < candSentNers.size(); k++) {
-						for (int l = 0; l < choiceNERs.size(); l++) {
-							if (candSentNouns.get(k).getText()
-									.contains(choiceNERs.get(l).getText())) {
-								nnMatch++;
-							}
-						}
-						for (int l = 0; l < choiceNouns.size(); l++) {
-							if (candSentNouns.get(k).getText()
-									.contains(choiceNouns.get(l).getText())) {
-								nnMatch++;
-							}
-						}
+					  NER ner_candSent=candSentNers.get(k);
+            ArrayList<Synonym> candSentSynonyms=Utils
+                    .fromFSListToCollection(ner_candSent.getSynonyms(),
+                            Synonym.class);
+            for (int k2 = 0; k2 < choiceNERs.size(); k2++) {
+              NER ner_choice=choiceNERs.get(k2);
+              ArrayList<Synonym> choiceSynonyms=Utils
+                      .fromFSListToCollection(ner_choice.getSynonyms(),
+                              Synonym.class);
+              for (int l = 0; l < candSentSynonyms.size(); l++) {
+                Synonym syn_candSent=candSentSynonyms.get(l);
+                for (int l2 = 0; l2 < choiceSynonyms.size(); l2++) {
+                  Synonym syn_choice=choiceSynonyms.get(l2);
+                  if (syn_candSent.getText().contains(syn_choice.getText())) {
+                    nnMatch++;
+                  }
+                }
+              }
+            }
+            
+            for (int k2 = 0; k2 < choiceNouns.size(); k2++) {
+              NounPhrase np_choice=choiceNouns.get(k2);
+              ArrayList<Synonym> choiceSynonyms=Utils
+                      .fromFSListToCollection(np_choice.getSynonyms(),
+                              Synonym.class);
+              for (int l = 0; l < candSentSynonyms.size(); l++) {
+                Synonym syn_candSent=candSentSynonyms.get(l);
+                for (int l2 = 0; l2 < choiceSynonyms.size(); l2++) {
+                  Synonym syn_choice=choiceSynonyms.get(l2);
+                  if (syn_candSent.getText().contains(syn_choice.getText())) {
+                    nnMatch++;
+                  }
+                }
+              }
+            }
+            
+//						for (int l = 0; l < choiceNERs.size(); l++) {
+//							if (candSentNouns.get(k).getText()
+//									.contains(choiceNERs.get(l).getText())) {
+//								nnMatch++;
+//							}
+//						}
+//						for (int l = 0; l < choiceNouns.size(); l++) {
+//							if (candSentNouns.get(k).getText()
+//									.contains(choiceNouns.get(l).getText())) {
+//								nnMatch++;
+//							}
+//						}
 
 					}
 					
