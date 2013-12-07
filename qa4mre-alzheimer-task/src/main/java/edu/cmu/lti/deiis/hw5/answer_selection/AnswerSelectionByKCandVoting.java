@@ -3,6 +3,7 @@ package edu.cmu.lti.deiis.hw5.answer_selection;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import org.apache.uima.UimaContext;
@@ -35,6 +36,8 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
   private int docCount;
   private double sumAcc;
   private double sumCScore;
+  private HashMap<String, Double> cScoreList;
+  private HashMap<String, Double> accList;
   
   @Override
   public void initialize(UimaContext context) throws ResourceInitializationException {
@@ -43,6 +46,9 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
     this.docCount=0;
     this.sumAcc=0D;
     this.sumCScore=0D;
+    
+    this.cScoreList=new HashMap<String, Double>();
+    this.accList=new HashMap<String, Double>();
   }
 
   @Override
@@ -118,6 +124,9 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
     this.docCount++;
     this.sumAcc+=accuracy;
     this.sumCScore+=cAt1;
+    
+    this.accList.put(testDoc.getId(), new Double(accuracy));
+    this.cScoreList.put(testDoc.getId(), new Double(cAt1));
 
   }
 
@@ -250,6 +259,10 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
   @Override
   public void destroy()
   {
+	  for(Entry<String, Double> entry:this.accList.entrySet())
+	  {
+		  System.out.println(entry.getKey()+":  accuracy: "+entry.getValue()+": c@1score: "+this.cScoreList.get(entry.getKey()));
+	  }
 	  System.out.println();
 	  System.out.println("++++++++++++++++++++++++++++++++++++++++++++++");
 	  System.out.println("DOCUMENT AVERAGE c@1 Score: "+(this.sumCScore/this.docCount));

@@ -27,11 +27,14 @@
     <delegateAnalysisEngine key="AnswerSelectionByKCandVoting">
       <import name="annotators.AnswerSelectionByKCandVoting"/>
     </delegateAnalysisEngine>
+  <delegateAnalysisEngine key="CooccurrencePruner">
+      <import name="annotators.CooccurrencePruner"/>
+    </delegateAnalysisEngine>
   <delegateAnalysisEngine key="QuestionAnswerMoreCandSentSimilarityMatcher">
       <import name="annotators.QuestionAnswerMoreCandSentSimilarityMatcher"/>
     </delegateAnalysisEngine>
-    <delegateAnalysisEngine key="AnswerChoiceMoreCandAnsPMIScorer">
-      <import name="annotators.AnswerChoiceMoreCandAnsPMIScorer"/>
+    <delegateAnalysisEngine key="AnswerChoiceCandAnsPMIScorer">
+      <import name="annotators.AnswerChoiceCandAnsPMIScorer"/>
     </delegateAnalysisEngine>
     <delegateAnalysisEngine key="AnswerSelectionPMIByKCandVoting">
       <import name="annotators.AnswerSelectionPMIByKCandVoting"/>
@@ -46,9 +49,11 @@
     <configurationParameterSettings/>
     <flowConstraints>
       <fixedFlow>
+        <node>POSPruner</node>
+        <node>CooccurrencePruner</node>
         <node>QuestionAnswerMoreCandSentSimilarityMatcher</node>
-        <node>AnswerChoiceMoreCandAnsPMIScorer</node>
-        <node>AnswerSelectionPMIByKCandVoting</node>
+        <node>AnswerChoiceCandAnsPMIScorer</node>
+      <node>AnswerSelectionPMIByKCandVoting</node>
         </fixedFlow>
     </flowConstraints>
     <typePriorities/>
