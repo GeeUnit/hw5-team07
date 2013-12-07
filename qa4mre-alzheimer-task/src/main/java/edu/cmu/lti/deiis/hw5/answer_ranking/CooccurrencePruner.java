@@ -19,6 +19,11 @@ import edu.cmu.lti.qalab.types.Question;
 import edu.cmu.lti.qalab.types.Token;
 import edu.cmu.lti.qalab.utils.Utils;
 
+/**
+ * Prunes documents based on a lack of second-order semantic similarity. It uses a combination of DISCO and the 2007 pubmed corpus
+ * @author jeffgee@cmu.edu
+ *
+ */
 public class CooccurrencePruner extends AbstractPruner {
 
 	private DISCO disco;
@@ -41,15 +46,11 @@ public class CooccurrencePruner extends AbstractPruner {
 	@Override
 	public ArrayList<Answer> prune(Question question, ArrayList<Answer> answers) {
 		
-		
-//		System.out.println(question.getText());
 		ArrayList<Token> tokens=Utils.getTokenListFromQuestion(question);
 		
-		//Get the important noun that we are seeking.
-//		Token qToken=this.getKeyToken(tokens);
 		
 		ArrayList<Answer> prunedAnswers=new ArrayList<Answer>();
-		int pruned=0;
+
 		ArrayList<NounPhrase> qNPs=Utils.getNounPhraseListFromQuestionList(question);
 		
 		for(Answer answer:answers)
@@ -79,8 +80,9 @@ public class CooccurrencePruner extends AbstractPruner {
 					
 					
 					try {
-						int count=disco.frequency(interestingToken);
 						
+						int count=disco.frequency(interestingToken);
+						//if an answer is not found in the corpus, keep it 
 						if(count>0)
 						{
 							for(NounPhrase qNP:qNPs)
@@ -90,6 +92,7 @@ public class CooccurrencePruner extends AbstractPruner {
 								
 								double sos=disco.secondOrderSimilarity(qToken, interestingToken);
 							
+								//if a word is found in the corpus, and it is semantically dissimilar, prune it.
 								if(sos>maxSOS)
 								{
 									maxSOS=sos;
@@ -117,11 +120,11 @@ public class CooccurrencePruner extends AbstractPruner {
 				{
 					if(answer.getIsCorrect())
 					{
-//						System.out.print(qToken.getText());
+						//show if a correct answer was pruned
 						System.out.print("CORRECT ===========================>");
 					}
 					System.out.println("PRUNED BASED ON COOCURRENCE: "+answer.getText());
-					pruned++;
+
 				}
 				
 			}

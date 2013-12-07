@@ -16,15 +16,23 @@ import edu.cmu.lti.qalab.types.Question;
 import edu.cmu.lti.qalab.types.QuestionAnswerSet;
 import edu.cmu.lti.qalab.utils.Utils;
 
+/**
+ * Abstract class for an answer pruner. An answer pruner removes answers from
+ * consideration before even searching the background document. This is
+ * generally due to not making sense, etc.
+ * 
+ * @author jeffgee@cmu.edu
+ * 
+ */
 public abstract class AbstractPruner extends JCasAnnotator_ImplBase {
 
 	protected Set<String> nounTags;
 	protected Set<String> questionTags;
-	
+
 	public void initialize(UimaContext context)
 			throws ResourceInitializationException {
 		super.initialize(context);
-		this.nounTags=new HashSet<String>();
+		this.nounTags = new HashSet<String>();
 		this.nounTags.add("NN");
 		this.nounTags.add("NNS");
 		this.nounTags.add("NNP");
@@ -32,8 +40,8 @@ public abstract class AbstractPruner extends JCasAnnotator_ImplBase {
 		this.nounTags.add("SYM");
 		this.nounTags.add("PRP");
 		this.nounTags.add("PRP$");
-		
-		this.questionTags=new HashSet<String>();
+
+		this.questionTags = new HashSet<String>();
 		this.questionTags.add("WDT");
 		this.questionTags.add("WP");
 		this.questionTags.add("WP$");
@@ -42,20 +50,22 @@ public abstract class AbstractPruner extends JCasAnnotator_ImplBase {
 
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
-		ArrayList<QuestionAnswerSet> qaSets=Utils.getQuestionAnswerSetFromTestDocCAS(aJCas);
-		
-		for(QuestionAnswerSet qaSet: qaSets)
-		{
-				Question q=qaSet.getQuestion();
-				FSList answerFS=qaSet.getAnswerList();
-				ArrayList<Answer> answerChoices=Utils.fromFSListToCollection(answerFS, Answer.class);
-				
-				ArrayList<Answer> prunedAnswers=prune(q,answerChoices);
-				
-				FSList newAnswerChoices=Utils.fromCollectionToFSList(aJCas, prunedAnswers);
-				qaSet.setAnswerList(newAnswerChoices);
-				
-				qaSet.addToIndexes();
+		ArrayList<QuestionAnswerSet> qaSets = Utils
+				.getQuestionAnswerSetFromTestDocCAS(aJCas);
+
+		for (QuestionAnswerSet qaSet : qaSets) {
+			Question q = qaSet.getQuestion();
+			FSList answerFS = qaSet.getAnswerList();
+			ArrayList<Answer> answerChoices = Utils.fromFSListToCollection(
+					answerFS, Answer.class);
+
+			ArrayList<Answer> prunedAnswers = prune(q, answerChoices);
+
+			FSList newAnswerChoices = Utils.fromCollectionToFSList(aJCas,
+					prunedAnswers);
+			qaSet.setAnswerList(newAnswerChoices);
+
+			qaSet.addToIndexes();
 		}
 	}
 

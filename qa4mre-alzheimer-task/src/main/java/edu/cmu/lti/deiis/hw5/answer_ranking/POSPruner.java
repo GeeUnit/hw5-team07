@@ -19,6 +19,12 @@ import edu.cmu.lti.qalab.types.QuestionAnswerSet;
 import edu.cmu.lti.qalab.types.Token;
 import edu.cmu.lti.qalab.utils.Utils;
 
+
+/**
+ * The POSPruner removes answers from consideration if their POS tag is invalid based on the structure of the sentence.
+ * @author jeffgee@cmu.edu
+ *
+ */
 public class POSPruner extends AbstractPruner {
 
 	public void initialize(UimaContext context)
@@ -80,7 +86,11 @@ public class POSPruner extends AbstractPruner {
 		return key;
 	}
 	
-	
+	/**
+	 * Find the key tokens that define what type of question this is. This is comprised of the Wh- and the first noun phrase.
+	 * @param question
+	 * @return
+	 */
 	public List<Token> getQuestionPattern(Question question)
 	{
 		FSList tokensFS=question.getTokenList();
@@ -171,10 +181,6 @@ public class POSPruner extends AbstractPruner {
 		{
 			posTags.add(token.getPos());
 		}
-//		if(posTags.contains("CD"))
-//		{
-//			return "CD";
-//		}
 		if(npList.size()>1)
 		{
 			return "NNS";

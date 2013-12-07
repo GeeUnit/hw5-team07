@@ -21,23 +21,28 @@ import edu.cmu.lti.qalab.types.Synonym;
 import edu.cmu.lti.qalab.types.TestDocument;
 import edu.cmu.lti.qalab.utils.Utils;
 
-
+/**
+ * The SentenceCombiner transforms what would otherwise be sentence annotations into three sentence annotations.
+ * @author jeffgee@cmu.edu
+ *
+ */
 public class SentenceCombiner extends JCasAnnotator_ImplBase {
 
 	private static int K_SENTENCES = 3;
 
-	// This class will merge all the annotations in batches of N sentences.
+	// This class will merge all the annotations in batches of 3 sentences.
 	@Override
 	public void process(JCas jCas) throws AnalysisEngineProcessException {
 
 		TestDocument testDoc = Utils.getTestDocumentFromCAS(jCas);
 		
 		try {
-			String id = testDoc.getId();
+			
 
 			ArrayList<Sentence> sentenceList = Utils.fromFSListToCollection(
 					testDoc.getSentenceList(), Sentence.class);
 			
+			//Initialize combined lists
 			List<ArrayList<NounPhrase>> newNPLists=new ArrayList<ArrayList<NounPhrase>>();
 			List<ArrayList<NER>> newNERLists=new ArrayList<ArrayList<NER>>();
 		
@@ -62,6 +67,7 @@ public class SentenceCombiner extends JCasAnnotator_ImplBase {
 					NEs=Utils.fromFSListToCollection(fsNEList, NER.class);
 				}
 				
+				//for a window size of three, added closes noun phrases and named entities
 				for (int j=i+1; j<i+K_SENTENCES;j++)
 				{
 					Sentence ctxSent=sentenceList.get(j);
@@ -93,6 +99,7 @@ public class SentenceCombiner extends JCasAnnotator_ImplBase {
 				newNERLists.add(NEs);
 			}
 
+			//add the new sentences to a list
 			ArrayList<Sentence> newSentenceList=new ArrayList<Sentence>();
 			
 			for(int i=0; i<sentenceList.size()-K_SENTENCES;i++)
@@ -104,6 +111,7 @@ public class SentenceCombiner extends JCasAnnotator_ImplBase {
 				newSentenceList.add(sent);
 			}
 			
+			//update testdocument with new sentences.
 			FSList sentenceWindows=Utils.createSentenceList(jCas, newSentenceList);
 			testDoc.setSentenceList(sentenceWindows);
 			testDoc.addToIndexes();
