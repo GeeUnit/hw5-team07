@@ -3,6 +3,12 @@
 This document lists detailed information about the runs
 
 ------Run 1---------
+Search Phase:
+QuestionAnswerMoreCandSentSimilarityMatcher
+AnswerChoiceMoreCandAnsPMIScorer
+AnswerSelectionPMIByKCandVoting
+
+------Run 2---------
 
 Indexing Phase:
 SentenceCombiner
@@ -13,11 +19,25 @@ QuestionAnswerCandSentSimilarityMatcher
 AnswerChoiceCandAnsSimilarityScorer
 AnswerSelectionByKCandVoting
 
-------Run 2---------
+
+------Run 3-----------
+Indexing Phase:
+SentenceCombiner
 
 Search Phase:
+POSPruner
+CooccurrencePruner
+QuestionAnswerCandSentSimilarityMatcher
+AnswerChoiceCandAnsSimilarityScorer
+AnswerSelectionByKCandVoting
+
+------Run 3-----------
+Indexing Phase:
+SentenceCombiner
+
+Search Phase:
+POSPruner
+CooccurrencePruner
 QuestionAnswerMoreCandSentSimilarityMatcher
 AnswerChoiceMoreCandAnsPMIScorer
 AnswerSelectionPMIByKCandVoting
-
-------Run 3-----------
