@@ -37,7 +37,7 @@ public class AnswerChoiceMoreCandAnsPMIScorer extends JCasAnnotator_ImplBase {
 		super.initialize(context);
 		String serverUrl = (String) context
 				.getConfigParameterValue("SOLR_SERVER_URL");
-		//K_CANDIDATES=(Integer)context.getConfigParameterValue("K_CANDIDATES");
+		K_CANDIDATES=(Integer)context.getConfigParameterValue("K_CANDIDATES");
 		
 		try {
 			this.solrWrapper = new SolrWrapper(serverUrl);

@@ -21,3 +21,12 @@ AnswerSelectionByKCandVoting
 
 
 ------Run 3-----------
+Indexing Phase:
+SentenceCombiner
+
+Search Phase:
+POSPruner
+CooccurrencePruner
+QuestionAnswerCandSentSimilarityMatcher
+AnswerChoiceCandAnsSimilarityScorer
+AnswerSelectionByKCandVoting

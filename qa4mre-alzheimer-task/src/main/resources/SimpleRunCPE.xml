@@ -72,11 +72,7 @@
         <node>QuestionNEAnnotator</node>
         <node>SynonymAnnotator</node>
         <node>QASynonymAnnotator</node>
-        <node>SentenceCombiner</node>
         <node>SolrIndexer</node>
-        <node>TextSegmenter</node>
-        <node>StanfordSentenceAnnotator</node>
-        <node>StanfordQuestionNLPAnnotator</node>
       </fixedFlow>
     </flowConstraints>
     <typePriorities/>
