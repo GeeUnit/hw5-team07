@@ -72,20 +72,19 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
 
       for (int c = 0; c < topK; c++) {
 
-				CandidateSentence candSent = candSentList.get(c);
+		CandidateSentence candSent = candSentList.get(c);
 
         // Vote for best answer according to CandidateSentence
         singleVote(candSent, hshAnswer);
 
       }
-
       String bestChoice = null;
       try {
         bestChoice = findBestChoice(hshAnswer);
-       
+
         if(bestChoice!=null)
         {
-        	 Answer toSelect=this.getBestAnswer(choiceList, bestChoice);
+        	Answer toSelect=this.getBestAnswer(choiceList, bestChoice);
 	        toSelect.setIsSelected(true);
 	        toSelect.addToIndexes();
         }
@@ -200,13 +199,13 @@ public class AnswerSelectionByKCandVoting extends JCasAnnotator_ImplBase {
    * @throws Exception
    */
   private String findBestChoice(HashMap<String, Double> hshAnswer) throws Exception {
-
     Iterator<String> it = hshAnswer.keySet().iterator();
     String bestAns = null;
     double maxScore = MIN_SCORE_THRESHOLD*this.K_CANDIDATES;
     System.out.println("Aggregated counts; ");
     while (it.hasNext()) {
       String key = it.next();
+      
       Double val = hshAnswer.get(key);
       System.out.println(key + "\t" + key + "\t" + val);
       if (val > maxScore) {

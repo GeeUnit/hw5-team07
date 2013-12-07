@@ -1,0 +1,15 @@
+::::::::::: RUN INFO ::::::::::::::::::
+
+This document lists detailed information about the runs
+
+
+
+
+
+
+Run 2:
+
+Indexing Phase:
+Three Sentence Combiner
+
+Search
